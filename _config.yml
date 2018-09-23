@@ -1,0 +1,32 @@
+# Permalinks
+permalink:           pretty
+
+# Setup
+title:               Peering101
+tagline:             Introduzione al peering su internet
+url:                 http://www.peering101.it
+# paginate:            1
+baseurl:             ""
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Marco Marzetti
+  url:               https://twitter.com/lamehost
+  email:             marco@lamehost.it
+
+# Custom vars
+version:             0.0.1
+github:
+  repo:              https://github.com/peering101/peering101.github.io
+
+# Gems
+plugins:
+  - jekyll-paginate
+  - jekyll-gist
