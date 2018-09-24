@@ -9,7 +9,7 @@ Piuttosto vuole essere un insieme di buone norme e consigli utili per imparare a
 
 ---
 
-# Capitoli
+# Argomenti
 ## [Informazioni](#)
 Quali pubblicare, come, dove, come e perché.
 
