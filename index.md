@@ -4,7 +4,7 @@ title: Home
 ---
 
 # Intro
-Questo sito non ha la pretesa di essere dettagliato o esaustivo.<br>
+Questo sito non ha la pretesa di essere dettagliato o esaustivo.  
 Piuttosto vuole essere un insieme di buone norme e consigli utili per imparare a fare peering.  
 
 ---
