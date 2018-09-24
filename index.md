@@ -17,7 +17,7 @@ Quali pubblicare, come, dove, come e perché.
 Come funziona.
 
 ## [Filtri](#)
-Cosa annunciare e cosa ricevere.
+Cosa annunciare e cosa accettare.
 
 ## [Route Servers](#)
 A cosa servono e come funzionano.
@@ -29,7 +29,7 @@ Come analizzare il traffico.
 Come spostare traffico.
 
 ## [Monitoraggio](#)
-Come controllare i propri prefissi.
+Come verificare che tutti riescano a raggiungerli.
 
 ---
 
