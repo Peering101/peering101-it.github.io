@@ -10,28 +10,28 @@ Piuttosto vuole essere un insieme di buone norme e consigli utili per imparare a
 ---
 
 # Argomenti
-## [Informazioni](#)
+## [Informazioni](#informazioni)
 Quali pubblicare, come, dove, come e perché.
 
-## [BGP](#)
+## [BGP](#bgp)
 Come funziona.
 
-## [Filtri](#)
+## [Filtri](#filtri)
 Cosa annunciare e cosa accettare.
 
-## [Route Servers](#)
+## [Route Servers](#route-servers)
 A cosa servono e come funzionano.
 
-## [Netflow](#)
+## [Netflow](#netflow)
 Come analizzare il traffico.
 
-## [Traffic Engineering](#)
+## [Traffic Engineering](#traffic-engineering)
 Come spostare traffico.
 
-## [Monitoraggio](#)
+## [Monitoraggio](#monitoraggio)
 Come verificare che tutti riescano a raggiungerli.
 
 ---
 
 # Contribuisci
-Maggiori informazioni sul repository [{{site.github.repo}}]({{site.github.repo}}).
+Maggiori informazioni su [{{site.github.repo}}]({{site.github.repo}}).
