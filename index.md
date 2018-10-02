@@ -10,26 +10,11 @@ Piuttosto vuole essere un insieme di buone norme e consigli utili per imparare a
 ---
 
 # Argomenti
-## [Informazioni](#informazioni)
-Quali pubblicare, come, dove, come e perché.
-
-## [BGP](#bgp)
-Come funziona.
-
-## [Filtri](#filtri)
-Cosa annunciare e cosa accettare.
-
-## [Route Servers](#route-servers)
-A cosa servono e come funzionano.
-
-## [Netflow](#netflow)
-Come analizzare il traffico.
-
-## [Traffic Engineering](#traffic-engineering)
-Come spostare traffico.
-
-## [Monitoraggio](#monitoraggio)
-Come verificare che tutti riescano a raggiungerli.
+{% for topic in site.topics %}
+  {% assign chunks = topic.id | split: "/" %}
+  <h2 id="topic_{{ chunks.last }}"><a href="{{ topic.url }}">{{ topic.title }}</a></h2>
+  {{ topic.subtitle }}
+{% endfor %}
 
 ---
 
