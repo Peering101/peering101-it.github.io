@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Pagina d'esempio
+subtitle: Template per creare nuove pagine
 ---
 
-Pagina d'esempio
+# Pagina d'esempio
 Questa sezione serve come introduzione all'articolo ed ad una sintesi dei suoi contenuti più importanti.
 Dovrebbe identificare l'argomento, stabilire il contesto, spiegare perché l'argomento è importante e riassumere i punti più importanti, comprese eventuali controversie di rilievo.
 
 ---
-
 
 * [Pagina](#pagina)
 * [Sommario](#sommario)
@@ -25,6 +25,8 @@ La pagina e' divisa in 4 elementi principali:
  * Sommario
  * Corpo dell'argomento
  * Autore
+
+Ognuno di essi va diviso da una linea orizzontale.
 
 # Sommario
 Se il corpo dell'argomento supera quattro capitoli e' suggeribile creare un sommario.  
