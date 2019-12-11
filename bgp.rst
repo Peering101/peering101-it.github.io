@@ -102,14 +102,14 @@ Nato nel 1989, quando *IETF* (*Internet Engineering Task Force*) partorì la `[R
 Il BGP si basa su un algoritmo di instradamento chiamato "vettore di percorsi" (*path vector*), cioè i messaggi che produce contengono una lista di percorsi dati dai sistemi autonomi che occorre attraversare per raggiungere una certa destinazione (identificata da un prefisso di rete).
    
 =========== ============  ==========================
-  Network     Next Hop               Path
+  Rete       Vicino               Percorso
 =========== ============  ==========================
-1.0.0.0/24  202.93.8.242  54728 20130 6939 13335 i
+1.0.0.0/24  202.93.8.242  54728 20130 6939 13335
 =========== ============  ==========================
 
 Questo esempio si legge così:
 
-è possibile raggiungere la rete 1.0.0.0/24 attraverso il dispositivo 202.93.8.242 il quale propone di attraversare, oltre sé stesso ovviamente, gli *AS* 54728, 20130, 6939 per approdare infine all'*AS* 13335 dove la risorsa di destinazione risiede.
+è possibile raggiungere la rete 1.0.0.0/24 (*network*) attraverso il dispositivo 202.93.8.242 (*next hop*) il quale propone un percorso (*path*) che consiste nell'attraversare, oltre sé stesso ovviamente, gli *AS* 54728, 20130, 6939 per approdare infine all'*AS* 13335 dove la risorsa di destinazione risiede.
 
 Sessioni BGP
 --------
