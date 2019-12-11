@@ -85,6 +85,8 @@ Da un punto di vista tecnico la definizione può essere rintracciata nella `[RFC
 
 *"Un sistema autonomo è un gruppo di uno o più prefissi IP gestito da uno o più operatori di rete con una politica di instradamento UNICA e BEN DEFINITA."*
 
+Più dettagliatamente possiamo considerare un "dentro" e un "fuori" dal punto di vista di un *AS* e cioè rispettivamente instradamenti *intra-AS* e instradamenti *inter-AS*. Da una parte dunque protocolli per il cosiddetto instradamento interno (*RIP, EGRP, OSPF, IS-IS*), dall'altra protocolli per l'instradamento esterno (*BGP*).
+
 Come funziona BGP
 --------
 
