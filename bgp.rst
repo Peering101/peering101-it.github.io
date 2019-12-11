@@ -115,9 +115,7 @@ Questo esempio si legge così:
 
 Il dispositivo chiamato "vicino" (*neighbor*) è un router capace di parlare la lingua del BGP (*BGP speaking*) che viene trasportata dal protocollo *TCP* (*Transport Control Protocol*) sulla porta 179, registrata presso `IANA - Internet Assigned Numbers Authority <https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.txt>`__.
 
-L'intestazione del messaggio BGP che viene scambiato tra due *router* ha il seguente aspetto:
-
-**Intestazione del messaggio BGP**::
+L'intestazione del messaggio BGP che viene scambiato tra due *router* ha il seguente aspetto::
 
       0                   1                   2                   3
       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
@@ -133,6 +131,16 @@ L'intestazione del messaggio BGP che viene scambiato tra due *router* ha il segu
       |          Length               |      Type     |
       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
+A seconda del tipo di messaggio, dopo l'intestazione potrebbero seguire dei dati.
+
+Il campo denominato *length* serve a dichiarare la lunghezza dell'intero messaggio BGP, intestazione compresa; per questo è semplice calcolarne i valori: minimo, 19 byte, massimo, 4096 byte.
+
+Il campo *type* definisce invece il tipo di messaggio trasmesso e può assumere i seguenti valori:
+
+- OPEN
+- UPDATE
+- NOTIFICATION
+- KEEPALIVE
 
 Sessioni BGP
 --------
