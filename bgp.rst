@@ -18,7 +18,7 @@ La struttura del testo si rifà a un approccio sempre verde, scandito secondo qu
 - filtri e manipolazioni;
 - ridondanza e bilanciamento.
 
-Per quanto possibile saranno indicate le fonti, le migliori pratiche e le recenti tecnologie così come pubblicate da `RFC Editor <https://rfc-editor.org>`__.
+Per quanto possibile saranno indicate le fonti, le migliori pratiche e le recenti tecnologie così come pubblicate da `RFC Editor <https://rfc-editor.org>`__ e dalle altre organizzazioni coinvolte nella definizione degli standard.
 
 Protocolli di instradamento: fondamenti e concetti
 --------
