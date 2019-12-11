@@ -7,7 +7,7 @@ Premessa
 In questo spazio, nato da un'idea di `ITNOG <https://www.itnog.it/>`__ (*the ITalian Network Operators Group*), intendiamo fornire una breve guida ai principali concetti e meccanismi sottesi al funzionamento di Internet illustrando alcune delle architetture di instradamento basate sul protocollo *BGP - Border Gateway Protocol*.
 L'obiettivo dunque non è quello di tradurre e parafrasare le RFC (*Request for comments*), né quello di somministrare un ricettario; piuttosto vorremmo divulgare (con linguaggio semplice) i capisaldi della letteratura conditi con esempi intuitivi così da facilitare la strada a quanti vorranno poi approfondire.
 
-La struttura del testo si rifà a un approccio sempre verde, scandito secondo questi punti:
+La struttura del testo si rifà a un approccio sempreverde, scandito secondo questi punti:
 
 - `protocolli di instradamento: fondamenti e concetti`_;
 - `distance vector vs link-state`_;
@@ -80,7 +80,7 @@ Instradamento interno o esterno, statico o dinamico
 
 Abbiamo visto come diversi siano i metodi per rendere le risorse di rete raggiungibili, ma occorre aggiungere ancora un tassello determinante per la prosecuzione dell'illustrazione, e cioè il loro àmbito di applicazione. Per questo è necessario introdurre la nozione di sistema autonomo, fin qui solo velocemente menzionata.
 
-Si tratta della cellula più piccola che dà vita all'organismo di Internet e dobbiamo immaginarla come la tessera di un puzzle la quale può trovarsi nel centro o ai bordi del quadro ma sempre con almeno due lati connessi ad altre tessere.
+Si tratta della cellula più piccola che dà vita all'organismo di Internet e dobbiamo immaginarla come la tessera di un mosaico la quale può trovarsi nel centro o ai bordi del quadro ma sempre con almeno un lato (preferibilmente almeno due) connesso ad altre tessere.
 
 Da un punto di vista tecnico la definizione può essere rintracciata nella `[RFC1930] Guidelines for creation, selection, and registration of an Autonomous System (AS) <http://www.rfc-editor.org/rfc/rfc1930.txt>`__ dove si legge:
 
