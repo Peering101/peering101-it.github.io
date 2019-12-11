@@ -101,7 +101,7 @@ Nato nel 1989, quando *IETF* (*Internet Engineering Task Force*) partorì la `[R
 
 Il BGP si basa su un algoritmo di instradamento chiamato "vettore di percorsi" (*path vector*), cioè i messaggi che produce contengono una lista di percorsi dati dai sistemi autonomi che occorre attraversare per raggiungere una certa destinazione (identificata da un prefisso di rete).
 
-.. table:: **Esempio di AS path**
+**Esempio di AS path**::
 
 ============== ============  ==========================
      Rete         Vicino              Percorso
@@ -117,9 +117,8 @@ Il dispositivo chiamato "vicino" (*neighbor*) è un router capace di parlare la 
 
 L'intestazione del messaggio BGP che viene scambiato tra due *router* ha il seguente aspetto:
 
-.. table:: **Intestazione del messaggio BGP**
+**Intestazione del messaggio BGP**::
 
-=======================================================================
       0                   1                   2                   3
       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -133,7 +132,7 @@ L'intestazione del messaggio BGP che viene scambiato tra due *router* ha il segu
       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
       |          Length               |      Type     |
       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-=======================================================================
+
 
 Sessioni BGP
 --------
