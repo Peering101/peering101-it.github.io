@@ -101,7 +101,7 @@ Nato nel 1989, quando *IETF* (*Internet Engineering Task Force*) partorì la `[R
 
 Il BGP si basa su un algoritmo di instradamento chiamato "vettore di percorsi" (*path vector*), cioè i messaggi che produce contengono una lista di percorsi dati dai sistemi autonomi che occorre attraversare per raggiungere una certa destinazione (identificata da un prefisso di rete).
 
-**Esempio di AS path**::
+**Esempio di AS path**
 
 ============== ============  ==========================
      Rete         Vicino              Percorso
