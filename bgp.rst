@@ -10,14 +10,14 @@ L'obiettivo dunque non è quello di tradurre e parafrasare le RFC (*Request for 
 La struttura del testo si rifà a un approccio sempre verde, scandito secondo questi punti:
 
 - `protocolli di instradamento: fondamenti e concetti`_;
-- distance vector vs link-state;
-- instradamento interno o esterno, statico o dinamico;
-- come funziona BGP;
-- sessioni BGP;
-- processo di instradamento;
-- controllo degli instradamenti;
-- filtri e manipolazioni;
-- ridondanza e bilanciamento.
+- `distance vector vs link-state`_;
+- `instradamento interno o esterno, statico o dinamico`_;
+- `come funziona BGP`_;
+- `sessioni BGP`_;
+- `processo di instradamento`_;
+- `controllo degli instradamenti`_;
+- `filtri e manipolazioni`_;
+- `ridondanza e bilanciamento`_.
 
 Per quanto possibile saranno indicate le fonti, le migliori pratiche e le recenti tecnologie così come pubblicate da `RFC Editor <https://rfc-editor.org>`__ e dalle altre organizzazioni coinvolte nella definizione degli standard.
 
