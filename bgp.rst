@@ -133,7 +133,9 @@ L'intestazione del messaggio BGP che viene scambiato tra due *router* ha il segu
 
 A seconda del tipo di messaggio, dopo l'intestazione potrebbero seguire dei dati.
 
-Il campo denominato *length* serve a dichiarare la lunghezza dell'intero messaggio BGP, intestazione compresa; per questo è semplice calcolarne i valori: minimo, 19 byte, massimo, 4096 byte.
+A ogni modo il campo *marker* ha una consistenza fissa di 16 byte e viene usato per determinare se il messaggio BGP contiene informazioni di autenticazione oppure no.
+
+Il campo denominato *length* serve a dichiarare la lunghezza dell'intero messaggio BGP, intestazione compresa; per questo è semplice calcolarne i valori: minimo, 19 byte (cioè 16 il *marker*, 2 il *length*, 1 il *type*), massimo, 4096 byte.
 
 Il campo *type* definisce invece il tipo di messaggio trasmesso e può assumere i seguenti valori:
 
