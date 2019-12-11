@@ -56,7 +56,7 @@ Quello basato sul vettore delle distanze prevede una lista (il vettore appunto) 
 
 Così facendo, tutti i *router* coinvolti nel processo contribuiscono a influenzare le proprie tabelle di instradamento fino a convergere su una lista di *best path* condivisa.
 
-Alcuni esempi di protocolli di instradamento basati sull'algoritmo del *distance vector* sono: *RIP, Routing Information Protocol* `[RFC2453]<https://www.rfc-editor.org/rfc/rfc2453.txt>`_, *EIGRP, Enhanced Interior Gateway Routing Protocol*  `[RFC7868]<https://www.rfc-editor.org/rfc/rfc7868.txt>`__.
+Alcuni esempi di protocolli di instradamento basati sull'algoritmo del *distance vector* sono: *RIP, Routing Information Protocol* `[RFC2453] <https://www.rfc-editor.org/rfc/rfc2453.txt>`__, *EIGRP, Enhanced Interior Gateway Routing Protocol*  `[RFC7868] <https://www.rfc-editor.org/rfc/rfc7868.txt>`__.
 
 Come funziona BGP
 --------
