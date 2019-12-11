@@ -74,7 +74,7 @@ Queste caratteristiche rendono il *link-state* un algoritmo più adatto a essere
 
 I due più importanti esempi di protocolli di instradamento basati sull'algoritmo *link-state* sono *OSPF - Open Shortest Path First* `[RFC2328] <http://www.rfc-editor.org/rfc/rfc2328.txt>`__ e *IS-IS - Intermediate System to Intermediate System* `[ISO/IEC 10589:2002] <http://standards.iso.org/ittf/PubliclyAvailableStandards/c030932_ISO_IEC_10589_2002(E).zip>`__.
 
-Instradamento interno o esterno
+Instradamento interno o esterno, statico o dinamico
 --------
 
 Abbiamo visto come diversi siano i metodi per rendere le risorse di rete raggiungibili, ma occorre aggiungere ancora un tassello determinante per la prosecuzione dell'illustrazione, e cioè il loro àmbito di applicazione. Per questo è necessario introdurre la nozione di sistema autonomo, fin qui solo velocemente menzionata.
@@ -85,7 +85,12 @@ Da un punto di vista tecnico la definizione può essere rintracciata nella `[RFC
 
 *"Un sistema autonomo è un gruppo di uno o più prefissi IP gestito da uno o più operatori di rete con una politica di instradamento UNICA e BEN DEFINITA."*
 
-Più dettagliatamente possiamo considerare un "dentro" e un "fuori" dal punto di vista di un *AS* e cioè rispettivamente instradamenti *intra-AS* e instradamenti *inter-AS*. Da una parte dunque protocolli per il cosiddetto instradamento interno, *IGP - Interior Gateway Protocol* (*RIP, EGRP, OSPF, IS-IS*), dall'altra protocolli per l'instradamento esterno, *EGP - Exterior Gateway Protocol* (*BGP*).
+Più dettagliatamente possiamo considerare un "dentro" e un "fuori" dal punto di vista di un *AS* e cioè rispettivamente instradamenti *intra-AS* e instradamenti *inter-AS*.
+
+Ora, gli instradamenti possono essere classificati anche per la modalità con la quale vengono appresi dai *router*: quando inseriamo manualmente un percorso verso una destinazione, allora si chiamerà "instradamento statico" (*static routing*); quando invece i dispositivi apprendono gli instradamenti grazie a un protocollo, allora si parlerà di "instradamento dinamico" (*dynamic routing*).
+
+All'interno di questa ultima categoria distinguiamo: per il cosiddetto instradamento interno, *IGP - Interior Gateway Protocol* (come *RIP, EGRP, OSPF, IS-IS*); per l'instradamento esterno, *EGP - Exterior Gateway Protocol* (come *BGP*).
+
 
 Come funziona BGP
 --------
