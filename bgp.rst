@@ -45,8 +45,18 @@ Per consentire l'instradamento, il *router* segue una procedura che si articola 
 
 9. ripetizione della procedura fin quando la destinazione viene raggiunta secondo lo schema di un salto dopo l'altro (*hop-by-hop*), tipico delle reti a commutazione di pacchetto.
 
+Alla base dei protocolli di instradamento ci sono generalmente due algoritmi: vettore delle distanze (*distance vector*) e stato del collegamento (*link-state*).
+
 Distance vector vs link-state
 --------
+
+Come calcolare la distanza più breve per raggiungere una destinazione? Questo è il campo dove si gioca la partita dei protocolli di instradamento sulla rete.
+
+Quello basato sul vettore delle distanze prevede una lista (il vettore appunto) di distanze associate al prefisso di ogni destinazione appreso dai messaggi provenienti da altri *router* sulla rete. Cioè praticamente ciascun *router* calcola autonomamente il percorso migliore verso ogni destinazione e, subito dopo, invia il proprio vettore di distanze agli altri *router* in rete.
+
+Così facendo, tutti i *router* coinvolti nel processo contribuiscono a influenzare le proprie tabelle di instradamento fino a convergere su una lista di *best path* condivisa.
+
+Alcuni esempi di protocolli di instradamento basati sull'algoritmo del *distance vector* sono: *RIP, Routing Information Protocol* `[RFC2453]<https://www.rfc-editor.org/rfc/rfc2453.txt>`__, *EIGRP, Enhanced Interior Gateway Routing Protocol  [RFC7868]<https://www.rfc-editor.org/rfc/rfc7868.txt>`__.
 
 Come funziona BGP
 --------
