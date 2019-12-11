@@ -103,7 +103,7 @@ Il BGP si basa su un algoritmo di instradamento chiamato "vettore di percorsi" (
 
 .. csv-table:: Esempio di AS path
    :header: "Network", "Next Hop", "Path"
-   :widths: 20, 20, 40
+   :widths: 40, 40, 80
    "1.0.0.0/24", "202.93.8.242", "54728 20130 6939 13335 i"
 
 Questo esempio si legge così:
