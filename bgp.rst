@@ -4,7 +4,7 @@ BGP (Border Gateway Protocol)
 Premessa
 --------
 
-In questo spazio, nato da un'idea di `ITNOG <https://www.itnog.it/>`__ (*the ITalian Network Operators Group*), intendiamo fornire una breve guida ai principali concetti e meccanismi sottesi al funzionamento di Internet illustrando alcune delle architetture di instradamento basate sul protocollo *BGP, Border Gateway Protocol*.
+In questo spazio, nato da un'idea di `ITNOG <https://www.itnog.it/>`__ (*the ITalian Network Operators Group*), intendiamo fornire una breve guida ai principali concetti e meccanismi sottesi al funzionamento di Internet illustrando alcune delle architetture di instradamento basate sul protocollo *BGP - Border Gateway Protocol*.
 L'obiettivo dunque non è quello di tradurre e parafrasare le RFC (*Request for comments*), né quello di somministrare un ricettario; piuttosto vorremmo divulgare (con linguaggio semplice) i capisaldi della letteratura conditi con esempi intuitivi così da facilitare la strada a quanti vorranno poi approfondire.
 
 La struttura del testo si rifà a un approccio sempre verde, scandito secondo questi punti:
@@ -60,7 +60,7 @@ Proprio l'aspetto della convergenza è stato riconosciuto nel tempo come momento
 
 Le argomentazioni necessarie a dare una risposta a quella domanda costituiscono una base critica all'adozione su larga scala di protocolli *distance vector*: dunque lentezza nella convergenza e difficoltà di gestire un gran numero di destinazioni.
 
-Alcuni esempi di protocolli di instradamento basati sull'algoritmo del *distance vector* sono: *RIP, Routing Information Protocol* `[RFC2453] <https://www.rfc-editor.org/rfc/rfc2453.txt>`__, *EIGRP, Enhanced Interior Gateway Routing Protocol*  `[RFC7868] <https://www.rfc-editor.org/rfc/rfc7868.txt>`__.
+Alcuni esempi di protocolli di instradamento basati sull'algoritmo del *distance vector* sono: *RIP - Routing Information Protocol* `[RFC2453] <https://www.rfc-editor.org/rfc/rfc2453.txt>`__, *EIGRP - Enhanced Interior Gateway Routing Protocol*  `[RFC7868] <https://www.rfc-editor.org/rfc/rfc7868.txt>`__.
 
 _____
 
@@ -72,7 +72,7 @@ Dopodiché, tutti i *router* saranno in grado di calcolare e tratteggiare un alb
 
 Queste caratteristiche rendono il *link-state* un algoritmo più adatto a essere impiegato in scenari grandi e complessi, tuttavia sempre interni a un sistema autonomo. Infatti su grandi reti, come Internet, l'instabilità di alcuni collegamenti renderebbe le ritrasmissioni e i conseguenti calcoli un lavoro troppo oneroso (e di conseguenza inefficiente) per i singoli *router*.
 
-I due più importanti esempi di protocolli di instradamento basati sull'algoritmo *link-state* sono *OSPF, Open Shortest Path First* `[RFC2328] <http://www.rfc-editor.org/rfc/rfc2328.txt>`__ e *IS-IS, Intermediate System to Intermediate System* `[ISO/IEC 10589:2002] <http://standards.iso.org/ittf/PubliclyAvailableStandards/c030932_ISO_IEC_10589_2002(E).zip>`__.
+I due più importanti esempi di protocolli di instradamento basati sull'algoritmo *link-state* sono *OSPF - Open Shortest Path First* `[RFC2328] <http://www.rfc-editor.org/rfc/rfc2328.txt>`__ e *IS-IS - Intermediate System to Intermediate System* `[ISO/IEC 10589:2002] <http://standards.iso.org/ittf/PubliclyAvailableStandards/c030932_ISO_IEC_10589_2002(E).zip>`__.
 
 Instradamento interno o esterno
 --------
@@ -85,7 +85,7 @@ Da un punto di vista tecnico la definizione può essere rintracciata nella `[RFC
 
 *"Un sistema autonomo è un gruppo di uno o più prefissi IP gestito da uno o più operatori di rete con una politica di instradamento UNICA e BEN DEFINITA."*
 
-Più dettagliatamente possiamo considerare un "dentro" e un "fuori" dal punto di vista di un *AS* e cioè rispettivamente instradamenti *intra-AS* e instradamenti *inter-AS*. Da una parte dunque protocolli per il cosiddetto instradamento interno (*RIP, EGRP, OSPF, IS-IS*), dall'altra protocolli per l'instradamento esterno (*BGP*).
+Più dettagliatamente possiamo considerare un "dentro" e un "fuori" dal punto di vista di un *AS* e cioè rispettivamente instradamenti *intra-AS* e instradamenti *inter-AS*. Da una parte dunque protocolli per il cosiddetto instradamento interno, *IGP - Interior Gateway Protocol* (*RIP, EGRP, OSPF, IS-IS*), dall'altra protocolli per l'instradamento esterno, *EGP - Exterior Gateway Protocol* (*BGP*).
 
 Come funziona BGP
 --------
