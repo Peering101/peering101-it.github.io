@@ -81,9 +81,9 @@ Abbiamo visto come diversi siano i metodi per rendere le risorse di rete raggiun
 
 Si tratta della cellula più piccola che dà vita all'organismo di Internet e dobbiamo immaginarla come la tessera di un puzzle la quale può trovarsi nel centro o ai bordi del quadro ma sempre con almeno due lati connessi ad altre tessere.
 
-Da un punto di vista tecnico la definizione può essere rintracciata nella `[RFC1930] *Guidelines for creation, selection, and registration of an Autonomous System (AS)* <http://www.rfc-editor.org/rfc/rfc1930.txt>`__ dove si legge:
+Da un punto di vista tecnico la definizione può essere rintracciata nella `[RFC1930] Guidelines for creation, selection, and registration of an Autonomous System (AS) <http://www.rfc-editor.org/rfc/rfc1930.txt>`__ dove si legge:
 
-"Un sistema autonomo è un gruppo di uno o più prefissi IP gestito da uno o più operatori di rete con una politica di instradamento UNICA e BEN DEFINITA."
+*"Un sistema autonomo è un gruppo di uno o più prefissi IP gestito da uno o più operatori di rete con una politica di instradamento UNICA e BEN DEFINITA."*
 
 Come funziona BGP
 --------
