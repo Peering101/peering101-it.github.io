@@ -135,15 +135,14 @@ A seconda del tipo di messaggio, dopo l'intestazione potrebbero seguire dei dati
 
 A ogni modo il campo *marker* ha una consistenza fissa di 16 byte e viene usato per determinare se il messaggio BGP contiene informazioni di autenticazione oppure no.
 
-Il campo denominato *length* serve a dichiarare la lunghezza dell'intero messaggio BGP, intestazione compresa; per questo è semplice calcolarne il valore minimo: 19 byte (cioè 16 il *marker*, 2 il *length*, 1 il *type*); il valore massimo, per RFC, è di 4096 byte.
+Il campo denominato *length* serve a dichiarare la lunghezza dell'intero messaggio BGP, intestazione compresa; per questo è semplice calcolarne il valore minimo: 19 byte (cioè 16 il *marker*, 2 il *length*, 1 il *type*). Il valore massimo, per RFC, è di 4096 byte.
 
-Il campo *type* definisce invece il tipo di messaggio trasmesso e può indicare i seguenti valori:
+Il campo *type* definisce invece il tipo di messaggio trasmesso e può recare dei valori che possono indicare i seguenti codici:
 
 - OPEN;
 - UPDATE;
 - NOTIFICATION;
 - KEEPALIVE.
-
 
 
 Sessioni BGP
