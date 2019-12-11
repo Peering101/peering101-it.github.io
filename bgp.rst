@@ -29,7 +29,7 @@ Per consentire l'instradamento, il *router* segue una procedura che si articola 
 
 1. scelta di un cosiddetto protocollo di instradamento (*routing protocol*) utile a scambiare con altri *router* della rete informazioni sui percorsi e sulle destinazioni;
 
-2. inserimento di tali informazioni in tabelle di instradamento (*routing protocol*), una per ciascun protocollo;
+2. inserimento di tali informazioni in tabelle di instradamento (*routing table*), una per ciascun protocollo;
 
 3. analisi di tutte le tabelle popolate e scelta dei migliori percorsi verso ciascuna destinazione;
 
