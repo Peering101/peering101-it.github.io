@@ -109,7 +109,7 @@ Il BGP si basa su un algoritmo di instradamento chiamato "vettore di percorsi" (
 
 Questo esempio si legge così:
 
-è possibile raggiungere la rete 203.0.113.0/24 (*network*) attraverso il dispositivo 198.51.100.1 (*next hop*) il quale propone un percorso (*path*) che consiste nell'attraversare, oltre sé stesso ovviamente, gli *AS* 54728, 20130, 6939 per approdare infine all'*AS* 65536 dove la risorsa di destinazione risiede.
+è possibile raggiungere la rete 203.0.113.0/24 (*network*) attraverso il dispositivo 198.51.100.1 (*next hop*) il quale propone un percorso (*path*) che consiste nell'attraversare, oltre sé stesso ovviamente, gli *AS* 64496, 65551, 64511, per approdare infine all'*AS* 65536 dove la risorsa di destinazione risiede.
 
 Sessioni BGP
 --------
