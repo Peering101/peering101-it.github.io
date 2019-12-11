@@ -74,6 +74,13 @@ Queste caratteristiche rendono il *link-state* un algoritmo più adatto a essere
 
 I due più importanti esempi di protocolli di instradamento basati sull'algoritmo *link-state* sono *OSPF, Open Shortest Path First* `[RFC2328] <http://www.rfc-editor.org/rfc/rfc2328.txt>`__ e *IS-IS, Intermediate System to Intermediate System* `[ISO/IEC 10589:2002] <http://standards.iso.org/ittf/PubliclyAvailableStandards/c030932_ISO_IEC_10589_2002(E).zip>`__.
 
+Instradamento interno o esterno
+--------
+
+Abbiamo visto come diversi siano i metodi per rendere le risorse di rete raggiungibili, ma occorre aggiungere ancora un tassello determinante per la prosecuzione dell'illustrazione, e cioè il loro àmbito di applicazione. Per questo è necessario introdurre la nozione di sistema autonomo, fin qui solo velocemente menzionata.
+
+Si tratta della cellula più piccola che dà vita all'organismo di Internet e dobbiamo immaginarla come la tessera di un puzzle la quale può trovarsi nel centro o ai bordi 
+
 Come funziona BGP
 --------
 
