@@ -113,7 +113,7 @@ Questo esempio si legge così:
 
 è possibile raggiungere la rete 203.0.113.0/24 (*network*) attraverso il dispositivo 198.51.100.1 (*next hop*) il quale propone un percorso (*path*) che consiste nel transitare, oltre che per sé stesso ovviamente, per gli *AS* 64496, 65551, 64511, così da approdare infine all'*AS* 65536 dove la risorsa di destinazione risiede.
 
-Il dispositivo chiamato "vicino" (*neighbor*) è un router capace di parlare la lingua del BGP (*BGP speaking*) che viene trasportata dal protocollo *TCP* (*Transport Control Protocol*) sulla porta 179, registrata presso `IANA - Internet Assigned Numbers Authority <https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.txt>`__.
+Il dispositivo chiamato "vicino" (*neighbor*) è un *router* capace di parlare la lingua del BGP (*BGP speaking*) che viene trasportata dal protocollo *TCP* (*Transport Control Protocol*) sulla porta 179, registrata presso `IANA - Internet Assigned Numbers Authority <https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.txt>`__.
 
 L'intestazione del messaggio BGP che viene scambiato tra due *router* ha il seguente aspetto::
 
@@ -137,12 +137,14 @@ A ogni modo il campo *marker* ha una consistenza fissa di 16 byte e viene usato 
 
 Il campo denominato *length* serve a dichiarare la lunghezza dell'intero messaggio BGP, intestazione compresa; per questo è semplice calcolarne i valori: minimo, 19 byte (cioè 16 il *marker*, 2 il *length*, 1 il *type*), massimo, 4096 byte.
 
-Il campo *type* definisce invece il tipo di messaggio trasmesso e può assumere i seguenti valori:
+Il campo *type* definisce invece il tipo di messaggio trasmesso e può indicare i seguenti valori:
 
-- OPEN
-- UPDATE
-- NOTIFICATION
-- KEEPALIVE
+- OPEN;
+- UPDATE;
+- NOTIFICATION;
+- KEEPALIVE.
+
+
 
 Sessioni BGP
 --------
