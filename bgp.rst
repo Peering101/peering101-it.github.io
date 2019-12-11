@@ -9,8 +9,9 @@ L'obiettivo dunque non è quello di tradurre e parafrasare le RFC (*Request for 
 
 La struttura del testo si rifà a un approccio sempre verde, scandito secondo questi punti:
 
-- protocolli di instradamento: fondamenti e concetti;
+- `protocolli di instradamento: fondamenti e concetti`;
 - distance vector vs link-state;
+- instradamento interno o esterno, statico o dinamico;
 - come funziona BGP;
 - sessioni BGP;
 - processo di instradamento;
