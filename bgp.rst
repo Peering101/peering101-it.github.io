@@ -83,7 +83,9 @@ Si tratta della cellula più piccola che dà vita all'organismo di Internet e do
 
 Da un punto di vista tecnico la definizione può essere rintracciata nella `[RFC1930] Guidelines for creation, selection, and registration of an Autonomous System (AS) <http://www.rfc-editor.org/rfc/rfc1930.txt>`__ dove si legge:
 
-   *"Un sistema autonomo è un gruppo di uno o più prefissi IP gestito da uno o più operatori di rete con una politica di instradamento UNICA e BEN DEFINITA."* Fino al 2007 la rappresentazione di un *AS* avveniva per mezzo di un numero a 16 bit, dopodiché per mezzo di un numero a 32 bit, come oggi regolata dalla `[RFC6793] BGP Support for Four-Octet Autonomous System (AS) Number Space <https://www.rfc-editor.org/rfc/rfc6793.txt>`__.
+   *"Un sistema autonomo è un gruppo di uno o più prefissi IP gestito da uno o più operatori di rete con una politica di instradamento UNICA e BEN DEFINITA."*
+   
+Fino al 2007 la rappresentazione di un *AS* avveniva per mezzo di un numero a 16 bit, dopodiché per mezzo di un numero a 32 bit, come oggi regolata dalla `[RFC6793] BGP Support for Four-Octet Autonomous System (AS) Number Space <https://www.rfc-editor.org/rfc/rfc6793.txt>`__.
 
 Più dettagliatamente possiamo considerare un "dentro" e un "fuori" dal punto di vista di un *AS* e cioè rispettivamente instradamenti *intra-AS* e instradamenti *inter-AS*.
 
@@ -99,8 +101,8 @@ Nato nel 1989, quando *IETF* (*Internet Engineering Task Force*) partorì la `[R
 
 Il BGP si basa su un algoritmo di instradamento chiamato "vettore di percorsi" (*path vector*), cioè i messaggi che produce contengono una lista di percorsi dati dai sistemi autonomi che occorre attraversare per raggiungere una certa destinazione (identificata da un prefisso di rete).
 
-   Network          Next Hop            Path
-   1.0.0.0/24       202.93.8.242        54728 20130 6939 13335 i
+Network          Next Hop            Path
+1.0.0.0/24       202.93.8.242        54728 20130 6939 13335 i
 
 Questo esempio si legge così:
 
