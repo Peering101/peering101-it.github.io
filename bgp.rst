@@ -150,6 +150,7 @@ Per una migliore comprensione dell'intero processo di instradamento gestito dal 
 Partiamo dal messaggio *OPEN* che costituisce il primo passo affinché due *router* possano stabilire una connessione secondo il protocollo BGP.
 
 Gli elementi del messaggio *OPEN* sono:
+
 - *[version]* la versione del protocollo (oggi si usa sempre la versione 4);
 - *[my autonomous system]* il numero di sistema autonomo al quale il *router* appartiene;
 - *[hold timer]* il numero di secondi che può trascorre tra i successivi messaggi di *UPDATE* o *KEEPALIVE*;
