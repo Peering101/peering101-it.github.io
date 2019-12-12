@@ -178,6 +178,12 @@ Infine, se è andato tutto a buon fine ci si ritrova all'ultimo passaggio, **est
 
 Qualora la connessione TCP dovesse interrompersi, il *router* tornerebbe allo stato *active*.
 
+Nominato più volte, ispezioniamo il contenuto del messaggio *NOTIFICATION* precisando che viene generato in caso di errore e 
+infatti contiene: un codice di errore, un altro codice subordinato al primo e un campo di dati a lunghezza variabile.
+
+Il messaggio *KEEPALIVE* ha invece una diversa funzione, ma altrettanto importante perché, inviato a intervalli di tempo prestabiliti, serve a capire se i *router* sono ancora disponibili. Ha una lunghezza fissa di 19 byte e non reca contenuti.
+
+
 Sessioni BGP
 --------
 
