@@ -266,7 +266,22 @@ AS_PATH rientra fra gli attributi *well-known mandatory*, come pure NEXT_HOP e O
 gli unici due *well-known discretionary* sono LOCAL_PREF e ATOMIC_AGGREGATE;
 gli attributi *optional transitive* sono AGGREGATOR e COMMUNITY, mentre gli *optional non-transitive* sono MULTI_EXIT_DISC, ORIGINATOR_ID, Cluster List, Multiprotocol Reachable NLRI e Multiprotocol Unreachable NLRI.
 
+Quindi alla luce di quanto appena documentato ripetiamo il completo schema di messaggio *UPDATE*::
 
+      +-----------------------------------------------------+
+      |           14 byte                                   | Withdrawn Routes Length
+      +-----------------------------------------------------+
+      |           203.0.114.0/24                            | Withdrawn Routes
+      +-----------------------------------------------------+
+      |           67 byte                                   | Total Path Attribute Length
+      +-----------------------------------------------------+
+      |   ORIGIN   IGP                                      |
+      |   AS_PATH  64496 65551 64511 65536                  | Path Attributes
+      |   NEXT_HOP 198.51.100.1                             |
+      +-----------------------------------------------------+
+      |            203.0.113.0/24                           | NLRI
+      +-----------------------------------------------------+
+      
 Sessioni BGP
 --------
 
