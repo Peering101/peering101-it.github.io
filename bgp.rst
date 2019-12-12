@@ -145,10 +145,19 @@ Il campo *type* definisce invece il tipo di messaggio trasmesso e può recare de
 - *NOTIFICATION*;
 - *KEEPALIVE*.
 
-Per una migliore comprensione dell'intero processo di instradamento gestito dal protocollo BGP, è utile a questo punto esaminare e comprendere la funzione degli ingranaggi funzionanti sotto il cofano.
+Per una migliore comprensione dell'intero processo di instradamento gestito dal protocollo BGP, è utile a questo punto esaminare e comprendere la funzione degli ingranaggi in movimento sotto il cofano.
 
 Partiamo dal messaggio *OPEN* che costituisce il primo passo affinché due *router* possano stabilire una connessione secondo il protocollo BGP.
-Gli elementi essenziali del messaggio *OPEN* sono: 
+
+Gli elementi del messaggio *OPEN* sono:
+- *[version]* la versione del protocollo (oggi si usa sempre la versione 4);
+- *[my autonomous system]* il numero di sistema autonomo al quale il *router* appartiene;
+- *[hold timer]* il numero di secondi che può trascorre tra i successivi messaggi di *UPDATE* o *KEEPALIVE*;
+- *[bgp identifier]* l'identificativo del *bgp speaking router* (spesso il più alto indirizzo IP assegnato al dispositivo);
+- *[optional parameter length]* la lunghezza in byte del seguente parametro opzionale;
+- *[optional parameters]* una lista di parametri opzionali come a esempio quelli per l'autenticazione.
+
+
 
 Sessioni BGP
 --------
