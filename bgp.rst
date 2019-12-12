@@ -253,6 +253,13 @@ Oppure una combinazione delle due precedenti::
       |            203.0.113.0/24                           | NLRI
       +-----------------------------------------------------+
       
+Una speciale considerazione va rivolta agli attributi del percorso (**path attributes**) i quali si articolano in quattro diverse categorie:
+
+- **[well-known mandatory]**
+- **[well-known discretionary]**
+- **[optional transitive]**
+- **[optional nontransitive]**
+
 
 Sessioni BGP
 --------
