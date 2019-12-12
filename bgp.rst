@@ -140,11 +140,15 @@ Il campo denominato *length* serve a dichiarare la lunghezza dell'intero messagg
 
 Il campo *type* definisce invece il tipo di messaggio trasmesso e può recare dei valori che possono indicare i seguenti codici:
 
-- OPEN;
-- UPDATE;
-- NOTIFICATION;
-- KEEPALIVE.
+- *OPEN*;
+- *UPDATE*;
+- *NOTIFICATION*;
+- *KEEPALIVE*.
 
+Per una migliore comprensione dell'intero processo di instradamento gestito dal protocollo BGP, è utile a questo punto esaminare e comprendere la funzione degli ingranaggi funzionanti sotto il cofano.
+
+Partiamo dal messaggio *OPEN* che costituisce il primo passo affinché due *router* possano stabilire una connessione secondo il protocollo BGP.
+Gli elementi essenziali del messaggio *OPEN* sono: 
 
 Sessioni BGP
 --------
