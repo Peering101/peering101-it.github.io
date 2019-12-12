@@ -160,20 +160,23 @@ Gli elementi del messaggio *OPEN* sono:
 
 Affinché la connessione BGP tra due *router* venga stabilita correttamente è necessario che l'iter superi alcuni passaggi.
 
-Innanzitutto partiamo dallo stato di riposo (**idle**) nel quale si trova un *router* prima di ricevere il via alla connessione che possiamo dare noi stessi intervenendo sulla configurazione del dispositivo. Ricevuto il via (*start*), il primo *router* tenta una connessione *TCP* sulla porta 179 del secondo e poi si mette in ascolto di risposte provenienti dal secondo *router*.
+Innanzitutto partiamo dallo stato di riposo (**idle**) nel quale si trova un *router* prima di ricevere il via alla connessione che possiamo dare noi stessi intervenendo sulla configurazione del dispositivo. Ricevuto il via (*start*), il primo *router* tenta una connessione TCP sulla porta 179 del secondo e poi si mette in ascolto di risposte provenienti dal secondo *router*.
 
 Ecco che entriamo nel passaggio di connessione (**connect**) durante il quale si attende che la connessione TCP avvenga con successo. In quest'ultimo caso si procede verso un ulteriore passaggio chiamato *opensent*. Se invece la connessione TCP non viene stabilita, allora si va verso il passaggio *active*. E ancora, nel caso in cui si esaurisca il tempo per l'operazione, si azzera il *timer* e viene ritentata una connessione TCP, mentre lo stato rimane *connect*. Altri eventi innescati dal sistema o manualmente da noi, producono il ritorno allo stato di riposo.
 
 Segue lo stato attivo (**active**) che semplicemente indica un momento di transizione o verso il successo della connessione TCP o verso il suo fallimento con successivo innesco di un ulteriore tentativo.
 
-Se la connessione TCP va a buon fine, allora siamo nel passaggio **opensent** dove scende in campo il protocollo BGP che si mette in attesa di un messaggio di tipo OPEN da parte del secondo *router*. Se arriva, il messaggio viene controllato e in caso di errore il *router* risponde con un messaggio di notifica (NOTIFICATION), dopodiché torna in stato di riposo.
+Se la connessione TCP va a buon fine, allora siamo nel passaggio **opensent** dove scende in campo il protocollo BGP che si mette in attesa di un messaggio di tipo *OPEN* da parte del secondo *router*. Se arriva, il messaggio viene controllato e in caso di errore il *router* risponde con un messaggio di notifica (*NOTIFICATION*), dopodiché torna in stato di riposo.
 
-Ma se il messaggio OPEN è corretto, allora il motore del BGP si mette in moto e il primo *router* comincia a inviare al secondo messaggi di tipo KEEPALIVE per mantenere viva la connessione.
+Ma se il messaggio *OPEN* è corretto, allora il motore del BGP si mette in moto e il primo *router* comincia a inviare al secondo messaggi di tipo *KEEPALIVE* per mantenere viva la connessione.
 
 Siamo ancora nel passaggio *opensent* quando il *router* confronta il campo *my autonomous system* inviatogli dal secondo *router* con il proprio numero di *AS* così da capire se entrambi appartengano o no allo stesso sistema autonomo. Nel primo caso saremmo nel contesto di BGP interno (*internal BGP*), nell'altro invece ci troveremmo nel contesto di BGP esterno (*external BGP*), una notizia importantissima che influenza molti comportamenti del protocollo.
 
-Quando la connessione TCP dovesse interrompersi, il *router* tornerebbe allo stato *active*.
+A questo punto ci troviamo in un passaggio denominato **openconfirm** che conduce verso due distinte situazioni: il primo *router* attende un messaggio *KEEPALIVE* dal secondo; se arriva, la negoziazione si completa e dunque la connessione si considera stabilita (*established*). Altrimenti se il primo *router* riceve un messaggio di *NOTIFICATION*, si torna allo stato di riposo.
 
+Infine, se è andato tutto a buon fine si arriva all'ultimo passaggio, **established**, dove i *router* cominciano a scambiarsi messaggi di tipo *UPDATE* che devono essere privi di errori, poiché, se ne vengono trovati, viene generato un messaggio di *NOTIFICATION* e inevitabilmente si torna allo stato di riposo.
+
+Qualora la connessione TCP dovesse interrompersi, il *router* tornerebbe allo stato *active*.
 
 Sessioni BGP
 --------
