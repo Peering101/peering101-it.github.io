@@ -174,7 +174,7 @@ Siamo ancora nel passaggio *opensent* quando il *router* confronta il campo *my 
 
 A questo punto ci troviamo in un passaggio denominato **openconfirm** che conduce verso due distinte situazioni: il primo *router* attende un messaggio *KEEPALIVE* dal secondo; se arriva, la negoziazione si completa e dunque la connessione si considera stabilita (*established*). Altrimenti se il primo *router* riceve un messaggio di *NOTIFICATION*, si torna allo stato di riposo.
 
-Infine, se è andato tutto a buon fine si arriva all'ultimo passaggio, **established**, dove i *router* cominciano a scambiarsi messaggi di tipo *UPDATE* che devono essere privi di errori, poiché, se ne vengono trovati, viene generato un messaggio di *NOTIFICATION* e inevitabilmente si torna allo stato di riposo.
+Infine, se è andato tutto a buon fine ci si ritrova all'ultimo passaggio, **established**, dove i *router* cominciano a scambiarsi messaggi di tipo *UPDATE* che devono essere privi di errori, poiché, se rinvenuti, viene generato un messaggio di *NOTIFICATION* e inevitabilmente si va dritti allo stato di riposo.
 
 Qualora la connessione TCP dovesse interrompersi, il *router* tornerebbe allo stato *active*.
 
