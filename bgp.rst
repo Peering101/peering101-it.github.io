@@ -183,7 +183,7 @@ infatti contiene: un codice di errore, un altro codice subordinato al primo e un
 
 Il messaggio *KEEPALIVE* ha invece una diversa funzione, ma altrettanto importante perché, inviato a intervalli di tempo prestabiliti, serve a capire se i *router* sono ancora disponibili. Ha una lunghezza fissa di 19 byte e non reca contenuti.
 
-Arriviamo finalmente al carburante del protocollo BGP: il messaggio *UPDATE* che veicola i contenuti senza i quali nulla della nostra trattazione avrebbe senso e si presenta così::
+Arriviamo finalmente al carburante del protocollo BGP: il messaggio *UPDATE* che veicola i contenuti senza i quali nulla della nostra trattazione avrebbe senso e che si presenta così::
 
       +-----------------------------------------------------+
       |   Withdrawn Routes Length (2 octets)                |
@@ -197,7 +197,62 @@ Arriviamo finalmente al carburante del protocollo BGP: il messaggio *UPDATE* che
       |   Network Layer Reachability Information (variable) |
       +-----------------------------------------------------+
 
+Partiamo col dire che uno stesso messaggio *UPDATE* può contenere contemporaneamente informazioni sia relative a instradamenti da eliminare (*withdrawn route*) sia a instradamenti da aggiungere (*NLRI - Network Layer Reachability Information*) alla tabella interna al *router*.
 
+In più, ciascun campo citato può contenere multipli valori.
+
+Riprendiamo un esempio esposto precedentemente:
+
+============== ============  ==========================
+     Rete         Vicino              Percorso
+============== ============  ==========================
+203.0.113.0/24 198.51.100.1  64496_65551_64511_65536
+============== ============  ==========================
+
+Proviamo a popolare il messaggio *UPDATE* con questo contenuto::
+
+      +-----------------------------------------------------+
+      |                                                     | Withdrawn Routes Length
+      +-----------------------------------------------------+
+      |                                                     | Withdrawn Routes
+      +-----------------------------------------------------+
+      |                                                     | Total Path Attribute Length
+      +-----------------------------------------------------+
+      |   AS_PATH  64496 65551 64511 65536                  | Path Attributes
+      |   NEXT_HOP 198.51.100.1                             |
+      +-----------------------------------------------------+
+      |            203.0.113.0/24                           | NLRI
+      +-----------------------------------------------------+
+
+Altra ipotesi potrebbe essere la seguente::
+
+      +-----------------------------------------------------+
+      |                                                     | Withdrawn Routes Length
+      +-----------------------------------------------------+
+      |           203.0.113.0/24                            | Withdrawn Routes
+      +-----------------------------------------------------+
+      |                                                     | Total Path Attribute Length
+      +-----------------------------------------------------+
+      |                                                     | Path Attributes
+      +-----------------------------------------------------+
+      |                                                     | NLRI
+      +-----------------------------------------------------+
+
+Oppure una combinazione delle due precedenti::
+
+      +-----------------------------------------------------+
+      |                                                     | Withdrawn Routes Length
+      +-----------------------------------------------------+
+      |           203.0.113.0/24                            | Withdrawn Routes
+      +-----------------------------------------------------+
+      |                                                     | Total Path Attribute Length
+      +-----------------------------------------------------+
+      |   AS_PATH  64496 65551 64511 65536                  | Path Attributes
+      |   NEXT_HOP 198.51.100.1                             |
+      +-----------------------------------------------------+
+      |            203.0.113.0/24                           | NLRI
+      +-----------------------------------------------------+
+      
 
 Sessioni BGP
 --------
