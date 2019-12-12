@@ -183,6 +183,21 @@ infatti contiene: un codice di errore, un altro codice subordinato al primo e un
 
 Il messaggio *KEEPALIVE* ha invece una diversa funzione, ma altrettanto importante perché, inviato a intervalli di tempo prestabiliti, serve a capire se i *router* sono ancora disponibili. Ha una lunghezza fissa di 19 byte e non reca contenuti.
 
+Arriviamo finalmente al carburante del protocollo BGP: il messaggio *UPDATE* che veicola i contenuti senza i quali nulla della nostra trattazione avrebbe senso e si presenta così::
+
+      +-----------------------------------------------------+
+      |   Withdrawn Routes Length (2 octets)                |
+      +-----------------------------------------------------+
+      |   Withdrawn Routes (variable)                       |
+      +-----------------------------------------------------+
+      |   Total Path Attribute Length (2 octets)            |
+      +-----------------------------------------------------+
+      |   Path Attributes (variable)                        |
+      +-----------------------------------------------------+
+      |   Network Layer Reachability Information (variable) |
+      +-----------------------------------------------------+
+
+
 
 Sessioni BGP
 --------
