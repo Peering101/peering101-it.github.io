@@ -258,9 +258,13 @@ Una speciale considerazione va rivolta agli attributi del percorso (**path attri
 - **[well-known mandatory]** attributo imprescindibile che deve essere conosciuto da qualunque *bgp speaking router*;
 - **[well-known discretionary]** attributo che può essere omesso ma che deve essere conosciuto da qualunque *bgp speaking router*;
 - **[optional transitive]** attributo opzionale che, se presente ma non riconosciuto, deve ugualmente essere trasmesso agli altri *bgp speaking router*;
-- **[optional nontransitive]** attributo opzionale che, se presente ma non riconosciuto, può essere tranquillamente ignorato e non deve essere trasmesso agli altri *bgp speaking router*.
+- **[optional non-transitive]** attributo opzionale che, se presente ma non riconosciuto, può essere tranquillamente ignorato e non deve essere trasmesso agli altri *bgp speaking router*.
 
 Facciamo alcuni esempi:
+
+AS_PATH rientra fra gli attributi *well-known mandatory*, come pure NEXT_HOP, e ORIGIN (in tutto sono tre);
+gli unici due *well-known discretionary* sono LOCAL_PREF e ATOMIC_AGGREGATE;
+gli attributi *optional transitive* sono AGGREGATOR e COMMUNITY, mentre gli *optional non-transitive* sono MULTI_EXIT_DISC, ORIGINATOR_ID, Cluster List, Multiprotocol Reachable NLRI e Multiprotocol Unreachable NLRI.
 
 
 Sessioni BGP
