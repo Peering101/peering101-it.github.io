@@ -134,7 +134,7 @@ L'intestazione del messaggio BGP che viene scambiato tra due *router* ha il segu
 
 A seconda del tipo di messaggio, dopo l'intestazione potrebbero seguire dei dati.
 
-A ogni modo il campo *marker* ha una consistenza fissa di 16 byte e viene usato per determinare se il messaggio BGP contiene informazioni di autenticazione oppure no.
+A ogni modo il campo *marker* (oggi presente ma non più usato) ha una consistenza fissa di 16 byte e veniva usato per determinare se il messaggio BGP contenesse informazioni di autenticazione oppure no.
 
 Il campo denominato *length* serve a dichiarare la lunghezza dell'intero messaggio BGP, intestazione compresa; per questo è semplice calcolarne il valore minimo: 19 byte (cioè 16 il *marker*, 2 il *length*, 1 il *type*). Il valore massimo, per RFC, è di 4096 byte.
 
@@ -288,7 +288,7 @@ Sessioni BGP
 Processo di instradamento
 --------
 
-BGP è un protocollo molto flssibile, per questo gode di ottima salute nonostante il peso degli anni e le mutanti esigenze dell'industria di Internet. La sua grande abilità è di rendere note le posizioni di tutte le risorse numeriche che si affacciano in Rete originanti dagli oltre 65mila sistemi autonomi a oggi attivi nel mondo.
+BGP è un protocollo molto flssibile, per questo gode di ottima salute nonostante il peso degli anni e le mutanti esigenze dell'industria di Internet. La sua grande abilità è di rendere note le posizioni di tutte le risorse numeriche che si affacciano in Rete originanti dagli oltre 66mila sistemi autonomi a oggi attivi nel mondo.
 
 Se in molti casi il processo per scegliere il miglior percorso (*best path*) verso una destinazione è assai lineare perché si può preferire semplicemente il percorso più breve (cioè l'*AS_PATH* più corto), a volte si deve applicare un chiaro algoritmo che i *router* devono osservare tutte le volte che per la stessa destinazione hanno a disposizione più percorsi diversi:
 
