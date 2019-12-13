@@ -53,7 +53,7 @@ Distance vector vs link-state
 
 Come calcolare la distanza più breve per raggiungere una destinazione? Questo è il campo dove si gioca la partita dei protocolli di instradamento sulla rete.
 
-Quello basato sul vettore delle distanze prevede una lista (il vettore appunto) di distanze associate al prefisso di ogni destinazione appreso dai messaggi provenienti da altri *router* sulla rete. Cioè praticamente ciascun *router* calcola autonomamente il percorso migliore verso ogni destinazione e, subito dopo, invia il proprio vettore di distanze agli altri *router* in rete.
+Quello basato sul vettore delle distanze prevede una lista (il vettore appunto) di distanze associate al prefisso di ogni destinazione appreso dai messaggi provenienti da altri *router* sulla rete. Cioè praticamente ciascun *router* calcola autonomamente il percorso migliore verso ogni destinazione e, sùbito dopo, invia il proprio vettore di distanze agli altri *router* in rete.
 
 Così facendo, tutti i *router* coinvolti nel processo contribuiscono a influenzare le proprie tabelle di instradamento fino a convergere su una lista di *best path* condivisa.
 
@@ -65,9 +65,9 @@ Alcuni esempi di protocolli di instradamento basati sull'algoritmo del *distance
 
 _____
 
-Diverso protocollo di instradamento, e più complesso del precedente, è quello basato sull'algoritmo *link-state*. In questo caso i *router* si scambiano informazioni proprio sullo stato del collegamento e non si scambiano quindi tabelle di instradamento.
+Diverso protocollo di instradamento, e più complesso del precedente, è quello basato sull'algoritmo *link-state*. In questo caso i *router* si scambiano informazioni proprio sullo stato del collegamento e quindi non tabelle di instradamento.
 
-L'oggetto delle comunicazioni tra dispositivi che ne fanno uso risiede nelle informazioni su dispositivi e reti adiacenti incluse delle grandezze associate alla connessione. In altre parole ciascun *router* produce un messaggio che contiene una descrizione del dispositivo stesso e di dove si connette agli altri; messaggio che viene distribuito a tutti gli altri *router* della rete i quali lo archiviano in una base di dati interna. Così ciascun dispositivo sarà in grado di ricostruire autonomamente una topologia della rete che sarà uguale per tutti.
+L'oggetto delle comunicazioni tra dispositivi che ne fanno uso risiede nelle informazioni su dispositivi e reti adiacenti incluse delle grandezze (*metric*) associate alla connessione. In altre parole ciascun *router* produce un messaggio che contiene una descrizione del dispositivo stesso e di dove si connette agli altri; messaggio che viene distribuito a tutti gli altri *router* della rete i quali lo archiviano in una base di dati interna. Così ciascun dispositivo sarà in grado di ricostruire autonomamente una topologia della rete che sarà uguale per tutti.
 
 Dopodiché, tutti i *router* saranno in grado di calcolare e tratteggiare un albero (dove ciascun dispositivo pone sé stesso alla radice) di cosiddetti *best path* verso ciascuna destinazione applicando l'algoritmo `SPF - Shortest Path First <http://www-m3.ma.tum.de/foswiki/pub/MN0506/WebHome/dijkstra.pdf>`_ concepito nel 1959 dal matematico olandese Edsger W. Dijkstra.
 
@@ -134,7 +134,7 @@ L'intestazione del messaggio BGP che viene scambiato tra due *router* ha il segu
 
 A seconda del tipo di messaggio, dopo l'intestazione potrebbero seguire dei dati.
 
-A ogni modo il campo *marker* (oggi presente ma non più usato) ha una consistenza fissa di 16 byte e veniva usato per determinare se il messaggio BGP contenesse informazioni di autenticazione oppure no.
+A ogni modo il campo *marker*, oggi presente ma non più usato, ha una consistenza fissa di 16 byte e veniva usato per determinare se il messaggio BGP contenesse informazioni di autenticazione oppure no.
 
 Il campo denominato *length* serve a dichiarare la lunghezza dell'intero messaggio BGP, intestazione compresa; per questo è semplice calcolarne il valore minimo: 19 byte (cioè 16 il *marker*, 2 il *length*, 1 il *type*). Il valore massimo, per RFC, è di 4096 byte.
 
@@ -143,7 +143,8 @@ Il campo *type* definisce invece il tipo di messaggio trasmesso e può recare de
 - *OPEN*;
 - *UPDATE*;
 - *NOTIFICATION*;
-- *KEEPALIVE*.
+- *KEEPALIVE*;
+- *ROUTE REFRESH*.
 
 Per una migliore comprensione dell'intero processo di instradamento gestito dal protocollo BGP, è utile a questo punto esaminare e comprendere la funzione degli ingranaggi in movimento sotto il cofano.
 
@@ -284,6 +285,7 @@ Quindi alla luce di quanto appena documentato ripetiamo il completo schema di me
       
 Sessioni BGP
 --------
+[todo]
 
 Processo di instradamento
 --------
@@ -310,9 +312,12 @@ Ovviamente se il *NEXT_HOP* non è raggiungibile allora l'instradamento viene ig
 
 Controllo degli instradamenti
 --------
+[todo]
 
 Filtri e manipolazioni
 --------
+[todo]
 
 Ridondanza e bilanciamento
 --------
+[todo]
