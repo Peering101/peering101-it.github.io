@@ -292,15 +292,21 @@ BGP è un protocollo molto flssibile, per questo gode di ottima salute nonostant
 
 Se in molti casi il processo per scegliere il miglior percorso (*best path*) verso una destinazione è assai lineare perché si può preferire semplicemente il percorso più breve (cioè l'*AS_PATH* più corto), a volte si deve applicare un chiaro algoritmo che i *router* devono osservare tutte le volte che per la stessa destinazione hanno a disposizione più percorsi diversi:
 
-1. Se il *NEXT_HOP* non è disponibile allora l'instradamento viene ignorato.
-2. Preferire l'instradamento con il valore di *LOCAL_PREF* più alto.
-3. Preferire l'instradamento con l'*AS_PATH* più corto.
-4. Preferire l'instradamento con il tipo di *ORIGIN* più basso *( [0] - IGP < [1] - EGP < [2] - INCOMPLETE)*.
-5. Preferire l'instradamento con il valore di *MULTI_EXIT_DISC* più basso.
-6. Preferire i percorsi appresi da *external BGP* a quelli appresi da *internal BGP*.
-7. Preferire l'instradamento che può essere raggiunto attraverso il percorso più breve verso il *NEXT_HOP*.
-8. Preferire l'instradamento appreso dal dispositivo con il *ROUTER_ID* più basso.
+
+1. Preferire l'instradamento con il valore di *LOCAL_PREF* più alto.
+2. Preferire l'instradamento con l'*AS_PATH* più corto.
+3. Preferire l'instradamento con il tipo di *ORIGIN* più basso *( [0] - IGP < [1] - EGP < [2] - INCOMPLETE)*.
+4. Preferire l'instradamento con il valore di *MULTI_EXIT_DISC* più basso.
+5. Preferire i percorsi appresi da *external BGP* a quelli appresi da *internal BGP*.
+6. Preferire l'instradamento che può essere raggiunto attraverso il percorso più breve verso il *NEXT_HOP*.
+7. Preferire l'instradamento appreso dal dispositivo con il *ROUTER_ID* più basso.
+8. Preferire l'instradamento appreso dal dispositivo con il *NEIGHBOR_ID* più basso.
+
+Alcune implementazioni presenti sul mercato aggiungono altri criteri selettivi come a esempio:
+
 9. Preferire l'instradamento appreso (e installato nella tabella degli instradamenti) per primo.
+
+Ovviamente se il *NEXT_HOP* non è raggiungibile allora l'instradamento viene ignorato, come pure se vengono implementati delle regole per filtrare via alcuni annunci.
 
 Controllo degli instradamenti
 --------
