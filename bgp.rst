@@ -297,7 +297,7 @@ Se in molti casi il processo per scegliere il miglior percorso (*best path*) ver
 
 1. Preferire l'instradamento con il valore di *LOCAL_PREF* più alto.
 2. Preferire l'instradamento con l'*AS_PATH* più corto.
-3. Preferire l'instradamento con il tipo di *ORIGIN* più basso *( [0] - IGP < [1] - EGP < [2] - INCOMPLETE)*.
+3. Preferire l'instradamento con il tipo di *ORIGIN* più basso *( {[0] - IGP} < {[1] - EGP} < {[2] - INCOMPLETE})*.
 4. Preferire l'instradamento con il valore di *MULTI_EXIT_DISC* più basso.
 5. Preferire i percorsi appresi da *external BGP* a quelli appresi da *internal BGP*.
 6. Preferire l'instradamento che può essere raggiunto attraverso il percorso più breve verso il *NEXT_HOP*.
