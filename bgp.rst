@@ -288,6 +288,18 @@ Sessioni BGP
 Processo di instradamento
 --------
 
+BGP è un protocollo molto flssibile, per questo gode di ottima salute nonostante il peso degli anni e le mutanti esigenze dell'industria di Internet. Alla base c'è un chiaro algoritmo che i *router* devono osservare tutte le volte che per la stessa destinazione hanno a disposizione più percorsi diversi.
+
+1. Se il *NEXT_HOP* non è disponibile allora l'instradamento viene ignorato;
+2. Preferire l'instradamento con il valore di *LOCAL_PREF* più alto;
+3. Preferire l'instradamento con l'*AS_PATH* più corto;
+4. Preferire l'instradamento con il tipo di *ORIGIN* più basso (*IGP<EGP<INCOMPLETE*);
+5. Preferire l'instradamento con il valore di *MULTI_EXIT_DISC* più basso;
+6. Preferire i percorsi appresi da *external BGP* a quelli appresi da *internal BGP*;
+7. Preferire l'instradamento che può essere raggiunto attraverso il percorso più breve verso il *NEXT_HOP*;
+8. Preferire l'instradamento appreso dal dispositivo con il *ROUTER_ID* più basso;
+9. Preferire l'instradamento appreso (e installato nella tabella degli instradamenti) per primo.
+
 Controllo degli instradamenti
 --------
 
