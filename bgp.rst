@@ -306,7 +306,7 @@ Alcune implementazioni presenti sul mercato aggiungono altri criteri selettivi c
 
 9. Preferire l'instradamento appreso (e installato nella tabella degli instradamenti) per primo.
 
-Ovviamente se il *NEXT_HOP* non è raggiungibile allora l'instradamento viene ignorato, come pure se vengono implementati delle regole per filtrare via alcuni annunci.
+Ovviamente se il *NEXT_HOP* non è raggiungibile allora l'instradamento viene ignorato, come pure se vengono implementate delle regole per filtrare via alcuni annunci.
 
 Controllo degli instradamenti
 --------
