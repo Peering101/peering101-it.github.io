@@ -264,7 +264,7 @@ Facciamo alcuni esempi:
 
 AS_PATH rientra fra gli attributi *well-known mandatory*, come pure NEXT_HOP e ORIGIN (in tutto sono tre);
 gli unici due *well-known discretionary* sono LOCAL_PREF e ATOMIC_AGGREGATE;
-gli attributi *optional transitive* sono AGGREGATOR e COMMUNITY, mentre gli *optional non-transitive* sono MULTI_EXIT_DISC, ORIGINATOR_ID, Cluster List, Multiprotocol Reachable NLRI e Multiprotocol Unreachable NLRI.
+gli attributi *optional transitive* sono AGGREGATOR, COMMUNITY, EXTENDED_COMMUNITY, AS4_PATH, AS4_AGGRGATOR, mentre gli *optional non-transitive* sono MULTI_EXIT_DISC, ORIGINATOR_ID, CLUSTER_LIST, Multiprotocol Reachable NLRI e Multiprotocol Unreachable NLRI.
 
 Quindi alla luce di quanto appena documentato ripetiamo il completo schema di messaggio *UPDATE*::
 
