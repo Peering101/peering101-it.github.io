@@ -48,7 +48,7 @@ Per consentire l'instradamento, il *router* segue una procedura che si articola 
 
 Alla base dei protocolli di instradamento ci sono generalmente due algoritmi: vettore delle distanze (*distance vector*) e stato del collegamento (*link-state*).
 
-Distance vector vs link-state
+*Distance vector vs link-state*
 --------
 
 Come calcolare la distanza più breve per raggiungere una destinazione? Questo è il campo dove si gioca la partita dei protocolli di instradamento sulla rete.
