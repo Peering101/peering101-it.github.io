@@ -311,7 +311,7 @@ Ora, per far sì che la nostra rete 203.0.113.0/24 venga installata nella tabell
 
 Vale ovviamente lo stesso ragionamento per IPv6. Di sguito tutto insieme:
 
-CISCO IOS::
+`CISCO IOS <https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/26634-bgp-toc.html?referring_site=bodynav>`__::
   
   router bgp 64500
   network 203.0.113.0 mask 255.255.255.0
@@ -323,7 +323,7 @@ CISCO IOS::
   ip route 203.0.113.0 255.255.255.0 Null0
   ipv6 route 2001:db8::/32 Null0
 
-JUNIPER JUNOS::
+`JUNIPER JUNOS <https://www.juniper.net/documentation/en_US/junos/information-products/pathway-pages/config-guide-routing/config-guide-routing-bgp.html>`__::
 
   set routing-options autonomous-system 64500
   set routing-options static route 203.0.113.0/24 discard
@@ -334,7 +334,7 @@ JUNIPER JUNOS::
   set neighbor fd66:32:48:64::1 peer-as 64496
   set type external
 
-OpenBGPD::
+`OpenBGPD <http://www.openbgpd.org/>`__::
   
   AS 64500
   network 203.0.113.0/24
