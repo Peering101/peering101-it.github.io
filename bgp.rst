@@ -310,8 +310,7 @@ Ora, per far sì che la nostra rete 203.0.113.0/24 venga installata nella tabell
 **ip route 203.0.113.0 255.255.255.0 Null0**
 
 Vale ovviamente lo stesso ragionamento per IPv6. Di sguito tutto insieme::
-
-router bgp 64500*
+router bgp 64500
 network 203.0.113.0 mask 255.255.255.0
 network 2001:db8::/32
 neighbor 198.51.100.1 remote-as 64496
