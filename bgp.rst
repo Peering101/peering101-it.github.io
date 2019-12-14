@@ -311,7 +311,7 @@ Ora, per far sì che la nostra rete 203.0.113.0/24 venga installata nella tabell
 
 Vale ovviamente lo stesso ragionamento per IPv6. Di sguito tutto insieme:
 
-`CISCO IOS <https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/26634-bgp-toc.html?referring_site=bodynav>`__::
+`CISCO IOS <https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/26634-bgp-toc.html>`__::
   
   router bgp 64500
   network 203.0.113.0 mask 255.255.255.0
