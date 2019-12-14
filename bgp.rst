@@ -323,6 +323,14 @@ CISCO IOS::
   ip route 203.0.113.0 255.255.255.0 Null0
   ipv6 route 2001:db8::/32 Null0
 
+JUNIPER JUNOS::
+
+  set routing-options autonomous-system 64500
+  edit protocols bgp
+  edit group ebgp-peers
+  set neighbor 198.51.100.1 peer-as 64496
+  set type external
+
 OpenBGPD::
   
   AS 64500
