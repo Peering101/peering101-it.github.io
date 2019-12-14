@@ -326,19 +326,27 @@ CISCO IOS::
 JUNIPER JUNOS::
 
   set routing-options autonomous-system 64500
+  set routing-options static route 203.0.113.0/24 discard
+  set routing-options static route 2001:db8::/32 discard
   edit protocols bgp
   edit group ebgp-peers
   set neighbor 198.51.100.1 peer-as 64496
+  set neighbor fd66:32:48:64::1 peer-as 64496
   set type external
 
 OpenBGPD::
   
   AS 64500
   network 203.0.113.0/24
+  network 2001:db8::/32
   neighbor 198.51.100.1 {
     descr "PEER v4 CON AS64496"
     remote-as 64496
   }
+  neighbor fd66:32:48:64::1 {
+    descr "PEER v6 CON AS64496"
+    remote-as 64496
+  } 
 
 Processo di instradamento
 --------
