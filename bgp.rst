@@ -334,7 +334,7 @@ Vale ovviamente lo stesso ragionamento per IPv6. Di sguito tutto insieme:
   set neighbor fd66:32:48:64::1 peer-as 64496
   set type external
 
-`OpenBGPD <http://www.openbgpd.org/>`__::
+`OpenBSD OpenBGPD <http://www.openbgpd.org/>`__::
   
   AS 64500
   network 203.0.113.0/24
