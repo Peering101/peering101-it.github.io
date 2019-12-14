@@ -285,7 +285,30 @@ Quindi alla luce di quanto appena documentato ripetiamo il completo schema di me
       
 Sessioni BGP
 --------
-[todo]
+è arrivato il momento di sporcarsi le mani e testare alcune configurazioni utili a stabilire sessioni BGP con altri *bgp speaking router*. A seconda di chi ha implementato il protocollo BGP, è possibile trovare scostamenti nella sintassi e nelle opzioni usate nei dispositivi. Per questo qui vorremmo coprire almeno tre grandi categorie di software: il classico Cisco IOS, l'alternativo Juniper Junos e l'open-source OpenBGPD di OpenBSD.
+
+**Cisco IOS**
+
+Innanzitutto comunichiamo al *router* quale sia il suo sistema autonomo di appartenenza:
+
+**router bgp 64500**
+
+Indichiamo poi quale sia il prefisso che dovrà annunciare:
+
+**network 203.0.113.0 mask 255.255.255.0**
+
+è la volta del nostro dirimpettaio: quale è il suo indirizzo e a quale sistema autonomo appartiene?
+
+**neighbor 198.51.100.1 remote-as 64496**
+
+Inseriamo anche una descrizione per chiarezza:
+
+**neighbor 198.51.100.1 description PEER CON AS64496**
+
+Ora, per far sì che la nostra rete 203.0.113.0/24 venga installata nella tabella BGP è necessario che appaia anche nella tabella degli instradamenti. Per questo la instradiamo verso l'interfaccia virtuale Null numero 0.
+
+**ip route 203.0.113.0 255.255.255.0 Null0**
+
 
 Processo di instradamento
 --------
