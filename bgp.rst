@@ -448,12 +448,12 @@ Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Filtri e manipolazioni
 --------
-[todo]
+[to do]
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Ridondanza e bilanciamento
 --------
-[todo]
+[to do]
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
