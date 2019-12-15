@@ -386,7 +386,9 @@ Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Controllo degli instradamenti
 --------
-Lo standard viene coniugato, dalle molteplici implementazioni presenti sul mercato, a diversi modi di controllo degli instradamenti e secondo un preciso tempo di applicazione.
+Lo standard viene coniugato, dalle molteplici implementazioni presenti sul mercato, a diversi modi di controllo degli instradamenti e ciascuno secondo un preciso tempo di applicazione.
+
+Una esigenza che si palesa quando ci poniamo domande tipo: come evitiamo l'annuncio dello spazio di indirizzamento definito nella `[RFC1918] <https://www.rfc-editor.org/rfc/rfc1928.txt>`_? Oppure: come possiamo filtrare gli annunci provenienti da un determinato dirimpettaio (*neighbor*)? E ancòra: posso transitare per un certo fornitore invece che per un altro?
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
