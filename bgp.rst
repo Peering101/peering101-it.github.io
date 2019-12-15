@@ -396,6 +396,8 @@ Cominciamo con l'attributo *AS_PATH* che contiene la sequenza ordinata dei siste
 
 Per evitare la creazione di un ciclo continuo (*loop*), quando un *router* riceve un annuncio dove è già presente il proprio numero di sistema autonomo, allora il relativo messaggio di *UPDATE* viene ignorato.
 
+Continuiamo con l'attributo NEXT_HOP che, in àmbito BGP, non è esattamente l'indirizzo IP dell'interfaccia di collgamento del *router* che annuncia l'instradamento. Piuttosto, in *eBGP*, è l'indirizzo IP del dirimpettaio (*neighbor*), direttamente connesso o no, che annunci l'instradamento; di conseguenza gli instradamenti che vengono veicolati in *iBGP* ma appresi da *eBGP* non vengono modificati e dunque come NEXT_HOP recano l'indirizzo IP del *neighbor* che li ha annunciati.
+
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Filtri e manipolazioni
