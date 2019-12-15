@@ -48,7 +48,7 @@ Per consentire l'instradamento, il *router* segue una procedura che si articola 
 
 Alla base dei protocolli di instradamento ci sono generalmente due algoritmi: vettore delle distanze (*distance vector*) e stato del collegamento (*link-state*).
 
-Torna su `BGP (Border Gateway Protocol)`_
+*Torna su `BGP (Border Gateway Protocol)`_*
 
 *Distance vector vs link-state*
 --------
@@ -65,6 +65,7 @@ Le argomentazioni necessarie a dare una risposta a quella domanda costituiscono 
 
 Alcuni esempi di protocolli di instradamento basati sull'algoritmo del *distance vector* sono: *RIP - Routing Information Protocol* `[RFC2453] <https://www.rfc-editor.org/rfc/rfc2453.txt>`__, *EIGRP - Enhanced Interior Gateway Routing Protocol*  `[RFC7868] <https://www.rfc-editor.org/rfc/rfc7868.txt>`__.
 
+*Torna su `BGP (Border Gateway Protocol)`_*
 _____
 
 Diverso protocollo di instradamento, e più complesso del precedente, è quello basato sull'algoritmo *link-state*. In questo caso i *router* si scambiano informazioni proprio sullo stato del collegamento e quindi non tabelle di instradamento.
@@ -76,6 +77,8 @@ Dopodiché, tutti i *router* saranno in grado di calcolare e tratteggiare un alb
 Queste caratteristiche rendono il *link-state* un algoritmo più adatto a essere impiegato in scenari grandi e complessi, tuttavia sempre interni a un sistema autonomo. Infatti su grandi reti, come Internet, l'instabilità di alcuni collegamenti renderebbe le ritrasmissioni e i conseguenti calcoli un lavoro troppo oneroso (e di conseguenza inefficiente) per i singoli *router*.
 
 I due più importanti esempi di protocolli di instradamento basati sull'algoritmo *link-state* sono *OSPF - Open Shortest Path First* (versione 2 `[RFC2328] <http://www.rfc-editor.org/rfc/rfc2328.txt>`__ e versione 3 `[RFC5340] <https://www.rfc-editor.org/rfc/rfc5340.txt>`__ che supporta IPv6) e *IS-IS - Intermediate System to Intermediate System* `[ISO/IEC 10589:2002] <http://standards.iso.org/ittf/PubliclyAvailableStandards/c030932_ISO_IEC_10589_2002(E).zip>`__.
+
+*Torna su `BGP (Border Gateway Protocol)`_*
 
 Instradamento interno o esterno, statico o dinamico
 --------
@@ -96,6 +99,7 @@ Ora, gli instradamenti possono essere classificati anche per la modalità con la
 
 All'interno di questa ultima categoria distinguiamo: per il cosiddetto instradamento interno al sistema autonomo, *IGP - Interior Gateway Protocol* (come *RIP, EIGRP, OSPF, IS-IS*); per l'instradamento esterno tra sistemi autonomi diversi, *EGP - Exterior Gateway Protocol* (come *BGP*).
 
+*Torna su `BGP (Border Gateway Protocol)`_*
 
 Come funziona BGP
 --------
@@ -284,7 +288,9 @@ Quindi alla luce di quanto appena documentato ripetiamo il completo schema di me
       +-----------------------------------------------------+
       |            203.0.113.0/24                           | NLRI
       +-----------------------------------------------------+
-      
+
+*Torna su `BGP (Border Gateway Protocol)`_*
+
 Sessioni BGP
 --------
 è arrivato il momento di sporcarsi le mani e testare alcune configurazioni utili a stabilire sessioni BGP con altri *bgp speaking router*. A seconda di chi ha implementato il protocollo BGP, è possibile trovare scostamenti nella sintassi e nelle opzioni usate nei dispositivi. Per questo qui vorremmo coprire almeno tre grandi categorie di software: il classico Cisco IOS, l'alternativo Juniper Junos e l'open-source OpenBGPD di OpenBSD.
@@ -350,6 +356,8 @@ Vale ovviamente lo stesso ragionamento per IPv6. Di sguito tutto insieme:
     remote-as 64496
   } 
 
+*Torna su `BGP (Border Gateway Protocol)`_*
+
 Processo di instradamento
 --------
 
@@ -373,14 +381,22 @@ Alcune implementazioni presenti sul mercato aggiungono altri criteri selettivi c
 
 Ovviamente se il *NEXT_HOP* non è raggiungibile allora l'instradamento viene ignorato, come pure se vengono implementate delle regole per filtrare via alcuni annunci.
 
+*Torna su `BGP (Border Gateway Protocol)`_*
+
 Controllo degli instradamenti
 --------
 [todo]
+
+*Torna su `BGP (Border Gateway Protocol)`_*
 
 Filtri e manipolazioni
 --------
 [todo]
 
+*Torna su `BGP (Border Gateway Protocol)`_*
+
 Ridondanza e bilanciamento
 --------
 [todo]
+
+*Torna su `BGP (Border Gateway Protocol)`_*
