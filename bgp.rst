@@ -440,7 +440,7 @@ Per l'instradamento installato nella tabella BGP di R1, 203.0.115.0/24, apprendi
 
 Infatti analizzando la tabella degli instradamenti (*routing table*), troviamo che la rete 203.0.115.0/24 è stata installata con l'IP 198.51.100.129 come *gateway*. Si tratta di un indirizzo che non appartiene a R1, infatti, scorrendo la *tabella di routing* scopriamo che la rete di appartenenza di quell'IP, 198.51.100.128/26, è raggiungibile attraverso un altro *gateway*, il 192.0.2.253. A sua volta, la rete di appartenenza di quest'ultimo indirizzo, 192.0.2.252/30, è direttamente connessa alla interfaccia Gigabit Ethernet numero 3 del modulo numero 0 del *router* R1.
 
-Si tratta di una cosiddetta connessione punto-punto (*point-to-point*) dove, per ogni /30, il bit dispari è assegnato a R1 e il bit pari al suo *neighbor* BGP.
+Si tratta di una cosiddetta connessione punto-punto (*point-to-point*) dove, per ogni /30 IPv4, il bit dispari è assegnato a R1 e il bit pari al suo *neighbor* BGP.
 
 Per concludere possiamo facilmente dire che R1 può raggiungere uno dei suoi instradamenti, 203.0.114.0/24, inoltrando i pacchetti indirizzati al *NEXT_HOP* 198.51.100.65, attraverso l'interfaccia GE0/2, all'IP 192.0.2.249.
 
