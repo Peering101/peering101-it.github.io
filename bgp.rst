@@ -327,8 +327,8 @@ Vale ovviamente lo stesso ragionamento per IPv6. Di sguito tutto insieme:
   network 2001:db8::/32
   neighbor 198.51.100.1 remote-as 64496
   neighbor 198.51.100.1 description PEER v4 CON AS64496
-  neighbor fd66:32:48:64::1 remote-as 64496
-  neighbor fd66:32:48:64::1 description PEER v6 CON AS64496
+  neighbor fd16:32:48:64::1 remote-as 64496
+  neighbor fd16:32:48:64::1 description PEER v6 CON AS64496
   ip route 203.0.113.0 255.255.255.0 Null0
   ipv6 route 2001:db8::/32 Null0
 
@@ -340,7 +340,7 @@ Vale ovviamente lo stesso ragionamento per IPv6. Di sguito tutto insieme:
   edit protocols bgp
   edit group ebgp-peers
   set neighbor 198.51.100.1 peer-as 64496
-  set neighbor fd66:32:48:64::1 peer-as 64496
+  set neighbor fd16:32:48:64::1 peer-as 64496
   set type external
 
 `OpenBSD OpenBGPD <http://www.openbgpd.org/>`__::
@@ -352,7 +352,7 @@ Vale ovviamente lo stesso ragionamento per IPv6. Di sguito tutto insieme:
     descr "PEER v4 CON AS64496"
     remote-as 64496
   }
-  neighbor fd66:32:48:64::1 {
+  neighbor fd16:32:48:64::1 {
     descr "PEER v6 CON AS64496"
     remote-as 64496
   } 
