@@ -48,7 +48,7 @@ Per consentire l'instradamento, il *router* segue una procedura che si articola 
 
 Alla base dei protocolli di instradamento ci sono generalmente due algoritmi: vettore delle distanze (*distance vector*) e stato del collegamento (*link-state*).
 
-Torna su `BGP (Border Gateway Protocol)`__
+Torna su `BGP (Border Gateway Protocol)`_
 
 *Distance vector vs link-state*
 --------
