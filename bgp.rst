@@ -442,6 +442,8 @@ Infatti analizzando la tabella degli instradamenti (*routing table*), troviamo c
 
 Si tratta di una cosiddetta connessione punto-punto (*point-to-point*) dove, per ogni /30, il bit dispari è assegnato a R1 e il bit pari al suo *neighbor* BGP.
 
+Per concludere possiamo facilmente dire che R1 può raggiungere uno dei suoi instradamenti, 203.0.114.0/24, inoltrando i pacchetti indirizzati al *NEXT_HOP* 198.51.100.65, attraverso l'interfaccia GE0/2, all'IP 192.0.2.249.
+
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Filtri e manipolazioni
