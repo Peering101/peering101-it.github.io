@@ -386,7 +386,7 @@ Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Controllo degli instradamenti
 --------
-[todo]
+Lo standard viene coniugato, dalle molteplici implementazioni presenti sul mercato, a diversi modi di controllo degli instradamenti e secondo un preciso tempo di applicazione.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
