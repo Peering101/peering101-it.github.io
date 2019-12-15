@@ -293,7 +293,7 @@ Torna su `BGP (Border Gateway Protocol)`_
 
 Sessioni BGP
 --------
-è arrivato il momento di sporcarsi le mani e testare alcune configurazioni utili a stabilire sessioni BGP con altri *bgp speaking router*. A seconda di chi ha implementato il protocollo BGP, è possibile trovare scostamenti nella sintassi e nelle opzioni usate nei dispositivi. Per questo qui vorremmo coprire almeno tre grandi categorie di software: il classico Cisco IOS, l'alternativo Juniper Junos e l'open-source OpenBGPD di OpenBSD.
+È arrivato il momento di sporcarsi le mani e testare alcune configurazioni utili a stabilire sessioni BGP con altri *bgp speaking router*. A seconda di chi ha implementato il protocollo BGP, è possibile trovare scostamenti nella sintassi e nelle opzioni usate nei dispositivi. Per questo qui vorremmo coprire almeno tre grandi categorie di software: il classico Cisco IOS, l'alternativo Juniper Junos e l'open-source OpenBGPD di OpenBSD.
 
 **CISCO IOS**
 
@@ -305,7 +305,7 @@ Indichiamo poi quale sia il prefisso che dovrà annunciare:
 
 **network 203.0.113.0 mask 255.255.255.0**
 
-è la volta del nostro dirimpettaio: quale è il suo indirizzo e a quale sistema autonomo appartiene?
+È la volta del nostro dirimpettaio: quale è il suo indirizzo e a quale sistema autonomo appartiene?
 
 **neighbor 198.51.100.1 remote-as 64496**
 
