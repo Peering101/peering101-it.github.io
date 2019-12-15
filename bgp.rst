@@ -398,7 +398,7 @@ Per evitare la creazione di un ciclo continuo (*loop*), quando un *router* ricev
 
 Continuiamo con l'attributo NEXT_HOP che, in àmbito BGP, non è esattamente l'indirizzo IP dell'interfaccia di collgamento del *router* che annuncia l'instradamento. Piuttosto, in *eBGP*, è l'indirizzo IP del dirimpettaio (*neighbor*), direttamente connesso o no, che annunci l'instradamento; di conseguenza gli instradamenti che vengono veicolati in *iBGP* ma appresi da *eBGP* non vengono modificati e dunque come NEXT_HOP recano l'indirizzo IP del *neighbor* che li ha annunciati.
 
-A questo proposito osserviamo la recursività che questo meccanismo, in piena funzionalità, può generare nel *router* R1:
+A questo proposito osserviamo la ricorsività che questo meccanismo, in piena funzionalità, può generare nel *router* R1:
 
 **Tabella BGP di R1**
 
