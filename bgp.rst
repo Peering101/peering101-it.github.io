@@ -510,7 +510,7 @@ Osserviamo di conseguenza come si modifica la tabella BGP di R2:
 242.0.242.0/24   192.88.99.33   64500
 ================ ============== ==========================
 
-Possiamo notare la presenza di un instradamento preceduto dai segni asterisco e maggiore (\*>) che indicano il *best_path*.
+Dato che l'algoritmo di selezione del miglior percorso (punto 4 del paragrafo `Processo di instradamento`_) osservato da tutti i *bgp speaking router* rispettosi degli standard prevede che venga preferito l'instradamento con il più basso valore *MED*, possiamo notare la presenza di un instradamento preceduto dai segni asterisco e maggiore (\*>) indicanti il *best_path* proprio in corrispondenza della voce con *MED* 100.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
