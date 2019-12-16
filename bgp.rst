@@ -534,7 +534,7 @@ Torniamo al nostro esempio precedente ed esaminiamo la tabella BGP di R1:
 
 È lampante che per la destinazione 240.240.0.0/15 abbiamo due diversi percorsi, uno diretto verso l'AS64496 e l'altro attraverso l'AS64501. A tutta prima sembrerebbe più conveniente (nel senso di più breve) la prima occorrenza, tuttavia potrebbe darsi il caso che il collegamento con AS64501 abbia una capacità di gran lunga maggiore di quella che abbiamo con AS64496 e che a sua volta AS64501 abbia un collegamento ad altissima velocità con AS64496.
 
-Tenuto conto di questi ulteriori elementi decidiamo che il percorso più veloce verso 240.240.0.0/15 è quello con *AS_PATH* più lungo, per questo nel momento in cui apprendiamo il prefisso da AS64501, gli affibbiamo un valore di *LOCAL_PREF* di 150, anziché lasciargli quello predefinito di 100.
+Tenuto conto di questi ulteriori elementi decidiamo che il percorso più veloce verso 240.240.0.0/15 sia quello con *AS_PATH* più lungo, per questo nel momento in cui apprendiamo il prefisso da AS64501, gli affibbiamo un valore di *LOCAL_PREF* di 150, anziché lasciargli quello predefinito che (seppure non specificato nelle RFC di riferimento) viene impostato a 100 dalle più diffuse implementazioni attualmente presenti sul mercato.
 
 Ecco come si trasforma la tabella BGP di R1:
 
