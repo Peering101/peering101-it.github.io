@@ -357,6 +357,18 @@ Vale ovviamente lo stesso ragionamento per IPv6. Di sguito tutto insieme:
     remote-as 64496
   } 
 
+Ciascuna sessione BGP può essere variamente definita e arricchita a seconda del contesto nel quale viene stabilita, cosa che richiederebbe una più ampia e specifica trattazione.
+
+Ciò che tuttavia in questa sede ci appare necessario specificare è la portata delle singole sessioni che riflette le politiche di instradamento del sistema autonomo e i contratti (livelli minimi di servizio compresi) che i sistemi autonomi sottoscrivono in funzione del proprio piano di affari.
+
+Dobbiamo dunque distinguere una sessione BGP paritaria, cioè tra pari (*peer*), da una sessione BGP di transito (*transit*). Da un punto di vista tecnico sono entrambe soggette alle medesime regole (RFC, sintassi, rappresentazione) ma da un punto di vista "politico" ed "economico" sono assai distanti tra loro.
+
+Partiamo dal concetto di *peer*, cioè una sessione BGP tra pari: entrambi i sistemi autonomi coinvolti convengono di essere più o meno equivalenti in termini di risorse e traffico generato. Per questo, o anche per altre ragioni specifiche non note, decidono che sia conveniente per entrambi scambiarsi gli instradamenti che portano a risorse originanti ciascuno nel proprio sistema autonomo.
+
+Così AS64500 stabilisce una sessione BGP paritaria con AS64496 al quale annuncia due prefissi: 203.0.113.0/24 e 2001:db8::/32. Allo stesso modo si comporterà AS64496 con i propri prefissi.
+
+La cosa ora è chiara: in virtù dell'accordo contrattuale, che si traduce in una configurazione sui *router*, gli utenti di AS64500 che volessero fruire dei contenuti appartenenti all'AS64496, avrebbero un percorso privilegiato o, per dirla in maniera più tecnica, un *AS_PATH* cortissimo.
+
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Processo di instradamento
