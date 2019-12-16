@@ -432,7 +432,7 @@ A questo proposito osserviamo la ricorsività che questo meccanismo, in piena fu
 **Destinazione** **NEXT_HOP**
 ================ ==============
 203.0.113.0/24   198.51.100.1
-240.0.240.0/24   198.51.100.65
+240.240.0.0/15   198.51.100.65
 250.0.250.0/24   198.51.100.129
 ================ ==============
 
@@ -442,7 +442,7 @@ A questo proposito osserviamo la ricorsività che questo meccanismo, in piena fu
 **Destinazione**  **via d'uscita**
 ================= ================
 203.0.113.0/24    198.51.100.1
-240.0.240.0/24    198.51.100.65
+240.240.0.0/15    198.51.100.65
 250.0.250.0/24    198.51.100.129
 198.51.100.0/26   192.0.2.245
 192.0.2.244/30    INT GE0/1
@@ -468,31 +468,30 @@ Infatti analizzando la tabella degli instradamenti (*routing table*), troviamo c
 
 Si tratta di una cosiddetta connessione punto-punto (*point-to-point*) dove, per ogni /30 IPv4, il bit disponibile dispari è assegnato a R1 e il bit disponibile pari al suo *neighbor* BGP.
 
-Per concludere possiamo facilmente dire che R1 può raggiungere uno dei suoi instradamenti, 240.0.240.0/24, inoltrando i pacchetti indirizzati al *NEXT_HOP* 198.51.100.65, attraverso l'interfaccia GE0/2, all'IP 192.0.2.249.
+Per concludere possiamo facilmente dire che R1 può raggiungere uno dei suoi instradamenti, 240.240.0.0/15, inoltrando i pacchetti indirizzati al *NEXT_HOP* 198.51.100.65, attraverso l'interfaccia GE0/2, all'IP 192.0.2.249.
 
 Passiamo ora all'attributo *MULTI_EXIT_DISC*, cioè *Multiexit Discriminator* (*MED* per gli amici) che diventa particolarmente utile quando un sistema autonomo è collegato a un altro attraverso due sessioni BGP. Nello specifico, può essere usato per influenzare il dirimpettaio a farci consegnare il traffico laddove preferiamo.
 
-Tentiamo di chiarire attraverso un esempio:
+Tentiamo di chiarire attraverso un esempio che ha per attori protagonisti R1 e R2, legati da un rapporto di *peering*:
 
 **Tabella BGP di R1**
 
-================ ==============
-**Destinazione** **NEXT_HOP**
-================ ==============
-203.0.113.0/24   198.51.100.1
-240.0.240.0/24   198.51.100.65
-250.0.250.0/24   198.51.100.129
-================ ==============
+================ ============== ==========================
+**NLRI**         **NEXT_HOP**   **AS_PATH**
+================ ============== ==========================
+203.0.113.0/24   198.51.100.1   64496 i
+240.240.0.0/15   198.51.100.65  64496 i
+================ ============== ==========================
 
 **Tabella BGP di R2**
 
-================ ==============
-**Destinazione** **NEXT_HOP**
-================ ==============
-241.241.0.0/16   192.88.99.1
-242.0.242.0/24   192.88.99.33
-243.0.255.0/24   192.88.99.65
-================ ==============
+================ ============== ==========================
+**NLRI**         **NEXT_HOP**   **AS_PATH**
+================ ============== ==========================
+241.241.0.0/16   192.88.99.1    64500 i
+242.0.242.0/24   192.88.99.33   64500 i
+================ ============== ==========================
+
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
