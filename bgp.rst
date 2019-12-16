@@ -377,7 +377,7 @@ In altre parole, dobbiamo trovare un *AS* (o più d'uno naturalmente) che ci fac
 
 Un *AS* viene classificato come *tier-3* se può accedere al resto di Internet solo attraverso l'acquisto di transito da altri. Come *tier-2* abbiamo invece sistemi autonomi che, oltre a sessioni BGP paritarie con altri (molte, a volte moltissime), necessitano di acquistare transito da altri per raggiungere alcune porzioni di Internet.
 
-Infine ci sono gli *AS* *tier-1* (una quindicina al momento) che non necessitano di acquistare transito da altri (*transit-free*) poiché riescono, attraverso accordi di *peering*, a raggiungere tutti gli altri *AS* che costituiscono l'organismo di Internet.
+Infine ci sono gli *AS* *tier-1* (una quindicina nel mondo al momento) che non necessitano di acquistare transito da altri (*transit-free*) poiché riescono, attraverso accordi di *peering*, a raggiungere tutti gli altri *AS* che costituiscono l'organismo di Internet.
 
 Ecco spiegato dunque come è possibile mischiare le modalità *peering* e *transit* entrambe nello stesso *router*: all'*AS* con il quale facciamo *peering* annunciamo le nostre reti e accettiamo solo le sue reti; all'*AS* dal quale acquistiamo il transito annunciamo le nostre reti e accettiamo tutte le reti che conosce, sia le sue, sia quelle degli altri *AS*.
 
