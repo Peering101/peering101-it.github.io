@@ -485,14 +485,14 @@ Tentiamo di chiarire attraverso un esempio che ha per attori protagonisti R1 e R
 
 **Tabella BGP di R2**
 
-================ ============== ==========================
-**NLRI**         **NEXT_HOP**   **AS_PATH**
-================ ============== ==========================
+================ ============== =========== ===================
+**NLRI**         **NEXT_HOP**   **AS_PATH** **MULTI_EXIT_DISC**
+================ ============== =========== ===================
 241.241.0.0/16   192.88.99.1    64500
 242.0.242.0/24   192.88.99.1    64500
 241.241.0.0/16   192.88.99.33   64500
 242.0.242.0/24   192.88.99.33   64500
-================ ============== ==========================
+================ ============== =========== ===================
 
 Desideriamo che gli utenti di R2 interessati a risorse erogate da R1 all'interno del prefisso 241.241.0.0/16 passino sempre per 192.88.99.33 anziché per 192.88.99.1. Come potremmo sfruttare *MED*?
 
@@ -501,14 +501,14 @@ Osserviamo di conseguenza come si modifica la tabella BGP di R2:
 
 **Tabella BGP di R2**
 
-================ ============== ==========================
-**NLRI**         **NEXT_HOP**   **AS_PATH**
-================ ============== ==========================
-241.241.0.0/16   192.88.99.1    64500
+================ ============== =========== ===================
+**NLRI**         **NEXT_HOP**   **AS_PATH** **MULTI_EXIT_DISC**
+================ ============== =========== ===================
+241.241.0.0/16   192.88.99.1    64500       200
 242.0.242.0/24   192.88.99.1    64500
-*>241.241.0.0/16 192.88.99.33   64500
+*>241.241.0.0/16 192.88.99.33   64500       100
 242.0.242.0/24   192.88.99.33   64500
-================ ============== ==========================
+================ ============== =========== ===================
 
 Dato che l'algoritmo di selezione del miglior percorso (punto 4 del paragrafo `Processo di instradamento`_) osservato da tutti i *bgp speaking router* rispettosi degli standard prevede che venga preferito l'instradamento con il più basso valore *MED*, possiamo infatti notare la presenza di un instradamento preceduto dai segni asterisco e maggiore (\*>) indicanti il *best_path* proprio in corrispondenza della voce con *MED* 100.
 
