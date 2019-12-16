@@ -472,7 +472,7 @@ Per concludere possiamo facilmente dire che R1 può raggiungere uno dei suoi ins
 
 Passiamo ora all'attributo *MULTI_EXIT_DISC*, cioè *Multiexit Discriminator* (*MED* per gli amici) che diventa particolarmente utile quando un sistema autonomo è collegato a un altro attraverso due sessioni BGP. Nello specifico, può essere usato per influenzare il dirimpettaio a farci consegnare il traffico laddove preferiamo.
 
-Tentiamo di chiarire attraverso un esempio che ha per attori protagonisti R1 e R2, legati da un rapporto di *peering*:
+Tentiamo di chiarire attraverso un esempio che ha per attori protagonisti R1 e R2, legati da un rapporto di *peering* che si esprime con due sessioni BGP, una tra 192.88.99.1 di R1 e 198.51.100.1 di R2 e l'altra tra 192.88.99.33 di R1 e 198.51.100.65 di R2:
 
 **Tabella BGP di R1**
 
@@ -510,6 +510,7 @@ Osserviamo di conseguenza come si modifica la tabella BGP di R2:
 242.0.242.0/24   192.88.99.33   64500 i
 ================ ============== ==========================
 
+Possiamo notare la presenza di un instradamento preceduto dai segni asterisco e maggiore (*>) che indicano il *best_path*.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
