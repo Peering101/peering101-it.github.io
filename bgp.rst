@@ -483,7 +483,7 @@ Tentiamo di chiarire attraverso un esempio che ha per attori protagonisti R1 e R
 240.240.0.0/15   198.51.100.65  64496
 ================ ============== ==========================
 
-**Tabella BGP di R2**
+**Tabella BGP di R2 con MED**
 
 ================ ============== =========== ===================
 **NLRI**         **NEXT_HOP**   **AS_PATH** **MULTI_EXIT_DISC**
@@ -499,7 +499,7 @@ Desideriamo che gli utenti di R2 interessati a risorse erogate da R1 all'interno
 Semplice, facciamo sì che il messaggio *UPDATE* che R1 trasmette a R2 sia condito dall'attributo *MED* valorizzato con il numero (*metric*) 100 per il *neighbor* 198.51.100.1 e *metric* 200 per il *neighbor* 198.51.100.65.
 Osserviamo di conseguenza come si modifica la tabella BGP di R2:
 
-**Tabella BGP di R2**
+**Tabella BGP di R2 con MED**
 
 ================ ============== =========== ===================
 **NLRI**         **NEXT_HOP**   **AS_PATH** **MULTI_EXIT_DISC**
@@ -538,7 +538,7 @@ Tenuto conto di questi ulteriori elementi decidiamo che il percorso più veloce 
 
 Ecco come si trasforma la tabella BGP di R1:
 
-**Tabella BGP di R1**
+**Tabella BGP di R1 con LOCAL_PREF**
 
 ================ ============== =========== ===============
 **NLRI**         **NEXT_HOP**   **AS_PATH** **LOCAL_PREF**
