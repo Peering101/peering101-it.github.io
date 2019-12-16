@@ -510,7 +510,7 @@ Osserviamo di conseguenza come si modifica la tabella BGP di R2:
 242.0.242.0/24   192.88.99.33   64500 i
 ================ ============== ==========================
 
-Possiamo notare la presenza di un instradamento preceduto dai segni asterisco e maggiore (*>) che indicano il *best_path*.
+Possiamo notare la presenza di un instradamento preceduto dai segni asterisco e maggiore (\*>) che indicano il *best_path*.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
