@@ -489,6 +489,24 @@ Tentiamo di chiarire attraverso un esempio che ha per attori protagonisti R1 e R
 **NLRI**         **NEXT_HOP**   **AS_PATH**
 ================ ============== ==========================
 241.241.0.0/16   192.88.99.1    64500 i
+242.0.242.0/24   192.88.99.1    64500 i
+241.241.0.0/16   192.88.99.33   64500 i
+242.0.242.0/24   192.88.99.33   64500 i
+================ ============== ==========================
+
+Desideriamo che gli utenti di R2 interessati a risorse erogate da R1 all'interno del prefisso 241.241.0.0/16 passino sempre per 192.88.99.33 anziché per 192.88.99.1. Come potremmo sfruttare *MED*?
+
+Semplice, facciamo sì che il messaggio *UPDATE* che R1 trasmette a R2 sia condito dall'attributo *MED* valorizzato con il numero (*metric*) 100 per il *neighbor* 198.51.100.1 e *metric* 200 per il *neighbor* 198.51.100.65.
+Osserviamo di conseguenza come si modifica la tabella BGP di R2:
+
+**Tabella BGP di R2**
+
+================ ============== ==========================
+**NLRI**         **NEXT_HOP**   **AS_PATH**
+================ ============== ==========================
+241.241.0.0/16   192.88.99.1    64500 i
+242.0.242.0/24   192.88.99.1    64500 i
+*>241.241.0.0/16 192.88.99.33   64500 i
 242.0.242.0/24   192.88.99.33   64500 i
 ================ ============== ==========================
 
