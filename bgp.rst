@@ -516,7 +516,39 @@ Dobbiamo precisare comunque che non tutti i sistemi autonomi accettano l'attribu
 
 In questo frangente, l'instradamento è definito patata bollente (*hot-potato*) proprio perché un sistema autonomo tende a liberarsi del traffico (cioè a farlo uscire dalla propria rete) il prima possibile usando cioè il primo punto di uscita che ha a disposizione, senza ragionarci troppo su e dunque senza tenere conto di alcuni eventuali attributi BGP.
 
-Altro attributo indispensabile al controllo degli instradamenti è *LOCAL_PREF*, preferenza che è locale cioè con una valenza solo all'interno di un sistema autonomo; può essere infatti trasmesso solo su sessioni di *internal BGP* (*iBGP*).
+Altro attributo indispensabile al controllo degli instradamenti è *LOCAL_PREF*, preferenza che è appunto locale cioè con una valenza solo all'interno di un sistema autonomo; può essere infatti trasmesso solo su sessioni di *internal BGP* (*iBGP*).
+
+In altre parole, nel momento in cui riceviamo un annuncio da un *AS* con il quale abbiamo stabilito una sessione BGP, possiamo applicare un valore di preferenza (più alto è il valore, più alta la preferenza) proprio a quello specifico instradamento oppure a tutti gli instradamenti che apprendiamo da un determinato *eBGP neighbor*.
+
+Torniamo al nostro esempio precedente ed esaminiamo la tabella BGP di R1:
+
+**Tabella BGP di R1**
+
+================ ============== ==========================
+**NLRI**         **NEXT_HOP**   **AS_PATH**
+================ ============== ==========================
+203.0.113.0/24   198.51.100.1   64496
+240.240.0.0/15   198.51.100.65  64496
+240.240.0.0/15   198.51.100.129 64501 64496
+================ ============== ==========================
+
+è lampante che per la destinazione 240.240.0.0/15 abbiamo due diversi percorsi, uno diretto verso l'AS64496 e l'altro attraverso l'AS64501. A tutta prima sembrerebbe più conveniente (nel senso di più breve) la prima occorrenza, tuttavia potrebbe darsi il caso che il collegamento con AS64501 abbia una capacità di gran lunga maggiore di quella che abbiamo con AS64496 e che a sua volta AS64501 abbia un collegamento ad altissima velocità con AS64496.
+
+Tenuto conto di questi ulteriori elementi decidiamo che il percorso più veloce verso 240.240.0.0/15 è quello con AS_PATH più lungo, per questo nel momento in cui apprendiamo il prefisso da AS64501, gli affibbiamo un valore di *LOCAL_PREF* di 150, anziché lasciargli quello predefinito di 100.
+
+Ecco come si trasforma la tabella BGP di R1:
+
+**Tabella BGP di R1**
+
+================ ============== =========== ===============
+**NLRI**         **NEXT_HOP**   **AS_PATH** **LOCAL_PREF**
+================ ============== =========== ===============
+203.0.113.0/24   198.51.100.1   64496       100
+240.240.0.0/15   198.51.100.65  64496       100
+240.240.0.0/15   198.51.100.129 64501 64496 150
+================ ============== =========== ===============
+
+Vuol dire che tutto il traffico diretto verso qualsiasi risorsa afferente alla rete 240.240.0.0/15 dovrà transitare per l'AS64501 nel pieno rispetto di quanto previsto al punto 1 del paragrafo sul `Processo di instradamento`_.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
