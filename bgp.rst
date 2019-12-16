@@ -369,6 +369,20 @@ Così AS64500 stabilisce una sessione BGP paritaria con AS64496 al quale annunci
 
 La cosa ora è chiara: in virtù dell'accordo contrattuale, che si traduce in una configurazione sui *router*, gli utenti di AS64500 che volessero fruire dei contenuti appartenenti all'AS64496, avrebbero un percorso privilegiato o, per dirla in maniera più tecnica, un *AS_PATH* cortissimo.
 
+Si capisce come sia strategica per gli operatori nell'industria di Internet l'individuazione dei sistemi autonomi con i quali stabilire un accordo di questo genere (*peering*); è palese infatti che non è possibile che tutti gli oltre 66mila AS del mondo facciano ciascuno *peering* con tutti.
+
+Ma a questo punto ci domandiamo come si faccia a raggiungere le risorse appartenenti a tutti quei sistemi autonomi con i quali non abbiamo rapporti di *peering*. La risposta è semplice: ci si accorda con un altro sistema autonomo affinché ci conceda il transito verso le risorse appartenenti ad altri *AS* con cui abbia stabilito sessioni BGP.
+
+In altre parole, dobbiamo trovare un *AS* (o più d'uno naturalmente) che ci faccia appunto da transito. Sul mercato esistono parecchi operatori che per mestiere (cioè a titolo oneroso) danno *transit* ad altri *AS* e, a seconda del numero e della qualità delle sessioni BGP che hanno in piedi, vengono classificati secondo livelli (*tier*), solitamente tre: *tier-1*, *tier-2*, *tier-3*.
+
+Un *AS* viene classificato come *tier-3* se può accedere al resto di Internet solo attraverso l'acquisto di transito da altri. Come *tier-2* abbiamo invece sistemi autonomi che, oltre a sessioni BGP paritarie con altri (molte, a volte moltissime), necessitano di acquistare transito da altri per raggiungere alcune porzioni di Internet.
+
+Infine ci sono gli *AS* *tier-1* (una quindicina al momento) che non necessitano di acquistare transito da altri (*transit-free*) poiché riescono, attraverso accordi di *peering*, a raggiungere tutti gli altri *AS* che costituiscono l'organismo di Internet.
+
+Ecco spiegato dunque come è possibile mischiare le modalità *peering* e *transit* entrambe nello stesso *router*: all'*AS* con il quale facciamo *peering* annunciamo le nostre reti e accettiamo solo le sue reti; all'*AS* dal quale acquistiamo il transito annunciamo le nostre reti e accettiamo tutte le reti che conosce, sia le sue, sia quelle degli altri *AS*.
+
+Da notare che per la richiesta di un numero di sistema autonomo all'ente continentale di competenza (*RIR - Regional Internet Registry*) è necessario dimostrare di aver contrattualizzato (o aver richiesto la contrattualizzazione di) almeno due diversi transiti.
+
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Processo di instradamento
