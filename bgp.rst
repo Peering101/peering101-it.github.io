@@ -141,7 +141,7 @@ L'intestazione del messaggio BGP che viene scambiato tra due *router* ha il segu
 
 A seconda del tipo di messaggio, dopo l'intestazione potrebbero seguire dei dati.
 
-A ogni modo il campo *marker*, oggi presente ma non più usato, ha una consistenza fissa di 16 byte e veniva usato per determinare se il messaggio BGP contenesse informazioni di autenticazione oppure no.
+A ogni modo il campo *marker*, oggi presente ma non più usato, ha una consistenza fissa di 16 byte e aveva la funzione di far determinare se il messaggio BGP contenesse informazioni di autenticazione oppure no.
 
 Il campo denominato *length* serve a dichiarare la lunghezza dell'intero messaggio BGP, intestazione compresa; per questo è semplice calcolarne il valore minimo: 19 byte (cioè 16 il *marker*, 2 il *length*, 1 il *type*). Il valore massimo, per RFC, è di 4096 byte.
 
