@@ -46,7 +46,7 @@ Per consentire l'instradamento, il *router* segue una procedura che si articola 
 
 9. ripetizione della procedura fin quando la destinazione viene raggiunta secondo lo schema di un salto dopo l'altro (*hop-by-hop*), tipico delle reti a commutazione di pacchetto.
 
-Alla base dei protocolli di instradamento ci sono generalmente due algoritmi: vettore delle distanze (*distance vector*) e stato del collegamento (*link-state*).
+Alla base dei protocolli di instradamento ci sono generalmente tre algoritmi: vettore delle distanze (*distance vector*), stato del collegamento (*link-state*) e vettore di percorsi (*path vector*).
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
