@@ -318,7 +318,7 @@ Ora, per far sì che la nostra rete 203.0.113.0/24 venga installata nella tabell
 
 **ip route 203.0.113.0 255.255.255.0 Null0**
 
-Vale ovviamente lo stesso ragionamento per IPv6. Di sguito tutto insieme:
+Vale ovviamente lo stesso ragionamento per IPv6. Di seguito tutto insieme:
 
 `CISCO IOS <https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/26634-bgp-toc.html>`__::
   
