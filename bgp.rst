@@ -418,7 +418,7 @@ Una esigenza che si palesa quando ci poniamo domande tipo: come evitiamo l'annun
 
 Le risposte a questi e ad altri interrogativi presuppongono la conoscenza degli attributi menzionati nel paragrafo `Come funziona BGP`_.
 
-Cominciamo con l'attributo *AS_PATH* che contiene la sequenza ordinata dei sistemi autonomi (*AS_SEQUENCE*) che occorre transitare per raggiungere una determinata destinazione. Si tratta di un attributo che finché viene scambiato tra *bgp speaking router* appartenenti allo stesso sistema autonomo (*iBGP*) non viene modificato; ma quando viene scambiato tra sistemi autonomi diversi (*eBGP*), allora il *router* che riceve l'annuncio aggiunge (*prepend*) il proprio numero di *AS* all'inizio (cioè a sinistra) della sequenza.
+Cominciamo con l'attributo *AS_PATH* che contiene la sequenza ordinata dei sistemi autonomi (*AS_SEQUENCE*) dai quali occorre transitare per raggiungere una determinata destinazione. Si tratta di un attributo che finché viene scambiato tra *bgp speaking router* appartenenti allo stesso sistema autonomo (*iBGP*) non viene modificato; ma quando viene scambiato tra sistemi autonomi diversi (*eBGP*), allora il *router* che riceve l'annuncio aggiunge (*prepend*) il proprio numero di *AS* all'inizio (cioè a sinistra) della sequenza.
 
 Per evitare la creazione di un ciclo continuo (*loop*), quando un *router* riceve un annuncio dove è già presente il proprio numero di sistema autonomo, allora il relativo messaggio di *UPDATE* viene ignorato.
 
