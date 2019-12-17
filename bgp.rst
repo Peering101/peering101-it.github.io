@@ -554,6 +554,8 @@ Altro utilissimo attributo è *COMMUNITY* che ritrae proprio una comunità: un g
 
 Non c'è dubbio che alcuni sistemi autonomi traggano molto giovamento dal corretto uso dell'attributo in questione anche grazie alla sua caratteristica di non essere confinato localmente, infatti appartiene alla specie *optional transitive*, cioè opzionale sì, ma se presente deve essere trasmesso agli altri *bgp speaking router* anche se non riconosciuto.
 
+Alcune comunità, date le loro riconosciute ampie utilità e valenza, sono elette come notevoli (*well-known*) da alcune RFC e di conseguenza riservate e pubblicate da *IANA - Internet Assigned Numbers Authority*, l'autorità preposta: `BGP Well-known Communities <https://www.iana.org/assignments/bgp-well-known-communities/bgp-well-known-communities.xhtml>`_.
+
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Filtri e manipolazioni
