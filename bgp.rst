@@ -514,7 +514,7 @@ Dato che l'algoritmo di selezione del miglior percorso (punto 4 del paragrafo `P
 
 Dobbiamo precisare comunque che non tutti i sistemi autonomi accettano l'attributo *MULTI_EXIT_DISC*: ricade infatti nella classificazione *optional non-transitive*, cioè attributo opzionale che, se presente ma non riconosciuto, può essere tranquillamente ignorato e non deve essere trasmesso agli altri *bgp speaking router*.
 
-In questo frangente, l'instradamento è definito patata bollente (*hot-potato*) proprio perché un sistema autonomo tende a liberarsi del traffico (cioè a farlo uscire dalla propria rete) il prima possibile usando cioè il primo punto di uscita che ha a disposizione, senza ragionarci troppo su e dunque senza tenere conto di alcuni eventuali attributi BGP.
+In questo frangente, l'instradamento è definito patata bollente (*hot-potato*) proprio perché un sistema autonomo tende a liberarsi del traffico (cioè a farlo uscire dalla propria rete) il prima possibile usando il primo punto di uscita che ha a disposizione, senza ragionarci troppo su e dunque senza tenere conto di alcuni eventuali attributi BGP.
 
 Altro attributo indispensabile al controllo degli instradamenti è *LOCAL_PREF*, preferenza che è appunto locale cioè con una valenza solo all'interno di un sistema autonomo; può essere infatti trasmesso solo su sessioni di *internal BGP* (*iBGP*).
 
