@@ -272,7 +272,7 @@ Facciamo alcuni esempi:
 
 *AS_PATH* rientra fra gli attributi *well-known mandatory*, come pure *NEXT_HOP* e *ORIGIN* (in tutto sono tre);
 gli unici due *well-known discretionary* sono *LOCAL_PREF* e *ATOMIC_AGGREGATE*;
-gli attributi *optional transitive* sono *AGGREGATOR*, *COMMUNITY*, *EXTENDED_COMMUNITY*, *AS4_PATH*, *AS4_AGGRGATOR*, mentre gli *optional non-transitive* sono *MULTI_EXIT_DISC*, *ORIGINATOR_ID*, *CLUSTER_LIST*, *Multiprotocol Reachable NLRI* e *Multiprotocol Unreachable NLRI*.
+gli attributi *optional transitive* sono *AGGREGATOR*, *COMMUNITY*, *EXTENDED_COMMUNITY*, *AS4_PATH*, *AS4_AGGREGATOR*, mentre gli *optional non-transitive* sono *MULTI_EXIT_DISC*, *ORIGINATOR_ID*, *CLUSTER_LIST*, *Multiprotocol Reachable NLRI* e *Multiprotocol Unreachable NLRI*.
 
 Quindi alla luce di quanto appena documentato ripetiamo il completo schema di messaggio *UPDATE*::
 
@@ -556,7 +556,23 @@ Non c'è dubbio che alcuni sistemi autonomi traggano molto giovamento dal corret
 
 Alcune comunità, date le loro riconosciute ampie utilità e valenza, sono elette come notevoli (*well-known*) da alcune RFC e di conseguenza riservate e pubblicate da *IANA - Internet Assigned Numbers Authority*, l'autorità preposta: `BGP Well-known Communities <https://www.iana.org/assignments/bgp-well-known-communities/bgp-well-known-communities.xhtml>`_.
 
-Tra queste vorremmo sottolinearne almeno un paio: *NO_EXPORT* può contraddistinguere quegli instradamenti che non dovrebbero essere annunciati ad altri sistemi autonomi; *NO_ADVERTISE* è invece più restrittiva poiché potrebbe contraddistinguere quegli instradamenti che non dovrebbero essere annunciati ad alcun *router* dirimpettaio (*neighbor*), neanche a quelli interni all'*AS* (*iBGP*).
+Tra queste vorremmo sottolinearne almeno un paio: *NO_EXPORT* può contraddistinguere quegli instradamenti che non dovrebbero essere annunciati ad altri sistemi autonomi; *NO_ADVERTISE* è invece più restrittiva poiché potrebbe contraddistinguere quegli instradamenti che non dovrebbero essere annunciati ad alcun *router* dirimpettaio (*neighbor*), cioè neanche a quelli interni all'*AS* (*iBGP*).
+
+L'attributo *COMMUNITY* è rappresentato da un numero a 32 bit che nella pratica assume l'aspetto di due numeri in base dieci (da 0 a 65535) divisi dal segno di duepunti: il primo numero viene solitamente usato per manifestare il numero di sistema autonomo che firma appunto gli instradamenti e il secondo comunica il significato dell'attributo per quello stesso *AS*.
+
+**Tabella BGP di R1 con COMMUNITY**
+
+================ ============== =========== ===============
+**NLRI**         **NEXT_HOP**   **AS_PATH** **COMMUNITY**
+================ ============== =========== ===============
+203.0.113.0/24   198.51.100.1   64496       64500:39
+240.240.0.0/15   198.51.100.65  64496       64500:39
+240.240.0.0/15   198.51.100.129 64501 64496 64500:1
+================ ============== =========== ===============
+
+In questo esempio, R1, che appartiene all'AS64500, assegna alcuni attributi *COMMUNITY* agli instradamenti che apprende dalle sessioni *eBGP*, usando dei numeri che hanno significato solo per chi amministra quel sistema autonomo. Nello specifico il numero 39 contraddistingue instradamenti appresi da un *router* operante su suolo italiano, mentre il numero 1 contraddistingue un instradamento appreso da un *router* operante su suolo statunitense.
+
+Nel momento in cui AS64500 rende conoscibili tali corrispondenze ai suoi clienti, questi ultimi nel ricevere gli instradamenti così classificati hanno la possibilità, a loro volta, di applicare degli ulteriori criteri, come l'accoppiamento a determinati valori di *LOCAL_PREF*.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
