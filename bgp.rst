@@ -556,6 +556,8 @@ Non c'è dubbio che alcuni sistemi autonomi traggano molto giovamento dal corret
 
 Alcune comunità, date le loro riconosciute ampie utilità e valenza, sono elette come notevoli (*well-known*) da alcune RFC e di conseguenza riservate e pubblicate da *IANA - Internet Assigned Numbers Authority*, l'autorità preposta: `BGP Well-known Communities <https://www.iana.org/assignments/bgp-well-known-communities/bgp-well-known-communities.xhtml>`_.
 
+Tra queste vorremmo sottolinearne almeno un paio: *NO_EXPORT* può contraddistinguere quegli instradamenti che non dovrebbero essere annunciati ad altri sistemi autonomi; *NO_ADVERTISE* è invece più restrittiva poiché potrebbe contraddistinguere quegli instradamenti che non dovrebbero essere annunciati ad alcun *router* dirimpettaio (*neighbor*), neanche a quelli interni all'*AS* (*iBGP*).
+
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Filtri e manipolazioni
