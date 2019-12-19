@@ -435,6 +435,8 @@ Dal punto di vista di AS64496 quindi la tabella degli instradamenti avrebbe ques
 
 Poniamo il caso che R2 riceva da un terzo sistema autonomo la rete 241.241.0.0/16, allora la tabella potrebbe così trasformarsi:
 
+**Tabella BGP di R2 con doppio path**
+
 ================ ============== ==========================
 **NLRI**         **NEXT_HOP**   **AS_PATH**
 ================ ============== ==========================
@@ -442,9 +444,11 @@ Poniamo il caso che R2 riceva da un terzo sistema autonomo la rete 241.241.0.0/1
 241.241.0.0/16   198.51.100.225 64502 64499 64500
 ================ ============== ==========================
 
-Spieghiamo: gli utenti del sistema autonomo 64496 che volessero raggiungere risorse che ricadono nel perimetro della rete 241.241.0.0/16, transiterebbero semplicemente per AS64500. Tuttavia, se quest'ultimo volesse (per qualsiasi motivo) forzare il transito per l'AS64502, cioè per il percorso che l'algoritmo *path vector* non preferirebbe, come potrebbe agire?
+Spieghiamo: gli utenti del sistema autonomo 64496 che volessero raggiungere una risorsa nel perimetro della rete 241.241.0.0/16, transiterebbero semplicemente per AS64500. Tuttavia, se quest'ultimo volesse (per qualsiasi motivo) forzare il transito per l'AS64502, cioè per il percorso che l'algoritmo *path vector* non preferisce, come potrebbe agire?
 
 Può senz'altro piegare l'attributo *AS_PATH* a proprio vantaggio usando la tecnica del *prepending* che consiste nell'allungare fittiziamente la *AS_SEQUENCE* aggiungendo, più volte, il proprio numero di sistema autonomo così:
+
+**Tabella BGP di R2 con doppio path e prepending**
 
 ================ ============== ==========================
 **NLRI**         **NEXT_HOP**   **AS_PATH**
@@ -453,9 +457,9 @@ Può senz'altro piegare l'attributo *AS_PATH* a proprio vantaggio usando la tecn
 241.241.0.0/16   198.51.100.225 64502 64499 64500
 ================ ============== ==========================
 
-Il risultato è che gli utenti dell'AS64496 vengono ora forzati a transitare per il percorso annunciato da AS64502 attraverso il *router* 198.51.100.225 che, agli occhi dell'algoritmo *path vector* è diventato il più appetibile perché più corto di quello artefatto.
+Il risultato è che gli utenti dell'AS64496 vengono ora forzati a transitare per il percorso annunciato da AS64502 attraverso il *router* 198.51.100.225 che, agli occhi dell'algoritmo *path vector*, è ora diventato il più appetibile perché più corto di quello artefatto.
 
-Per evitare la creazione di un ciclo continuo (*loop*), quando un *router* riceve un annuncio dove è già presente il proprio numero di sistema autonomo, allora il relativo messaggio di *UPDATE* viene ignorato.
+Infine è bene precisare che per evitare la creazione di un ciclo continuo (*loop*), quando un *router* riceve un annuncio dove è già presente il proprio numero di sistema autonomo, allora il relativo messaggio di *UPDATE* viene ignorato.
 
 Continuiamo con l'attributo NEXT_HOP che, in àmbito BGP, non è esattamente l'indirizzo IP dell'interfaccia di collgamento del *router* che annuncia l'instradamento. Piuttosto, in *eBGP*, è l'indirizzo IP del dirimpettaio (*neighbor*), direttamente connesso o no, che annunci l'instradamento; di conseguenza gli instradamenti che vengono veicolati in *iBGP* ma appresi da *eBGP* non vengono modificati e dunque come NEXT_HOP recano l'indirizzo IP del *neighbor* che li ha annunciati.
 
