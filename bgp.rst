@@ -145,7 +145,7 @@ A ogni modo il campo *marker*, oggi presente ma non più usato, ha una consisten
 
 Il campo denominato *length* serve a dichiarare la lunghezza dell'intero messaggio BGP, intestazione compresa; per questo è semplice calcolarne il valore minimo: 19 byte (cioè 16 il *marker*, 2 il *length*, 1 il *type*). Il valore massimo, per RFC, è di 4096 byte.
 
-Il campo *type* definisce invece il tipo di messaggio trasmesso e può recare dei valori che possono indicare i seguenti codici:
+Il campo *type* definisce invece il tipo di messaggio trasmesso e può recare dei codici che possono indicare i seguenti valori:
 
 - *OPEN*;
 - *UPDATE*;
