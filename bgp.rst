@@ -420,6 +420,41 @@ Le risposte a questi e ad altri interrogativi presuppongono la conoscenza degli 
 
 Cominciamo con l'attributo *AS_PATH* che contiene la sequenza ordinata dei sistemi autonomi (*AS_SEQUENCE*) dai quali occorre transitare per raggiungere una determinata destinazione. Si tratta di un attributo che finché viene scambiato tra *bgp speaking router* appartenenti allo stesso sistema autonomo (*iBGP*) non viene modificato; ma quando viene scambiato tra sistemi autonomi diversi (*eBGP*), allora il *router* che riceve l'annuncio aggiunge (*prepend*) il proprio numero di *AS* all'inizio (cioè a sinistra) della sequenza.
 
+Quest'ultima caratteristica richiede un breve approfondimento. Abbiamo compreso come la quantità di sistemi autonomi riportata nella *AS_SEQUENCE* sia determinante per il processo decisionale che il BGP usa nel selezionare il miglior percorso verso una destinazione. Ecco, immaginiamo dunque cosa potrebbe succedere se un *AS* annunciasse a un *neighbor* una sequenza drogata, per non dire falsa.
+
+Normalmente AS64500 annuncerebbe la rete 241.241.0.0/16 dal *router* R1 al dirimpettaio 192.88.99.1 (AS64496) sul *router* R2 con questo *AS_PATH*: 64500.
+Dal punto di vista di AS64496 quindi la tabella degli instradamenti avrebbe questo aspetto:
+
+**Tabella BGP di R2**
+
+================ ============== ==========================
+**NLRI**         **NEXT_HOP**   **AS_PATH**
+================ ============== ==========================
+241.241.0.0/16   192.88.99.33   64500
+================ ============== ==========================
+
+Poniamo il caso che R2 riceva da un terzo sistema autonomo la rete 241.241.0.0/16, allora la tabella potrebbe così trasformarsi:
+
+================ ============== ==========================
+**NLRI**         **NEXT_HOP**   **AS_PATH**
+================ ============== ==========================
+241.241.0.0/16   192.88.99.33   64500
+241.241.0.0/16   198.51.100.225 64502 64499 64500
+================ ============== ==========================
+
+Spieghiamo: gli utenti del sistema autonomo 64496 che volessero raggiungere risorse che ricadono nel perimetro della rete 241.241.0.0/16, transiterebbero semplicemente per AS64500. Tuttavia, se quest'ultimo volesse (per qualsiasi motivo) forzare il transito per l'AS64502, cioè per il percorso che l'algoritmo *path vector* non preferirebbe, come potrebbe agire?
+
+Può senz'altro piegare l'attributo *AS_PATH* a proprio vantaggio usando la tecnica del *prepending* che consiste nell'allungare fittiziamente la *AS_SEQUENCE* aggiungendo, più volte, il proprio numero di sistema autonomo così:
+
+================ ============== ==========================
+**NLRI**         **NEXT_HOP**   **AS_PATH**
+================ ============== ==========================
+241.241.0.0/16   192.88.99.33   64500 64500 64500 64500
+241.241.0.0/16   198.51.100.225 64502 64499 64500
+================ ============== ==========================
+
+Il risultato è che gli utenti dell'AS64496 vengono ora forzati a transitare per il percorso annunciato da AS64502 attraverso il *router* 198.51.100.225 che, agli occhi dell'algoritmo *path vector* è diventato il più appetibile perché più corto di quello artefatto.
+
 Per evitare la creazione di un ciclo continuo (*loop*), quando un *router* riceve un annuncio dove è già presente il proprio numero di sistema autonomo, allora il relativo messaggio di *UPDATE* viene ignorato.
 
 Continuiamo con l'attributo NEXT_HOP che, in àmbito BGP, non è esattamente l'indirizzo IP dell'interfaccia di collgamento del *router* che annuncia l'instradamento. Piuttosto, in *eBGP*, è l'indirizzo IP del dirimpettaio (*neighbor*), direttamente connesso o no, che annunci l'instradamento; di conseguenza gli instradamenti che vengono veicolati in *iBGP* ma appresi da *eBGP* non vengono modificati e dunque come NEXT_HOP recano l'indirizzo IP del *neighbor* che li ha annunciati.
