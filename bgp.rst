@@ -457,7 +457,7 @@ Può senz'altro piegare l'attributo *AS_PATH* a proprio vantaggio usando la tecn
 241.241.0.0/16   198.51.100.225 64502 64499 64500
 ================ ============== ==========================
 
-Il risultato è che gli utenti dell'AS64496 vengono ora forzati a transitare per il percorso annunciato da AS64502 attraverso il *router* 198.51.100.225 che, agli occhi dell'algoritmo *path vector*, è ora diventato il più appetibile perché più corto di quello artefatto.
+Il risultato è che gli utenti dell'AS64496 vengono ora forzati a transitare per il percorso annunciato da AS64502 attraverso il *router* 198.51.100.225 che, agli occhi dell'algoritmo *path vector*, è diventato il più appetibile perché più corto di quello artefatto.
 
 Infine è bene precisare che per evitare la creazione di un ciclo continuo (*loop*), quando un *router* riceve un annuncio dove è già presente il proprio numero di sistema autonomo, allora il relativo messaggio di *UPDATE* viene ignorato.
 
