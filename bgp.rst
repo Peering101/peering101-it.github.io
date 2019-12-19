@@ -611,7 +611,7 @@ L'attributo *COMMUNITY* è rappresentato da un numero a 32 bit che nella pratica
 
 In questo esempio, R1, che appartiene all'AS64500, assegna alcuni attributi *COMMUNITY* agli instradamenti che apprende dalle sessioni *eBGP*, usando dei numeri che hanno significato solo per chi amministra quel sistema autonomo. Nello specifico il numero 39 contraddistingue instradamenti appresi da un *router* operante su suolo italiano, mentre il numero 1 contraddistingue un instradamento appreso da un *router* operante su suolo statunitense.
 
-Nel momento in cui AS64500 rende conoscibili tali corrispondenze ai suoi clienti, questi ultimi nel ricevere gli instradamenti così classificati hanno la possibilità, a loro volta, di applicare degli ulteriori criteri, come l'accoppiamento a determinati valori di *LOCAL_PREF*.
+Nel momento in cui AS64500 rende conoscibili tali corrispondenze ai suoi clienti, questi ultimi nel ricevere gli instradamenti così classificati hanno la possibilità, a loro volta, di applicare degli ulteriori criteri, come l'accoppiamento a determinati valori di *LOCAL_PREF* o addirittura di assumere la decisione di scartare certi instradamenti. 
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
