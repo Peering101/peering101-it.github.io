@@ -659,8 +659,12 @@ Ridondanza, *redundancy*, in questo scenario vuol dire stabilità, cioè riuscir
 
 Dunque un *AS* può curare la ridondanza attraverso l'acquisizione di transito su più di un collegamento, meglio se in punti geografici diversi, sfruttando fibre ottiche gestite da operatori diversi e accese da apparati alimentati da diversi vettori di energia elettrica. Riducendo all'osso il concetto e con una buona dose di approssimazione potremmo iper-semplificare col motto: "tutto doppio".
 
-A questo proposito ci viene in aiuto una entità nata con Internet, cioè il punto di interscambio (*exchange point*) degli instradamenti.
+In quest'ottica, un valido aiuto ci viene concesso da un'entità nata con Internet, cioè il punto di interscambio (*exchange point*) degli instradamenti, menzionato in lettratura come *NAP - Network Access Point*, punto di accesso alla rete.
 
-Quando parliamo di bilanciamento intendiamo bilanciamenteo del carico (*load balancing*), o meglio del traffico, che si ottiene attraverso una dinamica, ma sempre ragionevole, distribuzione degli instradamenti su più *neighbor*, sia di *peering*, sia di *transit*, sia *inbound*, sia *outbound*.
+Pensiamo al punto di interscambio come a un commutatore di pacchetti in una rete locale (*LAN switch*) al quale si connettono i *router* di alcuni sistemi autonomi interessati a scambiare, principalmente alla pari (*peering*), tra loro gli instradamenti. Praticamente un utilissimo facilitatore che agevola l'incontro tra *AS* che non si conoscono reciprocamente e che consente, in un unico luogo (fisico o logico), di accedere a una grossa fetta degli instradamenti presenti su Internet.
+
+In Italia i più attivi *NAP* neutrali sono: `MIX - Milan Internet eXchange <https://www.mix-it.net/>`_ a Milano; `NAMEX - NAutilus MEditerranean eXchange <https://www.namex.it/>`_ a Roma; `TOP-IX - TOrino Piemonte - Internet eXchange <https://www.top-ix.org/>`_ a Torino; `VSIX - Veneto Service Internet eXchange <https://www.vsix.it/>`_ a Padova.
+
+Quando invece parliamo di bilanciamento, intendiamo bilanciamenteo del carico (*load balancing*), o meglio del traffico, che si ottiene attraverso una dinamica, ma sempre ragionevole, distribuzione degli instradamenti su più *neighbor*, sia di *peering*, sia di *transit*, sia *inbound*, sia *outbound*.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
