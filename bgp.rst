@@ -628,21 +628,19 @@ Cominciamo col distinguere due àmbiti: traffico in entrata (*inbound*) e traffi
 
 Proprio così: *inbound* è influenzato dagli annunci che facciamo; *outbound* è influenzato dagli annunci che riceviamo. Quindi, per intenderci, se nessun utente degli altri sistemi autonomi riesce a raggiungere le nostre risorse, forse è perché siamo noi che non stiamo comunicando a nessuno dove ci troviamo. Viceversa se i nostri utenti non riescono a raggiungere risorse appartenenti ad altri *AS*, forse è perché stiamo scartando alcuni annunci in ingresso con la conseguenza che alcune reti non siano presenti nella tabella degli instradamenti.
 
-Generalmente per muoversi in questo contesto è opportuno prima di tutto individuare gli instradamenti oggetto della nostra attenzione, procedere a una attività di accettazione o di scarto di quegli instradamenti e concludere con un'eventuale modifica dei loro attributi BGP.
+Generalmente, per muoversi in questo contesto è opportuno prima di tutto individuare gli instradamenti oggetto della nostra attenzione, procedere a una attività di accettazione o di scarto di quegli instradamenti e concludere con un'eventuale modifica dei loro attributi BGP.
 
 Come individuiamo gli instradamenti che per qualche motivo ci interessano? Il lettore che abbia scorso per intero questa breve guida conoscerà le caratteristiche utili: l'identificativo di rete relativo a un prefisso IP (203.0.113.0/24), il sistema autonomo al quale il prefisso appartiene (64496), la sequenza di *AS* (*AS_SEQUENCE*) che occorre attraversare per raggiungere un prefisso, il particolare attributo abbinato a un instradamento (*LOCAL_PREF*), gli instradamenti appresi da un detereminato *neighbor* e altre.
 
-Questi criteri ovviamente possono essere valutati tutti, uno dopo l'altro, proprio come funzionano i setacci: se ne mette uno sotto l'altro, ciascuno con maglie sempre più fitte così che il materiale passante venga via via filtrato secondo grandezze diverse così che tutto ciò che si raccoglie alla fine corrisponda al risultato atteso.
+Questi criteri ovviamente possono essere valutati tutti, uno dopo l'altro, proprio come funzionano i setacci: se ne mette uno sotto l'altro, ciascuno con maglie sempre più fitte; in questo modo il materiale passante viene via via filtrato secondo grandezze diverse così che tutto ciò che si raccoglie alla fine corrisponda al risultato atteso.
 
 Tra l'altro non è detto che il materiale catturato dai filtri a maglie grosse debba per forza essere scartato, magari ci interessa farne un uso diverso.
 
 Va da sé che l'ordine nel quale vengono disposti i setacci conta, cioè se viene posizionato per primo quello a maglie più fitte è logico che i sottostanti non intrappolino alcunché.
 
-Fuor di metafora lo stesso principio vale anche per i *router* sui quali è possibile programmare dei filtri utili a catturare gli elementi ai quali applicare poi una manipolazione che ci aiuti a ottenere i nostri scopi.
+Fuor di metafora, lo stesso principio vale anche per i *router* sui quali è possibile programmare dei filtri utili a catturare gli elementi ai quali applicare poi una manipolazione che ci aiuti a ottenere i nostri scopi.
 
-Veniamo appunto alla manipolazione cioè a quella attività che consente di modificare gli attributi BGP degli elementi filtrati al fine di influenzare il processo di instradamento.
-
-
+Per manipolazione intendiamo quella attività che consente di modificare gli attributi BGP (già esposti nel paragrafo `Controllo degli instradamenti`_) degli elementi filtrati al fine di influenzare il `Processo di instradamento`_.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
