@@ -626,7 +626,7 @@ In questo paragrafo ci limiteremo ad accenni, rimandando ad altro capitolo una t
 
 Cominciamo col distinguere due àmbiti: traffico in entrata (*inbound*) e traffico in uscita (*outbound*). Sono proprio due diverse prospettive: da una parte (*inbound*) gli annunci che il nostro sistema autonomo comunica ai suoi *neighbor*, dall'altra (*outbound*) gli annunci che riceviamo dagli altri *AS*.
 
-Proprio così: *inbound* è influenzato dagli annunci che facciamo; *outbound* è influenzato dagli annunci che riceviamo.
+Proprio così: *inbound* è influenzato dagli annunci che facciamo; *outbound* è influenzato dagli annunci che riceviamo. Quindi, per intenderci, se nessun utente degli altri sistemi autonomi riesce a raggiungere le nostre risorse, forse è perché noi non stiamo comunicando a nessuno dove ci troviamo. Viceversa se i nostri utenti non riescono a raggiungere risorse appartenenti ad altri *AS*, forse è perché stiamo scartando alcuni annunci in ingresso con la conseguenza che alcune reti non siano presenti nella tabella degli instradamenti.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
