@@ -655,8 +655,12 @@ Basti riflettere per un momento sulla quantità di decisioni che un sistema auto
 
 In questa tempesta continua possiamo solo intuire quanto sia difficile tenere la barra dritta per erogare un servizio agli utenti che sia sempre all'altezza dei termini contrattuali (*SLA*) mantenendo l'intero sistema autonomo in uno stato di ridondanza e bilanciamento.
 
-Ridondanza in questo scenario vuol dire stabilità, cioè riuscire a poter erogare il servizio di connettività a Internet anche nel caso in cui una parte dell'infrastruttura fisica subisca un danneggiamento.
+Ridondanza, *redundancy*, in questo scenario vuol dire stabilità, cioè riuscire a poter erogare il servizio di connettività a Internet anche nel caso in cui una parte dell'infrastruttura fisica subisca un danneggiamento.
 
-Quando parliamo di bilanciamento intendiamo bilanciamenteo del carico (*load balancing*), o meglio del traffico, che si ottiene attraverso una dinamica, ma sempre ragionevole, distribuzione degli instradamenti su più *neighbor*, sia di *peering*, sia di *transit*.
+Dunque un *AS* può curare la ridondanza attraverso l'acquisizione di transito su più di un collegamento, meglio se in punti geografici diversi, sfruttando fibre ottiche gestite da operatori diversi e accese da apparati alimentati da diversi vettori di energia elettrica. Riducendo all'osso il concetto e con una buona dose di approssimazione potremmo iper-semplificare col motto: "tutto doppio".
+
+A questo proposito ci viene in aiuto una entità nata con Internet, cioè il punto di interscambio (*exchange point*) degli instradamenti.
+
+Quando parliamo di bilanciamento intendiamo bilanciamenteo del carico (*load balancing*), o meglio del traffico, che si ottiene attraverso una dinamica, ma sempre ragionevole, distribuzione degli instradamenti su più *neighbor*, sia di *peering*, sia di *transit*, sia *inbound*, sia *outbound*.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
