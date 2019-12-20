@@ -671,6 +671,6 @@ Quando invece parliamo di bilanciamento, intendiamo bilanciamenteo del carico (*
 
 Una scienza inesatta (quella del *traffic engineering*) che, data la fluidità del traffico, necessita continuamente di correttivi, anche minuscoli (*fine tuning*), per mantenere l'infrastruttura del nostro *AS* in equilibrio.
 
-Va detto che bilanciare il traffico non vuol dire ripartirlo equamente tra i collegamenti a disposizione, ma distribuirlo in modo ragionato (tenuto conto anche dell'aspetto di ridondanza) così da poter sfruttare al meglio le risorse con una benefica ricaduta sul *budget*.
+In conclusione, comunque, va detto che bilanciare il traffico non vuol dire ripartirlo equamente tra i collegamenti a disposizione, ma distribuirlo in modo ragionato (tenuto conto anche dell'aspetto di ridondanza) così da poter sfruttare al meglio le risorse con una benefica ricaduta sul *budget*.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
