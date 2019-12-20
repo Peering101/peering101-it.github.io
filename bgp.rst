@@ -630,7 +630,15 @@ Proprio così: *inbound* è influenzato dagli annunci che facciamo; *outbound* �
 
 Generalmente per muoversi in questo contesto è opportuno prima di tutto individuare gli instradamenti oggetto della nostra attenzione, procedere a una attività di accettazione o di scarto di quegli instradamenti e concludere con un'eventuale modifica dei loro attributi BGP.
 
-Come individuiamo gli instradamenti che per qualche motivo ci interessano? Il lettore che abbia scorso per intero questa breve guida conoscerà le caratteristiche utili: l'identificativo di rete relativo a un prefisso IP (203.0.113.0/24), il sistema autonomo al quale quel prefisso appartiene (64496), la sequenza di *AS* (*AS_SEQUENCE*) che occorre attraversare per raggiungere un prefisso, il particolare attributo abbinato a un instradamento (*LOCAL_PREF*), gli instradamenti appresi da un detereminato *neighbor* e altri ancora.
+Come individuiamo gli instradamenti che per qualche motivo ci interessano? Il lettore che abbia scorso per intero questa breve guida conoscerà le caratteristiche utili: l'identificativo di rete relativo a un prefisso IP (203.0.113.0/24), il sistema autonomo al quale il prefisso appartiene (64496), la sequenza di *AS* (*AS_SEQUENCE*) che occorre attraversare per raggiungere un prefisso, il particolare attributo abbinato a un instradamento (*LOCAL_PREF*), gli instradamenti appresi da un detereminato *neighbor* e altre.
+
+Questi criteri ovviamente possono essere valutati tutti, uno dopo l'altro, proprio come funzionano i setacci: se ne mette uno sotto l'altro, ciascuno con maglie sempre più fitte così che il materiale passante venga via via filtrato secondo grandezze diverse così che tutto ciò che si raccoglie alla fine corrisponda al risultato atteso.
+
+Tra l'altro non è detto che il materiale catturato dai filtri a maglie grosse debba per forza essere scartato, magari ci interessa farne un uso diverso.
+
+Fuor di metafora lo stesso principio vale anche per i *router* *bgp speaking* sui quali è possibile programmare dei filtri per catturare gli elementi ai quali applicare poi una manipolazione utile ai nostri scopi.
+
+Veniamo appunto alla manipolazione cioè a quella attività che consente di modificare gli attributi BGP degli instradamenti filtrati al fine di influenzare il processo di instradamento.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
