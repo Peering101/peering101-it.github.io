@@ -636,9 +636,13 @@ Questi criteri ovviamente possono essere valutati tutti, uno dopo l'altro, propr
 
 Tra l'altro non è detto che il materiale catturato dai filtri a maglie grosse debba per forza essere scartato, magari ci interessa farne un uso diverso.
 
-Fuor di metafora lo stesso principio vale anche per i *router* *bgp speaking* sui quali è possibile programmare dei filtri per catturare gli elementi ai quali applicare poi una manipolazione utile ai nostri scopi.
+Va da sé che l'ordine nel quale vengono disposti i setacci conta, cioè se viene posizionato per primo quello a maglie più fitte è logico che i sottostanti non intrappolino alcunché.
 
-Veniamo appunto alla manipolazione cioè a quella attività che consente di modificare gli attributi BGP degli instradamenti filtrati al fine di influenzare il processo di instradamento.
+Fuor di metafora lo stesso principio vale anche per i *router* sui quali è possibile programmare dei filtri utili a catturare gli elementi ai quali applicare poi una manipolazione che ci aiuti a ottenere i nostri scopi.
+
+Veniamo appunto alla manipolazione cioè a quella attività che consente di modificare gli attributi BGP degli elementi filtrati al fine di influenzare il processo di instradamento.
+
+
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
