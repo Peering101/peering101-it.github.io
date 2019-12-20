@@ -617,7 +617,10 @@ Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Filtri e manipolazioni
 --------
-[to do]
+
+Inesorabilmente è arrivato il momento di complicare per ordinare. Cioè per far sì di usare gli annunci secondo un certo ordine, secondo un certo criterio, è inevitabile che la configurazione diventi più complessa.
+
+Infatti le attività per filtrare e manipolare la tabella BGP, prima che i suoi elementi vengano installati nella tabella degli instradamenti, richiedono la conoscenza di alcuni principi generali e di alcune tecniche particolari.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
