@@ -630,6 +630,8 @@ Proprio così: *inbound* è influenzato dagli annunci che facciamo; *outbound* �
 
 Generalmente per muoversi in questo contesto è opportuno prima di tutto individuare gli instradamenti oggetto della nostra attenzione, procedere a una attività di accettazione o di scarto di quegli instradamenti e concludere con un'eventuale modifica dei loro attributi BGP.
 
+Come individuiamo gli instradamenti che per qualche motivo ci interessano? Il lettore che abbia scorso per intero questa breve guida conoscerà le caratteristiche utili: l'identificativo di rete relativo a un prefisso IP (203.0.113.0/24), il sistema autonomo al quale quel prefisso appartiene (64496), la sequenza di *AS* (*AS_SEQUENCE*) che occorre attraversare per raggiungere un prefisso, il particolare attributo abbinato a un instradamento (*LOCAL_PREF*), gli instradamenti appresi da un detereminato *neighbor* e altri ancora.
+
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Ridondanza e bilanciamento
