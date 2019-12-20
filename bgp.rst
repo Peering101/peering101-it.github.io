@@ -628,6 +628,8 @@ Cominciamo col distinguere due àmbiti: traffico in entrata (*inbound*) e traffi
 
 Proprio così: *inbound* è influenzato dagli annunci che facciamo; *outbound* è influenzato dagli annunci che riceviamo. Quindi, per intenderci, se nessun utente degli altri sistemi autonomi riesce a raggiungere le nostre risorse, forse è perché siamo noi che non stiamo comunicando a nessuno dove ci troviamo. Viceversa se i nostri utenti non riescono a raggiungere risorse appartenenti ad altri *AS*, forse è perché stiamo scartando alcuni annunci in ingresso con la conseguenza che alcune reti non siano presenti nella tabella degli instradamenti.
 
+Generalmente per muoversi in questo contesto è opportuno prima di tutto individuare gli instradamenti oggetto della nostra attenzione, procedere a una attività di accettazione o di scarto di quegli instradamenti e concludere con un'eventuale modifica dei loro attributi BGP.
+
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Ridondanza e bilanciamento
