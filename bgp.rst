@@ -646,6 +646,17 @@ Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Ridondanza e bilanciamento
 --------
-[to do]
+
+Seguendo il filo dell'esposizione imbastita con strategia *bottom-up*, giungiamo a uno degli argomenti che ha interessato e tuttora impegna, per la sua complessità, tutti gli operatori di rete come pure gli studiosi e i ricercatori delle cose di Internet (*res interretis*).
+
+In effetti vorremmo quanto meno esporre le fondamenta di una trattazione che potrà senz'altro essere approfondita e completata in un altro capitolo di questa guida.
+
+Basti riflettere per un momento sulla quantità di decisioni che un sistema autonomo di medie dimensioni è chiamato ad assumere ogni giorno per far fronte alle mutevoli forme di Internet e alle innumerevoli condizioni, comprese quelle di tipo malevolo, del traffico.
+
+In questa tempesta continua possiamo solo intuire quanto sia difficile tenere la barra dritta per erogare un servizio agli utenti che sia sempre all'altezza dei termini contrattuali (*SLA*) mantenendo l'intero sistema autonomo in uno stato di ridondanza e bilanciamento.
+
+Ridondanza in questo scenario vuol dire stabilità, cioè riuscire a poter erogare il servizio di connettività a Internet anche nel caso in cui una parte dell'infrastruttura fisica subisca un danneggiamento.
+
+Quando parliamo di bilanciamento intendiamo bilanciamenteo del carico (*load balancing*), o meglio del traffico, che si ottiene attraverso una dinamica, ma sempre ragionevole, distribuzione degli instradamenti su più *neighbor*, sia di *peering*, sia di *transit*.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
