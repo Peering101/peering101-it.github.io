@@ -624,6 +624,10 @@ Infatti le attività per filtrare e manipolare la tabella BGP, prima che i suoi 
 
 In questo paragrafo ci limiteremo ad accenni, rimandando ad altro capitolo una trattazione più esaustiva.
 
+Cominciamo col distinguere due àmbiti: traffico in entrata (*inbound*) e traffico in uscita (*outbound*). Sono proprio due diverse prospettive: da una parte (*inbound*) gli annunci che il nostro sistema autonomo comunica ai suoi *neighbor*, dall'altra (*outbound*) gli annunci che riceviamo dagli altri *AS*.
+
+Proprio così: *inbound* è influenzato dagli annunci che facciamo; *outbound* è influenzato dagli annunci che riceviamo.
+
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Ridondanza e bilanciamento
