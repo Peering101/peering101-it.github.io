@@ -622,6 +622,8 @@ Inesorabilmente è arrivato il momento di complicare per ordinare. Cioè per far
 
 Infatti le attività per filtrare e manipolare la tabella BGP, prima che i suoi elementi vengano installati nella tabella degli instradamenti, richiedono la conoscenza di alcuni principi generali e di alcune tecniche particolari. In tutti i casi, l'obiettivo si raggiunge sfruttando opzioni, comandi e sintassi che variano tra le diverse implementazioni di BGP oggi disponibili sul mercato.
 
+In questo paragrafo ci limiteremo ad accenni, rimandando ad altro capitolo una trattazione più esaustiva.
+
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Ridondanza e bilanciamento
