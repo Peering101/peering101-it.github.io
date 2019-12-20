@@ -663,8 +663,14 @@ In quest'ottica, un valido aiuto ci viene concesso da un'entità nata con Intern
 
 Pensiamo al punto di interscambio come a un commutatore di pacchetti in una rete locale (*LAN switch*) al quale si connettono i *router* di alcuni sistemi autonomi interessati a scambiare, principalmente alla pari (*peering*), tra loro gli instradamenti. Praticamente un utilissimo facilitatore che agevola l'incontro tra *AS* che non si conoscono reciprocamente e che consente, in un unico luogo (fisico o logico), di accedere a una grossa fetta degli instradamenti presenti su Internet.
 
-In Italia i più attivi *NAP* neutrali sono: `MIX - Milan Internet eXchange <https://www.mix-it.net/>`_ a Milano; `NAMEX - NAutilus MEditerranean eXchange <https://www.namex.it/>`_ a Roma; `TOP-IX - TOrino Piemonte - Internet eXchange <https://www.top-ix.org/>`_ a Torino; `VSIX - Veneto Service Internet eXchange <https://www.vsix.it/>`_ a Padova.
+In Italia i più attivi *NAP* neutrali sono: `MIX - Milan Internet eXchange <https://www.mix-it.net/>`_ a Milano; `NAMEX - NAutilus MEditerranean eXchange <https://www.namex.it/>`_ a Roma; `TOP-IX - TOrino Piemonte - Internet eXchange <https://www.top-ix.org/>`_ a Torino; `VSIX - Veneto System Internet eXchange <https://www.vsix.it/>`_ a Padova.
+
+Se vale il "tutto doppio", allora è consigliabile per un sistema autonomo italiano afferire ad almeno due di quei punti di interscambio nel nome della ridondanza.
 
 Quando invece parliamo di bilanciamento, intendiamo bilanciamenteo del carico (*load balancing*), o meglio del traffico, che si ottiene attraverso una dinamica, ma sempre ragionevole, distribuzione degli instradamenti su più *neighbor*, sia di *peering*, sia di *transit*, sia *inbound*, sia *outbound*.
+
+Una scienza inesatta (quella del *traffic engineering*) che, data la fluidità del traffico, necessita continuamente di correttivi, anche minuscoli (*fine tuning*), per mantenere l'infrastruttura del nostro *AS* in equilibrio.
+
+Va detto che bilanciare il traffico non vuol dire ripartirlo equamente tra i collegamenti a disposizione, ma distribuirlo in modo ragionato (tenuto conto anche dell'aspetto di ridondanza) così da poter sfruttare al meglio le risorse con una benefica ricaduta sul *budget*.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
