@@ -17,7 +17,8 @@ La struttura del testo si rifà a un approccio sempreverde (cioè di tipo *botto
 - `processo di instradamento`_;
 - `controllo degli instradamenti`_;
 - `filtri e manipolazioni`_;
-- `ridondanza e bilanciamento`_.
+- `ridondanza e bilanciamento`_;
+- `sicurezza`_.
 
 Per quanto possibile saranno indicate le fonti, le migliori pratiche e le recenti tecnologie così come pubblicate da `RFC Editor <https://rfc-editor.org>`__ e dalle altre organizzazioni coinvolte nella definizione degli standard.
 
@@ -672,5 +673,16 @@ Quando invece parliamo di bilanciamento, intendiamo bilanciamenteo del carico (*
 Una scienza inesatta (quella del *traffic engineering*) che, data la fluidità del traffico, necessita continuamente di correttivi, anche minuscoli (*fine tuning*), per mantenere l'infrastruttura del nostro *AS* in equilibrio.
 
 In conclusione, comunque, va detto che bilanciare il traffico non vuol dire ripartirlo equamente tra i collegamenti a disposizione, ma distribuirlo in modo ragionato (tenuto conto anche dell'aspetto di ridondanza) così da poter sfruttare al meglio le risorse con una benefica ricaduta sul *budget*.
+
+Sicurezza
+--------
+
+Molteplici sono gli aspetti legati alla sicurezza nel campo di applicazione del protocollo BGP e riguardano nello specifico diversi momenti della vita di una sessione BGP, sia essa di *peering* sia essa di *transit*.
+
+Partiamo dal momento in cui si individua, e si deve poter raggiungere, un *neighbor*. Come possiamo, a esempio, essere certi che non si tratti di un impostore?
+
+Innanzitutto è necessario assicurarsi che solo sorgenti autorizzate possano stabilire una connessione secondo il protocollo *TCP* sulla porta 179. A questo scopo può essere utile creare una lista di accesso (cosiddetta *ACL - Access Control List*) per consentire il collegamento solo da determinate risorse.
+
+Inoltre, è utile poter individuare la posizione del *neighbor*, cioè quanto sia distante dal nostro *router*. A esempio, se il nostro dirimpettatio giace sul nostro stesso segmento di rete (stesso dominio di *broadcast*), vuol dire che non dovrà attraversare alcun *router* e dunque il campo *TTL* nell'intestazione di IP, potrà essere valorizzato a zero (o, in alcune implementazioni, a 1). Nel caso in cui il *neighbor* fosse alcuni *hop* più distante, per esempio tre, occorrerebbe impostare a 3 il valore di TTL nell'intestazione di IP così da escludere tutti gli eventuali impostori presenti sulla Rete distanti da noi più di tre *hop*. Alcune implementazioni definiscono questa tecnica *BGP TTL Security*.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
