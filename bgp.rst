@@ -691,6 +691,6 @@ Esistono ulteriori tecniche che le implementazioni di BGP fatte dai vari produtt
 
 Fortunatamente dal 2012, con la `[RFC6480] An Infrastructure to Support Secure Internet Routing <https://www.rfc-editor.org/rfc/rfc6480.txt>`_, abbiamo un formidabile antidoto contro l'annuncio di instradamenti cosiddetti dirottati (*hijacked*), una infrastruttura basata su risorse verificabili con una chiave pubblica: *RPKI - Resource Public Key Infrastructure*.
 
-Data l'importanza e la vastità dell'argomento, un trattazione più completa dell'argomento sarà pubblicata in una guida a sé stante.
+Data l'importanza e la vastità dell'argomento, un trattazione più completa sarà presto pubblicata in una guida a sé stante.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
