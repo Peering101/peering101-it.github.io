@@ -674,6 +674,8 @@ Una scienza inesatta (quella del *traffic engineering*) che, data la fluidità d
 
 In conclusione, comunque, va detto che bilanciare il traffico non vuol dire ripartirlo equamente tra i collegamenti a disposizione, ma distribuirlo in modo ragionato (tenuto conto anche dell'aspetto di ridondanza) così da poter sfruttare al meglio le risorse con una benefica ricaduta sul *budget*.
 
+Torna all'inizio di `BGP (Border Gateway Protocol)`_
+
 Sicurezza
 --------
 
