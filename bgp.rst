@@ -85,7 +85,7 @@ Torna all'inizio di `BGP (Border Gateway Protocol)`_
 Instradamento interno o esterno, statico o dinamico
 --------
 
-Abbiamo visto come diversi siano i metodi per rendere le risorse di rete raggiungibili, ma occorre aggiungere ancora un tassello determinante per la prosecuzione dell'illustrazione, e cioè il loro àmbito di applicazione. Per questo è necessario introdurre la nozione di sistema autonomo, fin qui solo velocemente menzionata.
+Abbiamo visto come diversi siano i metodi per rendere le risorse di rete raggiungibili, ma occorre aggiungere ancóra un tassello determinante per la prosecuzione dell'illustrazione, e cioè il loro àmbito di applicazione. Per questo è necessario introdurre la nozione di sistema autonomo, fin qui solo velocemente menzionata.
 
 Si tratta della cellula più piccola che dà vita all'organismo di Internet e dobbiamo immaginarla come la tessera di un mosaico la quale può trovarsi nel centro o ai bordi del quadro ma sempre con almeno un lato (preferibilmente almeno due) connesso ad altre tessere.
 
@@ -171,7 +171,7 @@ Affinché la connessione BGP tra due *router* venga stabilita correttamente è n
 
 Innanzitutto partiamo dallo stato di riposo (**idle**) nel quale si trova un *router* prima di ricevere il via alla connessione che possiamo dare noi stessi intervenendo sulla configurazione del dispositivo. Ricevuto il via (*start*), il primo *router* tenta una connessione TCP sulla porta 179 del secondo e poi si mette in ascolto di risposte provenienti dal secondo *router*.
 
-Ecco che entriamo nel passaggio di connessione (**connect**) durante il quale si attende che la connessione TCP avvenga con successo. In quest'ultimo caso si procede verso un ulteriore passaggio chiamato *opensent*. Se invece la connessione TCP non viene stabilita, allora si va verso il passaggio *active*. E ancora, nel caso in cui si esaurisca il tempo per l'operazione, si azzera il *timer* e viene ritentata una connessione TCP, mentre lo stato rimane *connect*. Altri eventi innescati dal sistema o manualmente da noi, producono il ritorno allo stato di riposo.
+Ecco che entriamo nel passaggio di connessione (**connect**) durante il quale si attende che la connessione TCP avvenga con successo. In quest'ultimo caso si procede verso un ulteriore passaggio chiamato *opensent*. Se invece la connessione TCP non viene stabilita, allora si va verso il passaggio *active*. E ancóra, nel caso in cui si esaurisca il tempo per l'operazione, si azzera il *timer* e viene ritentata una connessione TCP, mentre lo stato rimane *connect*. Altri eventi innescati dal sistema o manualmente da noi, producono il ritorno allo stato di riposo.
 
 Segue lo stato attivo (**active**) che semplicemente indica un momento di transizione o verso il successo della connessione TCP o verso il suo fallimento con successivo innesco di un ulteriore tentativo.
 
@@ -179,7 +179,7 @@ Se la connessione TCP va a buon fine, allora siamo nel passaggio **opensent** do
 
 Ma se il messaggio *OPEN* è corretto, allora il motore del BGP si mette in moto e il primo *router* comincia a inviare al secondo messaggi di tipo *KEEPALIVE* per mantenere viva la connessione.
 
-Siamo ancora nel passaggio *opensent* quando il *router* confronta il campo *my autonomous system* inviatogli dal secondo *router* con il proprio numero di *AS* così da capire se entrambi appartengano o no allo stesso sistema autonomo. Nel primo caso saremmo nel contesto di BGP interno (*internal BGP*), nell'altro invece ci troveremmo nel contesto di BGP esterno (*external BGP*), una notizia importantissima che influenza molti comportamenti del protocollo.
+Siamo ancóra nel passaggio *opensent* quando il *router* confronta il campo *my autonomous system* inviatogli dal secondo *router* con il proprio numero di *AS* così da capire se entrambi appartengano o no allo stesso sistema autonomo. Nel primo caso saremmo nel contesto di BGP interno (*internal BGP*), nell'altro invece ci troveremmo nel contesto di BGP esterno (*external BGP*), una notizia importantissima che influenza molti comportamenti del protocollo.
 
 A questo punto ci troviamo in un passaggio denominato **openconfirm** che conduce verso due distinte situazioni: il primo *router* attende un messaggio *KEEPALIVE* dal secondo; se arriva, la negoziazione si completa e dunque la connessione si considera stabilita (*established*). Altrimenti se il primo *router* riceve un messaggio di *NOTIFICATION*, si torna allo stato di riposo.
 
@@ -190,7 +190,7 @@ Qualora la connessione TCP dovesse interrompersi, il *router* tornerebbe allo st
 Nominato più volte, ispezioniamo il contenuto del messaggio *NOTIFICATION* precisando che viene generato in caso di errore e 
 infatti contiene: un codice di errore, un altro codice subordinato al primo e un campo di dati a lunghezza variabile.
 
-Il messaggio *KEEPALIVE* ha invece una diversa funzione, ma altrettanto importante perché, inviato a intervalli di tempo prestabiliti, serve a capire se i *router* sono ancora disponibili. Ha una lunghezza fissa di 19 byte e non reca contenuti.
+Il messaggio *KEEPALIVE* ha invece una diversa funzione, ma altrettanto importante perché, inviato a intervalli di tempo prestabiliti, serve a capire se i *router* sono ancóra disponibili. Ha una lunghezza fissa di 19 byte e non reca contenuti.
 
 Arriviamo finalmente al carburante del protocollo BGP: il messaggio *UPDATE* che veicola i contenuti senza i quali nulla della nostra trattazione avrebbe senso e che si presenta così::
 
@@ -415,7 +415,7 @@ Controllo degli instradamenti
 --------
 Lo standard viene coniugato, dalle molteplici implementazioni presenti sul mercato, a diversi modi di controllo degli instradamenti e ciascuno secondo un preciso tempo di applicazione.
 
-Una esigenza che si palesa quando ci poniamo domande tipo: come evitiamo l'annuncio dello spazio di indirizzamento definito nella `[RFC1918] <https://www.rfc-editor.org/rfc/rfc1928.txt>`_? Oppure: come possiamo filtrare gli annunci provenienti da un determinato dirimpettaio (*neighbor*)? E ancòra: posso transitare per un certo fornitore (*AS*) invece che per un altro?
+Una esigenza che si palesa quando ci poniamo domande tipo: come evitiamo l'annuncio dello spazio di indirizzamento definito nella `[RFC1918] <https://www.rfc-editor.org/rfc/rfc1928.txt>`_? Oppure: come possiamo filtrare gli annunci provenienti da un determinato dirimpettaio (*neighbor*)? E ancóra: posso transitare per un certo fornitore (*AS*) invece che per un altro?
 
 Le risposte a questi e ad altri interrogativi presuppongono la conoscenza degli attributi menzionati nel paragrafo `Come funziona BGP`_.
 
@@ -691,7 +691,7 @@ Innanzitutto è necessario assicurarsi che solo sorgenti autorizzate possano sta
 
 Inoltre, è utile poter individuare la posizione del *neighbor*, cioè quanto sia distante dal nostro *router*. A esempio, se il nostro dirimpettaio giace sul nostro stesso segmento di rete, cioè nel nostro stesso dominio di *broadcast* (come molte volte avviene nei punti di interscambio degli instradamenti citati nel precedente paragrafo), vuol dire che non dovrà attraversare alcun *router* e dunque il campo *TTL* nell'intestazione di IP, potrà essere valorizzato a zero (o, per RFC, a 1). Nel caso in cui il *neighbor* fosse alcuni *hop* più distante, per esempio tre, occorrerebbe impostare a 3 il valore di TTL nell'intestazione di IP (da parte di entrambi i *router*) così da escludere tutti gli eventuali disturbatori presenti sulla Rete distanti da noi più di tre *hop*. Questa tecnica, utile solo per sessioni *eBGP*, è documentata nella `[RFC5082] The Generalized TTL Security Mechanism (GTSM) <https://www.rfc-editor.org/rfc/rfc5082.txt>`_ dove il ragionamento appena fatto viene trasposto partendo da un valore *TTL* di 255 e dunque, se non ci sono *hop* intermedi tra i *neighbor*, il valore atteso sarà di 255 o 254. Le macchine di conseguenza possono scartare i tentativi di stabilire una sessione BGP provenienti da *neighbor* sospetti (*dangerous*, cioè pericolosi, secondo la lettera della RFC).
 
-E ancòra, è possibile subordinare a un meccanismo di autenticazione la realizzazione di una sessione BGP. Come? Attraverso la configurazione di alcune opzioni stabilite nel 2010 dalla `[RFC5925] The TCP Authentication Option <https://www.rfc-editor.org/rfc/rfc5925.txt>`_. Vecchie implementazioni oggi esistenti in produzione fanno ancòra uso di una password condivisa secondo lo standard *TCP MD5* introdotto nel 1998 da una ormai obsoleta `[RFC2385] Protection of BGP Sessions via the TCP MD5 Signature Option <https://www.rfc-editor.org/rfc/rfc2385.txt>`_.
+E ancóra, è possibile subordinare a un meccanismo di autenticazione la realizzazione di una sessione BGP. Come? Attraverso la configurazione di alcune opzioni stabilite nel 2010 dalla `[RFC5925] The TCP Authentication Option <https://www.rfc-editor.org/rfc/rfc5925.txt>`_. Vecchie implementazioni oggi esistenti in produzione fanno ancóra uso di una password condivisa secondo lo standard *TCP MD5* introdotto nel 1998 da una ormai obsoleta `[RFC2385] Protection of BGP Sessions via the TCP MD5 Signature Option <https://www.rfc-editor.org/rfc/rfc2385.txt>`_.
 
 Esistono ulteriori tecniche che le implementazioni di BGP fatte dai vari produttori mettono a disposizione degli operatori, ma nessuna entra nel merito della legittimità dei singoli annunci. In poche parole, i metodi fin qui descritti sono in grado di accertare l'identità del *neighbor* e di proteggere il nostro *router* da eventuali pacchetti maliziosi provenienti da disturbatori, ma se questo dirimpettaio ben identificato e pulito ci annunciasse risorse di altri sistemi autonomi come fossero le sue, avremmo comunque un problema e, di sicuro, assai grave per l'intero ecosistema di Internet.
 
