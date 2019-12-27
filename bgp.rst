@@ -656,7 +656,7 @@ Basti riflettere per un momento sulla quantità di decisioni che un sistema auto
 
 In questa tempesta continua possiamo solo intuire quanto sia difficile tenere la barra dritta per erogare un servizio agli utenti che sia sempre all'altezza dei termini contrattuali (*SLA*) mantenendo l'intero sistema autonomo in uno stato di ridondanza e bilanciamento.
 
-Ridondanza, *redundancy*, in questo scenario vuol dire stabilità, cioè riuscire a poter erogare il servizio di connettività a Internet anche nel caso in cui una parte dell'infrastruttura fisica subisca un danneggiamento.
+In questo scenario, ridondanza (*redundancy*) esprime un principio di cautela che ispira una progettazione tale da evitare i cosiddetti singoli punti di rottura (*single point of failure*) attraverso l'impiego di elementi doppi.
 
 Dunque un *AS* può curare la ridondanza attraverso l'acquisizione di transito su più di un collegamento, meglio se in punti geografici diversi, sfruttando fibre ottiche gestite da operatori diversi e accese da apparati alimentati da diversi vettori di energia elettrica. Riducendo all'osso il concetto e con una buona dose di approssimazione potremmo iper-semplificare col motto: "tutto doppio".
 
@@ -671,6 +671,10 @@ Se per esempio gli afferenti all'infrastruttura di un *NAP* fossero cento, vorre
 In Italia i più attivi *NAP* neutrali sono: `MIX - Milan Internet eXchange <https://www.mix-it.net/>`_ a Milano; `NAMEX - NAutilus MEditerranean eXchange <https://www.namex.it/>`_ a Roma; `TOP-IX - TOrino Piemonte - Internet eXchange <https://www.top-ix.org/>`_ a Torino; `VSIX - Veneto System Internet eXchange <https://www.vsix.it/>`_ a Padova.
 
 Se vale il "tutto doppio", allora è consigliabile per un sistema autonomo italiano afferire ad almeno due di quei punti di interscambio nel nome della ridondanza.
+
+Vorremmo a questo punto osservare come la strada della ridondanza ci conduca nella terra della resilienza (*resiliency*) che è un concetto legato a doppio filo con quanto appena raccontato. Infatti possiamo considerare la resilienza come anima gemella della stabilità: riesce a garantire il servizio di accesso a Internet anche nel caso in cui una parte dell'infrastruttura (fisica o logica) subisca un danneggiamento.
+
+La resilienza è un affare così determinante per la vita di Internet che recentemente *IAB - Internet Architecture Board* ha espresso la volontà di dar vita a uno specifico programma (`_CHIRP - CHallenges for Internet Resilience Program <https://github.com/intarchboard/resilience/>`_) per stimolare la riflessione sul tema e la produzione scientifica in materia, anche attraverso la redazione di specifiche RFC. 
 
 Quando invece parliamo di bilanciamento, intendiamo bilanciamenteo del carico (*load balancing*), o meglio del traffico, che si ottiene attraverso una dinamica, ma sempre ragionevole, distribuzione degli instradamenti su più *neighbor*, sia di *peering*, sia di *transit*, sia *inbound*, sia *outbound*.
 
