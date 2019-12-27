@@ -672,7 +672,7 @@ In Italia i più attivi *NAP* neutrali sono: `MIX - Milan Internet eXchange <htt
 
 Se vale il "tutto doppio", allora è consigliabile per un sistema autonomo italiano afferire ad almeno due di quei punti di interscambio nel nome della ridondanza.
 
-Vorremmo a questo punto osservare come la strada della ridondanza ci conduca nella terra della resilienza (*resiliency*) che è un concetto legato a doppio filo con quanto appena raccontato. Infatti possiamo considerare la resilienza come anima gemella della stabilità: riesce a garantire il servizio di accesso a Internet anche nel caso in cui una parte dell'infrastruttura (fisica o logica) subisca un danneggiamento.
+Vorremmo a questo punto osservare come la strada della ridondanza ci conduca nella terra della resilienza (*resiliency*) che è un concetto legato a doppio filo con quanto appena raccontato. Infatti possiamo considerare la resilienza come anima gemella della stabilità: riuscire a garantire il servizio di accesso a Internet anche nel caso in cui una parte dell'infrastruttura (fisica o logica) subisca un danneggiamento.
 
 La resilienza è un affare così determinante per la vita di Internet che recentemente `IAB <https://www.iab.org>`_ - *Internet Architecture Board*, organismo che si occupa della direzione tecnica per lo sviluppo nel lungo periodo di Internet, ha espresso la volontà di dar vita a uno specifico programma (`CHIRP - CHallenges for Internet Resilience Program <https://github.com/intarchboard/resilience/>`_) per stimolare la riflessione sul tema e la produzione scientifica in materia, anche attraverso la redazione di specifiche RFC. 
 
