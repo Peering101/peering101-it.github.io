@@ -722,3 +722,7 @@ Citazioni:
 .. [#] I cinque Regional Internet Registry esistenti al mondo sono associati nell'organismo `NRO - Number Resource Organization <https://www.nro.net/>`_.
 .. [#] Dati: `CIDR Report <https://www.cidr-report.org/as2.0/>`_.
 .. [#] Criterio implementato da `Cisco <https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/13753-25.html>`_
+
+_____
+
+Torna all'inizio di `BGP (Border Gateway Protocol)`_
