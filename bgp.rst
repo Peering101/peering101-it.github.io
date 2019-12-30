@@ -406,7 +406,7 @@ Se in molti casi il processo per scegliere il miglior percorso (*best path*) ver
 
 Alcune implementazioni presenti sul mercato aggiungono altri criteri selettivi come a esempio:
 
-9. Preferire l'instradamento appreso (e installato nella tabella degli instradamenti) per primo.
+9. Preferire l'instradamento appreso (e installato nella tabella degli instradamenti) per primo [#]_.
 
 Ovviamente se il *NEXT_HOP* non è raggiungibile allora l'instradamento viene ignorato, come pure se vengono implementate delle regole per filtrare via alcuni annunci.
 
@@ -721,3 +721,4 @@ Citazioni:
 .. [#] Questa classificazione vede il primo abbozzo nel lavoro `An analysis of internet inter-domain topology and route stability <https://www.isi.edu/division7/publication_files/analysis_of_internet_inter.pdf>`_ pubblicato nel 1997 da Ramesh Govindan e Anoop Reddy.
 .. [#] I cinque Regional Internet Registry esistenti al mondo sono associati nell'organismo `NRO - Number Resource Organization <https://www.nro.net/>`_.
 .. [#] Dati: `CIDR Report <https://www.cidr-report.org/as2.0/>`_.
+.. [#] Criterio implementato da `Cisco <https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/13753-25.html>`_
