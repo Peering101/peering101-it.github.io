@@ -705,6 +705,8 @@ Data l'importanza e la vastità dell'argomento, un trattazione più completa sar
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
+_____
+
 .. rubric:: Note
 
 .. [#] Le RFC sono discusse e approvate nei gruppi di lavoro (*working group*) in seno all'organismo `IETF - Internet Engineering Task Force <https://www.ietf.org>`__.
