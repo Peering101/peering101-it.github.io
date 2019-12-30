@@ -20,7 +20,7 @@ La struttura del testo si rifà a un approccio sempreverde (cioè di tipo *botto
 - `ridondanza e bilanciamento`_;
 - `sicurezza`_.
 
-Per quanto possibile saranno indicate le fonti, le migliori pratiche e le recenti tecnologie così come pubblicate da `RFC Editor <https://rfc-editor.org>`__ e dalle altre organizzazioni coinvolte nella definizione degli standard.
+Per quanto possibile saranno indicate le fonti, le migliori pratiche e le recenti tecnologie così come pubblicate da `RFC Editor <https://rfc-editor.org>`__ [#]_ e dalle altre organizzazioni coinvolte nella definizione degli standard.
 
 Protocolli di instradamento: fondamenti e concetti
 --------
@@ -710,3 +710,4 @@ _____
 .. rubric:: Note
 
 .. [#] Le RFC sono discusse e approvate nei gruppi di lavoro (*working group*) in seno all'organismo `IETF - Internet Engineering Task Force <https://www.ietf.org>`__.
+.. [#] La funzione di RFC Editor è stata voluta da Governo degli Stati Uniti d'America ai tempi del progetto *DARPA - Defense Advanced Research Projects Agency* ed è durata fino al 1998. Dal 1998 al 2018, la funzione di modificare, pubblicare e catalogare le RFC è stata appaltata alla `Internet Society <https://www.isoc.org>`__. RFC Editor è un progetto che fino al 2009 è stato condotto presso l'Università della California del sud a Marina del Rey. Oggi invece le funzioni di RFC Editor sono erogate da *AMS - Association Management Solutions LLC* sulla base di un contratto con *IETF LLC - IETF Administration*.
