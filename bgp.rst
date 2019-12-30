@@ -74,7 +74,7 @@ Diverso protocollo di instradamento, e più complesso del precedente, è quello 
 
 L'oggetto delle comunicazioni tra dispositivi che ne fanno uso risiede nelle informazioni su dispositivi e reti adiacenti incluse delle grandezze (*metric*) associate alla connessione. In altre parole ciascun *router* produce un messaggio che contiene una descrizione del dispositivo stesso e di dove si connette agli altri; messaggio che viene distribuito a tutti gli altri *router* della rete i quali lo archiviano in una base di dati interna. Così ciascun dispositivo sarà in grado di ricostruire autonomamente una topologia della rete che sarà uguale per tutti.
 
-Dopodiché, tutti i *router* saranno in grado di calcolare e tratteggiare un albero (dove ciascun dispositivo pone sé stesso alla radice) di cosiddetti *best path* verso ciascuna destinazione applicando l'algoritmo `SPF - Shortest Path First <http://www-m3.ma.tum.de/foswiki/pub/MN0506/WebHome/dijkstra.pdf>`_ concepito nel 1959 dal matematico olandese Edsger W. Dijkstra.
+Dopodiché, tutti i *router* saranno in grado di calcolare e tratteggiare un albero (dove ciascun dispositivo pone sé stesso alla radice) di cosiddetti *best path* verso ciascuna destinazione applicando l'algoritmo `SPF - Shortest Path First <http://www-m3.ma.tum.de/foswiki/pub/MN0506/WebHome/dijkstra.pdf>`_ concepito nel 1959 dal matematico olandese Edsger W. Dijkstra [#]_.
 
 Queste caratteristiche rendono il *link-state* un algoritmo più adatto a essere impiegato in scenari grandi e complessi, tuttavia sempre interni a un sistema autonomo. Infatti su grandi reti, come Internet, l'instabilità di alcuni collegamenti renderebbe le ritrasmissioni e i conseguenti calcoli un lavoro troppo oneroso (e di conseguenza inefficiente) per i singoli *router*.
 
@@ -711,3 +711,4 @@ _____
 
 .. [#] Le RFC sono discusse e approvate nei gruppi di lavoro (*working group*) in seno all'organismo `IETF - Internet Engineering Task Force <https://www.ietf.org>`__.
 .. [#] La funzione di RFC Editor è stata voluta da Governo degli Stati Uniti d'America ai tempi del progetto *DARPA - Defense Advanced Research Projects Agency* ed è durata fino al 1998. Dal 1998 al 2018, la funzione di modificare, pubblicare e catalogare le RFC è stata appaltata alla `Internet Society <https://www.isoc.org>`__. RFC Editor è un progetto che fino al 2009 è stato condotto presso l'Università della California del sud a Marina del Rey. Oggi invece le funzioni di RFC Editor sono erogate da *AMS - Association Management Solutions LLC* sulla base di un contratto con *IETF LLC - IETF Administration*.
+.. [#] Una breve biografia di Edsger Dijkstra si può leggere, in inglese, qui: http://mathshistory.st-andrews.ac.uk/Biographies/Dijkstra.html
