@@ -70,7 +70,7 @@ Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 _____
 
-Diverso protocollo di instradamento, e più complesso del precedente, è quello basato sull'algoritmo *link-state*. In questo caso i *router* si scambiano informazioni proprio sullo stato del collegamento e quindi non tabelle di instradamento.
+Diverso protocollo di instradamento, e più complesso del precedente, è quello basato sull'algoritmo *link-state* [#]_. In questo caso i *router* si scambiano informazioni proprio sullo stato del collegamento e quindi non tabelle di instradamento.
 
 L'oggetto delle comunicazioni tra dispositivi che ne fanno uso risiede nelle informazioni su dispositivi e reti adiacenti incluse delle grandezze (*metric*) associate alla connessione. In altre parole ciascun *router* produce un messaggio che contiene una descrizione del dispositivo stesso e di dove si connette agli altri; messaggio che viene distribuito a tutti gli altri *router* della rete i quali lo archiviano in una base di dati interna. Così ciascun dispositivo sarà in grado di ricostruire autonomamente una topologia della rete che sarà uguale per tutti.
 
@@ -712,3 +712,4 @@ _____
 .. [#] Le RFC sono discusse e approvate nei gruppi di lavoro (*working group*) in seno all'organismo `IETF - Internet Engineering Task Force <https://www.ietf.org>`__.
 .. [#] La funzione di RFC Editor è stata voluta da Governo degli Stati Uniti d'America ai tempi del progetto *DARPA - Defense Advanced Research Projects Agency* ed è durata fino al 1998. Dal 1998 al 2018, la funzione di modificare, pubblicare e catalogare le RFC è stata appaltata alla `Internet Society <https://www.isoc.org>`__. RFC Editor è un progetto che fino al 2009 è stato condotto presso l'Università della California del sud a Marina del Rey. Oggi invece le funzioni di RFC Editor sono erogate da *AMS - Association Management Solutions LLC* sulla base di un contratto con *IETF LLC - IETF Administration*.
 .. [#] Una breve biografia di Edsger Dijkstra si può leggere, in inglese, qui: http://mathshistory.st-andrews.ac.uk/Biographies/Dijkstra.html
+.. [#] L'algoritmo *link-state* affonda le radici nel seguente articolo del 1980 *`The New Routing Algorithm for the ARPANET <https://ieeexplore.ieee.org/document/1094721>`__ degli autori J. McQuillan,  I. Richer, E. Rosen.
