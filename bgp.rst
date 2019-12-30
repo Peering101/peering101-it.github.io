@@ -390,7 +390,7 @@ Torna all'inizio di `BGP (Border Gateway Protocol)`_
 Processo di instradamento
 --------
 
-BGP è un protocollo molto flssibile, per questo gode di ottima salute nonostante il peso degli anni e le mutanti esigenze dell'industria di Internet. La sua grande abilità è di rendere note le posizioni di tutte le risorse numeriche che si affacciano in Rete originanti dagli oltre 66mila sistemi autonomi a oggi attivi nel mondo.
+BGP è un protocollo molto flssibile, per questo gode di ottima salute nonostante il peso degli anni e le mutanti esigenze dell'industria di Internet. La sua grande abilità è di rendere note le posizioni di tutte le risorse numeriche che si affacciano in Rete originanti dagli oltre 66mila sistemi autonomi a oggi attivi nel mondo [#]_.
 
 Se in molti casi il processo per scegliere il miglior percorso (*best path*) verso una destinazione è assai lineare perché si può preferire semplicemente il percorso più breve (cioè l'*AS_PATH* più corto), a volte si deve applicare un chiaro algoritmo che i *router* devono osservare tutte le volte che per la stessa destinazione hanno a disposizione più percorsi diversi:
 
@@ -720,3 +720,4 @@ Citazioni:
 .. [#] L'algoritmo *link-state* affonda le radici nel seguente articolo del 1980 `The New Routing Algorithm for the ARPANET <https://ieeexplore.ieee.org/document/1094721>`__ degli autori J. McQuillan,  I. Richer, E. Rosen.
 .. [#] Questa classificazione vede il primo abbozzo nel lavoro `An analysis of internet inter-domain topology and route stability <https://www.isi.edu/division7/publication_files/analysis_of_internet_inter.pdf>`_ pubblicato nel 1997 da Ramesh Govindan e Anoop Reddy.
 .. [#] I cinque Regional Internet Registry esistenti al mondo sono associati nell'organismo `NRO - Number Resource Organization <https://www.nro.net/>`_.
+.. [#] Dati: `CIDR Report <https://www.cidr-report.org/as2.0/>`_.
