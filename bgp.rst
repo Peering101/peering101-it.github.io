@@ -1,11 +1,12 @@
 .. topic:: BGP (Border Gateway Protocol)
 
-   In questo spazio, nato da un'idea di `ITNOG <https://www.itnog.it/>`__ (*the ITalian Network Operators Group*), intendiamo
-   fornire una breve guida in lingua italiana ai principali concetti e meccanismi sottesi al funzionamento di Internet
-   illustrando alcune delle architetture di instradamento basate sul protocollo *BGP - Border Gateway Protocol*.
-   L'obiettivo dunque non è quello di tradurre e parafrasare le RFC (*Request for comments*) [#]_, né quello di somministrare
-   un ricettario; piuttosto vorremmo divulgare (con linguaggio semplice) i capisaldi della letteratura conditi con esempi
-   intuitivi così da facilitare la strada a quanti vorranno poi approfondire.
+    In questo spazio, nato da un'idea di `ITNOG <https://www.itnog.it/>`__ (*the ITalian Network Operators Group*), intendiamo
+    fornire una breve guida in lingua italiana ai principali concetti e meccanismi sottesi al funzionamento di Internet
+    illustrando alcune delle architetture di instradamento basate sul protocollo *BGP - Border Gateway Protocol*.
+    L'obiettivo dunque non è quello di tradurre e parafrasare le RFC (*Request for comments*) [#]_, né quello di somministrare
+    un ricettario; piuttosto vorremmo divulgare (con linguaggio semplice) i capisaldi della letteratura conditi con esempi
+    intuitivi così da facilitare la strada a quanti vorranno poi approfondire.
+
 
 La struttura del testo si rifà a un approccio sempreverde (cioè di tipo *bottom-up*, dal basso verso l’alto), scandito secondo questi punti:
 
