@@ -1,6 +1,9 @@
 BGP (Border Gateway Protocol)
 =============
-    
+
+Premessa
+-----
+
 In questo spazio, nato da un'idea di `ITNOG <https://www.itnog.it/>`__ (*the ITalian Network Operators Group*), intendiamo fornire una breve guida in lingua italiana ai principali concetti e meccanismi sottesi al funzionamento di Internet illustrando alcune delle architetture di instradamento basate sul protocollo *BGP - Border Gateway Protocol*.
 L'obiettivo dunque non è quello di tradurre e parafrasare le RFC (*Request for comments*) [#]_, né quello di somministrare un ricettario; piuttosto vorremmo divulgare (con linguaggio semplice) i capisaldi della letteratura conditi con esempi intuitivi così da facilitare la strada a quanti vorranno poi approfondire.
 
@@ -90,7 +93,7 @@ Da un punto di vista tecnico la definizione può essere rintracciata nella `[RFC
 
    *"Un sistema autonomo è un gruppo di uno o più prefissi IP gestito da uno o più operatori di rete con una politica di instradamento UNICA e BEN DEFINITA."* [t.d.r.]
    [CIT-RFC1930]_
-   
+
 Fino al 2007 la rappresentazione di un *AS* avveniva per mezzo di un numero a 16 bit (a esempio 64500), dopodiché per mezzo di un numero a 32 bit (a esempio in formato *asplain* 65551 o, in formato *asdot+*, 1.15), come regolata dalla `[RFC5396] Textual Representation of Autonomous System (AS) Numbers <https://www.rfc-editor.org/rfc/rfc5396.txt>`_.
 
 Più dettagliatamente possiamo considerare un "dentro" e un "fuori" dal punto di vista di un *AS* e cioè rispettivamente instradamenti *intra-AS* e instradamenti *inter-AS*.
@@ -185,7 +188,7 @@ Infine, se è andato tutto a buon fine ci si ritrova all'ultimo passaggio, **est
 
 Qualora la connessione TCP dovesse interrompersi, il *router* tornerebbe allo stato *active*.
 
-Nominato più volte, ispezioniamo il contenuto del messaggio *NOTIFICATION* precisando che viene generato in caso di errore e 
+Nominato più volte, ispezioniamo il contenuto del messaggio *NOTIFICATION* precisando che viene generato in caso di errore e
 infatti contiene: un codice di errore, un altro codice subordinato al primo e un campo di dati a lunghezza variabile.
 
 Il messaggio *KEEPALIVE* ha invece una diversa funzione, ma altrettanto importante perché, inviato a intervalli di tempo prestabiliti, serve a capire se i *router* sono ancóra disponibili. Ha una lunghezza fissa di 19 byte e non reca contenuti.
@@ -259,7 +262,7 @@ Oppure una combinazione delle due precedenti::
       +-----------------------------------------------------+
       |            203.0.113.0/24                           | NLRI
       +-----------------------------------------------------+
-      
+
 Una speciale considerazione va rivolta agli attributi del percorso (**path attributes**) i quali si articolano in quattro diverse categorie:
 
 - **[well-known mandatory]** attributo imprescindibile che deve essere conosciuto da qualunque *bgp speaking router*;
@@ -320,7 +323,7 @@ Ora, per far sì che la nostra rete 203.0.113.0/24 venga installata nella tabell
 Vale ovviamente lo stesso ragionamento per IPv6. Di seguito tutto insieme:
 
 `CISCO IOS <https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/26634-bgp-toc.html>`__::
-  
+
   router bgp 64500
   network 203.0.113.0 mask 255.255.255.0
   network 2001:db8::/32
@@ -343,7 +346,7 @@ Vale ovviamente lo stesso ragionamento per IPv6. Di seguito tutto insieme:
   set type external
 
 `OpenBSD OpenBGPD <http://www.openbgpd.org/>`__::
-  
+
   AS 64500
   network 203.0.113.0/24
   network 2001:db8::/32
@@ -354,7 +357,7 @@ Vale ovviamente lo stesso ragionamento per IPv6. Di seguito tutto insieme:
   neighbor fd16:32:48:64::1 {
     descr "PEER v6 CON AS64496"
     remote-as 64496
-  } 
+  }
 
 Ciascuna sessione BGP può essere variamente definita e arricchita a seconda del contesto nel quale viene stabilita, cosa che richiederebbe una più ampia e specifica trattazione.
 
@@ -610,7 +613,7 @@ L'attributo *COMMUNITY* è rappresentato da un numero a 32 bit che nella pratica
 
 In questo esempio, R1, che appartiene all'AS64500, assegna alcuni attributi *COMMUNITY* agli instradamenti che apprende dalle sessioni *eBGP*, usando dei numeri che hanno significato solo per chi amministra quel sistema autonomo. Nello specifico il numero 39 contraddistingue instradamenti appresi da un *router* operante su suolo italiano, mentre il numero 1 contraddistingue un instradamento appreso da un *router* operante su suolo statunitense.
 
-Nel momento in cui AS64500 rende conoscibili tali corrispondenze ai suoi clienti, questi ultimi nel ricevere gli instradamenti così classificati hanno la possibilità, a loro volta, di applicare degli ulteriori criteri, come l'accoppiamento a determinati valori di *LOCAL_PREF* o addirittura di assumere la decisione di scartare certi instradamenti. 
+Nel momento in cui AS64500 rende conoscibili tali corrispondenze ai suoi clienti, questi ultimi nel ricevere gli instradamenti così classificati hanno la possibilità, a loro volta, di applicare degli ulteriori criteri, come l'accoppiamento a determinati valori di *LOCAL_PREF* o addirittura di assumere la decisione di scartare certi instradamenti.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
@@ -672,7 +675,7 @@ Se vale il "tutto doppio", allora è consigliabile per un sistema autonomo itali
 
 Vorremmo a questo punto osservare come la strada della ridondanza ci conduca nella terra della resilienza (*resiliency*) che è un concetto legato a doppio filo con quanto appena raccontato. Infatti possiamo considerare la resilienza come anima gemella della stabilità: riuscire a garantire il servizio di accesso a Internet anche nel caso in cui una parte dell'infrastruttura (fisica o logica) subisca un danneggiamento.
 
-La resilienza è un affare così determinante per la vita di Internet che recentemente `IAB <https://www.iab.org>`_ - *Internet Architecture Board*, organismo che si occupa della direzione tecnica per lo sviluppo nel lungo periodo di Internet, ha espresso la volontà di dar vita a uno specifico programma (`CHIRP - CHallenges for Internet Resilience Program <https://github.com/intarchboard/resilience/>`_) per stimolare la riflessione sul tema e la produzione scientifica in materia, anche attraverso la redazione di specifiche RFC. 
+La resilienza è un affare così determinante per la vita di Internet che recentemente `IAB <https://www.iab.org>`_ - *Internet Architecture Board*, organismo che si occupa della direzione tecnica per lo sviluppo nel lungo periodo di Internet, ha espresso la volontà di dar vita a uno specifico programma (`CHIRP - CHallenges for Internet Resilience Program <https://github.com/intarchboard/resilience/>`_) per stimolare la riflessione sul tema e la produzione scientifica in materia, anche attraverso la redazione di specifiche RFC.
 
 Quando invece parliamo di bilanciamento, intendiamo bilanciamenteo del carico (*load balancing*), o meglio del traffico, che si ottiene attraverso una dinamica, ma sempre ragionevole, distribuzione degli instradamenti su più *neighbor*, sia di *peering*, sia di *transit*, sia *inbound*, sia *outbound*.
 
