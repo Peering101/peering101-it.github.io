@@ -1,5 +1,5 @@
 BGP (Border Gateway Protocol)
-=============
+=====
 
 Premessa
 -----
@@ -23,7 +23,7 @@ La struttura del testo si rifà a un approccio sempreverde (cioè di tipo *botto
 Per quanto possibile saranno indicate le fonti, le migliori pratiche e le recenti tecnologie così come pubblicate da `RFC Editor <https://rfc-editor.org>`__ [#]_ e dalle altre organizzazioni coinvolte nella definizione degli standard.
 
 Protocolli di instradamento: fondamenti e concetti
---------
+-----
 
 L'attore protagonista in tutte le attività di instradamento si chiama *router*: quell'apparato capace di instradare il traffico dei dispositivi secondo delle tabelle contenenti indispensabili informazioni sui migliori percorsi (*best path*) verso tutte le destinazioni che conosce.
 
@@ -52,7 +52,7 @@ Alla base dei protocolli di instradamento ci sono generalmente tre algoritmi: ve
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 *Distance vector vs link-state*
---------
+-----
 
 Come calcolare la distanza più breve per raggiungere una destinazione? Questo è il campo dove si gioca la partita dei protocolli di instradamento sulla rete.
 
@@ -105,7 +105,7 @@ All'interno di questa ultima categoria distinguiamo: per il cosiddetto instradam
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Come funziona BGP
---------
+-----
 
 Nato nel 1989, quando *IETF* (*Internet Engineering Task Force*) partorì la `[RFC1105] A Border Gateway Protocol (BGP) <https://www.rfc-editor.org/rfc/rfc1105.txt>`__ recante la versione 1 del protocollo, BGP subì nel tempo alcuni profondi cambiamenti e, nel 1995, RFC Editor pubblicò le specifiche della versione 4, oggi raccolte nella `[RFC4271] A Border Gateway Protocol 4 (BGP-4) <https://www.rfc-editor.org/rfc/rfc4271.txt>`__.
 
@@ -295,7 +295,8 @@ Quindi alla luce di quanto appena documentato ripetiamo il completo schema di me
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Sessioni BGP
---------
+-----
+
 È arrivato il momento di sporcarsi le mani e testare alcune configurazioni utili a stabilire sessioni BGP con altri *bgp speaking router*. A seconda di chi ha implementato il protocollo BGP, è possibile trovare scostamenti nella sintassi e nelle opzioni usate nei dispositivi. Per questo qui vorremmo coprire almeno tre grandi categorie di software: il classico Cisco IOS, l'alternativo Juniper Junos e l'open-source OpenBGPD di OpenBSD.
 
 **CISCO IOS**
@@ -388,7 +389,7 @@ Da notare che per la richiesta di un numero di sistema autonomo all'ente contine
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Processo di instradamento
---------
+-----
 
 BGP è un protocollo molto flssibile, per questo gode di ottima salute nonostante il peso degli anni e le mutanti esigenze dell'industria di Internet. La sua grande abilità è di rendere note le posizioni di tutte le risorse numeriche che si affacciano in Rete originanti dagli oltre 66mila sistemi autonomi a oggi attivi nel mondo [#]_.
 
@@ -618,7 +619,7 @@ Nel momento in cui AS64500 rende conoscibili tali corrispondenze ai suoi clienti
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Filtri e manipolazioni
---------
+-----
 
 Inesorabilmente è arrivato il momento di complicare per ordinare. Cioè per far sì di usare gli annunci secondo un certo ordine, secondo un certo criterio, è inevitabile che la configurazione diventi più complessa.
 
@@ -647,7 +648,7 @@ Per manipolazione intendiamo quella attività che consente di modificare gli att
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Ridondanza e bilanciamento
---------
+-----
 
 Seguendo il filo dell'esposizione imbastita con strategia *bottom-up*, giungiamo a uno degli argomenti che ha interessato e tuttora impegna, per la sua complessità, tutti gli operatori di rete come pure gli studiosi e i ricercatori delle cose di Internet (*res interretis*).
 
@@ -686,7 +687,7 @@ In conclusione, comunque, va detto che bilanciare il traffico non vuol dire ripa
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 Sicurezza
---------
+-----
 
 Molteplici sono gli aspetti legati alla sicurezza nel campo di applicazione del protocollo BGP e riguardano nello specifico diversi momenti della vita di una sessione BGP, sia essa di *peering* sia essa di *transit*.
 
