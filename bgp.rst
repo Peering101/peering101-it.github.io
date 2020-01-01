@@ -98,6 +98,16 @@ Fino al 2007 la rappresentazione di un *AS* avveniva per mezzo di un numero a 16
 
 Più dettagliatamente possiamo considerare un "dentro" e un "fuori" dal punto di vista di un *AS* e cioè rispettivamente instradamenti *intra-AS* e instradamenti *inter-AS*.
 
+
+.. figure:: media/BGP_intra-inter.svg
+    :width: 1031px
+    :align: center
+    :height: 502px
+    :alt: Instradamenti intra-AS e inter-AS
+    :figclass: align-center
+
+    Instradamenti intra-AS e inter-AS
+
 Ora, gli instradamenti possono essere classificati anche per la modalità con la quale vengono appresi dai *router*: quando inseriamo manualmente un percorso verso una destinazione, allora si chiamerà "instradamento statico" (*static routing*); quando invece i dispositivi apprendono gli instradamenti grazie a un protocollo, allora si parlerà di "instradamento dinamico" (*dynamic routing*).
 
 All'interno di questa ultima categoria distinguiamo: per il cosiddetto instradamento interno al sistema autonomo, *IGP - Interior Gateway Protocol* (come *RIP, EIGRP, OSPF, IS-IS*); per l'instradamento esterno tra sistemi autonomi diversi, *EGP - Exterior Gateway Protocol* (come *BGP*).
