@@ -395,9 +395,7 @@ Infine ci sono gli *AS* *tier-1* (una quindicina nel mondo al momento) che non n
 Ecco spiegato dunque come è possibile mischiare le modalità *peering* e *transit* entrambe nello stesso *router*: all'*AS* con il quale facciamo *peering* annunciamo le nostre reti e accettiamo solo le sue reti; all'*AS* dal quale acquistiamo il transito annunciamo le nostre reti e accettiamo tutte le reti che conosce, sia le sue, sia quelle degli altri *AS*.
 
 .. figure:: media/BGP_gerarchia-AS.svg
-    :width: 1241px
     :align: center
-    :height: 1276px
     :alt: Gerarchia tra sistemi autonomi
     :figclass: align-center
 
