@@ -104,7 +104,7 @@ Più dettagliatamente possiamo considerare un "dentro" e un "fuori" dal punto di
     :alt: Instradamenti intra-AS e inter-AS
     :figclass: align-center
 
-    *Figura 1: Instradamenti intra-AS e inter-AS*
+    [#Figura2]_ Instradamenti *intra-AS* e *inter-AS*
 
 Ora, gli instradamenti possono essere classificati anche per la modalità con la quale vengono appresi dai *router*: quando inseriamo manualmente un percorso verso una destinazione, allora si chiamerà "instradamento statico" (*static routing*); quando invece i dispositivi apprendono gli instradamenti grazie a un protocollo, allora si parlerà di "instradamento dinamico" (*dynamic routing*).
 
@@ -397,7 +397,7 @@ Ecco spiegato dunque come è possibile mischiare le modalità *peering* e *trans
     :alt: Gerarchia tra sistemi autonomi
     :figclass: align-center
 
-    *Figura 2: Gerarchia tra sistemi autonomi*
+    [#Figura2]_ Gerarchia tra sistemi autonomi*
 
 Da notare che per la richiesta di un numero di sistema autonomo all'ente continentale di competenza (*RIR - Regional Internet Registry*) [#]_ è necessario dimostrare di aver contrattualizzato (o aver richiesto la contrattualizzazione di) almeno due diversi transiti con *AS* diversi.
 
@@ -739,6 +739,10 @@ Citazioni:
 .. [#] Dati: `CIDR Report <https://www.cidr-report.org/as2.0/>`_.
 .. [#] Criterio implementato da `Cisco <https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/13753-25.html>`_
 
+.. rubric:: Indice delle figure
+
+.. [#Figura1] Instradamenti intra-AS e inter-AS.
+.. [#Figura2] Gerarchia tra sistemi autonomi
 _____
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
