@@ -100,9 +100,7 @@ Più dettagliatamente possiamo considerare un "dentro" e un "fuori" dal punto di
 
 
 .. figure:: media/BGP_intra-inter.svg
-    :width: 1031px
     :align: center
-    :height: 502px
     :alt: Instradamenti intra-AS e inter-AS
     :figclass: align-center
 
