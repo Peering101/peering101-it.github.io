@@ -106,7 +106,7 @@ Più dettagliatamente possiamo considerare un "dentro" e un "fuori" dal punto di
     :alt: Instradamenti intra-AS e inter-AS
     :figclass: align-center
 
-    Instradamenti intra-AS e inter-AS
+    Figura 1: Instradamenti intra-AS e inter-AS
 
 Ora, gli instradamenti possono essere classificati anche per la modalità con la quale vengono appresi dai *router*: quando inseriamo manualmente un percorso verso una destinazione, allora si chiamerà "instradamento statico" (*static routing*); quando invece i dispositivi apprendono gli instradamenti grazie a un protocollo, allora si parlerà di "instradamento dinamico" (*dynamic routing*).
 
