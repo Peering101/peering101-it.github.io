@@ -685,6 +685,13 @@ Ma non solo, il *NAP* interpreta anche un ruolo di facilitatore sul piano tecnic
 
 Se per esempio gli afferenti all'infrastruttura di un *NAP* fossero cento, vorrebbe dire che, nella migliore delle ipotesi, ciascuno dovrebbe configurare sul proprio apparato 99 sessioni (*N-1*). Se invece il punto di interscambio mettesse a disposizione un *route server*, allora a ciascun afferente basterebbe configurare una sola sessione con quel dispositivo per vedersi annunciati tutti gli instradamenti dei partecipanti. Per una spiegazione più dettagliata di quanto attiene alla distribuzione degli instradamenti da parte di un calcolatore elettronico (*route server*) così come illustrato nella `[RFC7948] Internet Exchange BGP Route Server Operations <https://www.rfc-editor.org/rfc/rfc7948.txt>`_, rimandiamo a un altro capitolo.
 
+.. figure:: media/BGP_NAP.svg
+    :align: center
+    :alt: Route server presso Network Access Network
+    :figclass: align-center
+
+    *Figura 3: Route server presso Network Access Network*
+
 In Italia i più attivi *NAP* neutrali sono: `MIX - Milan Internet eXchange <https://www.mix-it.net/>`_ a Milano; `NAMEX - NAutilus MEditerranean eXchange <https://www.namex.it/>`_ a Roma; `TOP-IX - TOrino Piemonte - Internet eXchange <https://www.top-ix.org/>`_ a Torino; `VSIX - Veneto System Internet eXchange <https://www.vsix.it/>`_ a Padova.
 
 Se vale il "tutto doppio", allora è consigliabile per un sistema autonomo italiano afferire ad almeno due di quei punti di interscambio nel nome della ridondanza.
