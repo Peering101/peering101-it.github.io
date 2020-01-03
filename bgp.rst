@@ -388,7 +388,7 @@ In altre parole, dobbiamo trovare un *AS* (o più d'uno naturalmente) che ci fac
 
 Un *AS* viene classificato come *tier-3* se può accedere al resto di Internet solo attraverso l'acquisto di transito da altri. Come *tier-2* abbiamo invece sistemi autonomi che, oltre a sessioni BGP paritarie con altri (molte, a volte moltissime), necessitano di acquistare transito da altri per raggiungere alcune porzioni di Internet.
 
-Infine ci sono gli *AS* *tier-1* (una quindicina nel mondo al momento) che non necessitano di acquistare transito da altri (*transit-free*) poiché riescono, attraverso accordi di *peering*, a raggiungere tutti gli altri *AS* che costituiscono l'organismo di Internet.
+Infine ci sono gli *AS* *tier-1* (una quindicina nel mondo al momento [#]_) che non necessitano di acquistare transito da altri (*transit-free*) poiché riescono, attraverso accordi di *peering*, a raggiungere tutti gli altri *AS* che costituiscono l'organismo di Internet.
 
 Ecco spiegato dunque come è possibile mischiare le modalità *peering* e *transit* entrambe nello stesso *router*: all'*AS* con il quale facciamo *peering* annunciamo le nostre reti e accettiamo solo le sue reti; all'*AS* dal quale acquistiamo il transito annunciamo le nostre reti e accettiamo tutte le reti che conosce, sia le sue, sia quelle degli altri *AS*.
 
@@ -746,6 +746,7 @@ Citazioni:
 .. [#] Una breve biografia di Edsger Dijkstra si può leggere, in inglese, qui: http://mathshistory.st-andrews.ac.uk/Biographies/Dijkstra.html
 .. [#] L'algoritmo *link-state* affonda le radici nel seguente articolo del 1980 `The New Routing Algorithm for the ARPANET <https://ieeexplore.ieee.org/document/1094721>`__ degli autori J. McQuillan,  I. Richer, E. Rosen.
 .. [#] Questa classificazione vede il primo abbozzo nel lavoro `An analysis of internet inter-domain topology and route stability <https://www.isi.edu/division7/publication_files/analysis_of_internet_inter.pdf>`_ pubblicato nel 1997 da Ramesh Govindan e Anoop Reddy.
+.. [#] Il numero dei sistemi autonomi classificabili come tier-1 può variare a seconda del punto di vista e dell'algoritmo usato per elaborare le osservazioni di Internet. Ecco un paio di punti di vista: `Radar di Qrator Labs <https://radar.qrator.net/as-rating>`_ e `ASRank di CAIDA - Center for Applied Internet Data Analysis <https://asrank.caida.org/>`_.
 .. [#] I cinque Regional Internet Registry esistenti al mondo sono: `RIPE NCC <https://www.ripe.net>`_ (Europa, Russia, vicino Oriente), `AFRINIC <https://www.afrinic.net>`_ (Africa), `APNIC <https://www.apnic.net>`_ (Asia e Isole dell'Oceano Pacifico), `ARIN <https://www.arin.net>`_ (America del nord), `LACNIC <https://www.lacnic.net>`_ (America centrale, America del sud e isole caraibiche). Questi enti sono associati nell'organismo `NRO - Number Resource Organization <https://www.nro.net/>`_.
 .. [#] Dati: `CIDR Report <https://www.cidr-report.org/as2.0/>`_.
 .. [#] Criterio implementato da `Cisco <https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/13753-25.html>`_
