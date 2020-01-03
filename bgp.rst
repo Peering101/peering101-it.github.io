@@ -735,11 +735,11 @@ Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
 _____
 
-Citazioni:
+**Citazioni:**
 
 .. [CIT-RFC1930] An AS is a connected group of one or more IP prefixes run by one or more network operators which has a SINGLE and CLEARLY DEFINED routing policy.
 
-.. rubric:: Note:
+.. rubric:: **Note:**
 
 .. [#] Le RFC sono discusse e approvate nei gruppi di lavoro (*working group*) in seno all'organismo `IETF - Internet Engineering Task Force <https://www.ietf.org>`__.
 .. [#] La funzione di RFC Editor è stata voluta dal Governo degli Stati Uniti d'America ai tempi del progetto *DARPA - Defense Advanced Research Projects Agency* ed è durata fino al 1998. Dal 1998 al 2018, la funzione di modificare, pubblicare e catalogare le RFC è stata appaltata alla `Internet Society <https://www.isoc.org>`__. RFC Editor è un progetto che fino al 2009 è stato condotto presso l'Università della California del sud a Marina del Rey. Oggi invece le funzioni di RFC Editor sono erogate da *AMS - Association Management Solutions LLC* sulla base di un contratto con *IETF LLC - IETF Administration*.
