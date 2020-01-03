@@ -729,7 +729,7 @@ Data l'importanza e la vastità dell'argomento, un trattazione più completa sar
 
 Infine, è necessario qui menzionare l'iniziativa di `ISOC - Internet Society <https://www.isoc.org>`__ nominata `MANRS <https://www.manrs.org>`__ (pronunciato 'maners'). **Mutually Agreed Norms for Routing Security** è un programma che propone alcune soluzioni per rendere più sicura la gestione degli instradamenti e ridurre di conseguenza i rischi più comuni come il dirottamento degli instradamenti (*route hijacking*), la perdita degli instradamenti (*route leak*), la falsificazione degli indirizzi IP (*IP address spoofing*).
 
-MANRS offre programmi per punti di interscambio e operatori di rete i quali, se lo desiderano, possono sottoporsi a una verifica così da poter essere inclusi in un elenco pubblicamente consultabile sul sito https://www.manrs.org. Al momento, su poco più di mille sistemi autonomi operanti in Italia, solo 17 *ISP - Internet Service Provider* si sono fatti certificare. Vorremmo dunque cogliere l'occasione per esortare quanti leggessero questa breve guida a diventare più consapevoli delle insidie e, soprattutto, dei rimedi a disposizione nell'àmbito degli instradamenti su Internet.
+MANRS offre programmi per punti di interscambio e operatori di rete i quali, se lo desiderano, possono sottoporsi a una verifica così da poter essere inclusi in un elenco pubblicamente consultabile sul sito https://www.manrs.org. Al momento, su poco più di mille sistemi autonomi operanti in Italia, solo 17 *ISP - Internet Service Provider* si sono fatti certificare [#]_. Vorremmo dunque cogliere l'occasione per esortare quanti leggessero questa breve guida a diventare più consapevoli delle insidie e, soprattutto, dei rimedi a disposizione nell'àmbito degli instradamenti su Internet.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
@@ -750,6 +750,7 @@ Citazioni:
 .. [#] Dati: `CIDR Report <https://www.cidr-report.org/as2.0/>`_.
 .. [#] Criterio implementato da `Cisco <https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/13753-25.html>`_
 .. [#] Le reti che in conformità alla `[RFC1918] <https://www.rfc-editor.org/rfc/rfc1918.txt>`_ non possono essere instradate su Internet sono: 10.0.0.0/8; 172.16.0.0/12; 192.168.0.0/16.
+.. [#] A gennaio 2020, su oltre 66mila sistemi autonomi nel mondo, 271 si sono fatti certificare da MANRS, cioè meno dello 0,4%.
 
 _____
 
