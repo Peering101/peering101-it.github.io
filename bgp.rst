@@ -727,7 +727,9 @@ Fortunatamente dal 2012, con la `[RFC6480] An Infrastructure to Support Secure I
 
 Data l'importanza e la vastità dell'argomento, un trattazione più completa sarà presto pubblicata in una guida a sé stante.
 
-Infine, è necessario qui menzionare l'iniziativa di `ISOC - Internet Society <https://www.isoc.org>`__ nominata `MANRS <https://www.manrs.org>`__ (pronunciato *'maners'*). *Mutually Agreed Norms for Routing Security* è un programma che propone alcune soluzioni per rendere più sicura la gestione degli instradamenti e ridurre di conseguenza i rischi più comuni come il dirottamento degli instradamenti (*route hijacking*), la perdita degli instradamenti (*route leak*), la falsificazione degli indirizzi IP (*IP address spoofing*).
+Infine, è necessario qui menzionare l'iniziativa di ISOC - Internet Society nominata MANRS (pronunciato 'maners'). Mutually Agreed Norms for Routing Security è un programma che propone alcune soluzioni per rendere più sicura la gestione degli instradamenti e ridurre di conseguenza i rischi più comuni come il dirottamento degli instradamenti (*route hijacking*), la perdita degli instradamenti (*route leak*), la falsificazione degli indirizzi IP (*IP address spoofing*).
+
+MANRS offre programmi per operatori di rete e per punti di interscambio i quali, se lo desiderano, possono sottoporsi a una verifica così da poter essere inclusi in un elenco pubblicamente consultabile sul sito https://www.manrs.org. Al momento, su poco più di mille sistemi autonomi operanti in Italia, solo 17 *ISP - Internet Service Provider* si sono fatti certificare. Per questo vorremmo cogliere l'occasione per esortare quanti leggessero questa breve guida a diventare più consapevoli delle insidie e, soprattutto, dei rimedi a disposizione nell'àmbito degli instradamenti su Internet.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
