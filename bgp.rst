@@ -750,7 +750,7 @@ Citazioni:
 .. [#] Dati: `CIDR Report <https://www.cidr-report.org/as2.0/>`_.
 .. [#] Criterio implementato da `Cisco <https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/13753-25.html>`_
 .. [#] Le reti che in conformità alla `[RFC1918] <https://www.rfc-editor.org/rfc/rfc1918.txt>`_ non possono essere instradate su Internet sono: 10.0.0.0/8; 172.16.0.0/12; 192.168.0.0/16.
-.. [#] A gennaio 2020, su oltre 66mila sistemi autonomi nel mondo, 271 si sono fatti certificare da MANRS, cioè meno dello 0,4%.
+.. [#] A gennaio 2020 risulta che, su oltre 66mila sistemi autonomi nel mondo, 271 si sono fatti certificare da MANRS, cioè meno dello 0,4%.
 
 _____
 
