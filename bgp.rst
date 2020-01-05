@@ -727,7 +727,7 @@ Fortunatamente dal 2012, con la `[RFC6480] An Infrastructure to Support Secure I
 
 Data l'importanza e la vastità dell'argomento, un trattazione più completa sarà presto pubblicata in una guida a sé stante.
 
-Infine, è necessario qui menzionare l'iniziativa di `ISOC - Internet Society <https://www.isoc.org>`__ nominata `MANRS <https://www.manrs.org>`__ (pronunciato 'maners'). **Mutually Agreed Norms for Routing Security** è un programma che propone alcune soluzioni per rendere più sicura la gestione degli instradamenti e ridurre di conseguenza i rischi più comuni come il dirottamento degli instradamenti (*route hijacking*), la perdita degli instradamenti (*route leak*), la falsificazione degli indirizzi IP (*IP address spoofing*).
+Infine, è necessario qui menzionare l'iniziativa di `ISOC - Internet Society <https://www.isoc.org>`__ nominata `MANRS <https://www.manrs.org>`__ (pronunciato 'maners'). **Mutually Agreed Norms for Routing Security** è un programma che propone alcune soluzioni per rendere più sicura la gestione degli instradamenti e ridurre di conseguenza i rischi più comuni come il dirottamento degli instradamenti (*route hijacking*), la perdita degli instradamenti (*route leak*) [#]_, la falsificazione degli indirizzi IP (*IP address spoofing*).
 
 MANRS offre programmi per punti di interscambio e operatori di rete i quali, se lo desiderano, possono sottoporsi a una verifica così da poter essere inclusi in un elenco pubblicamente consultabile sul sito https://www.manrs.org. Al momento (gennaio 2020), su quasi 1200 `LIR - Local Internet Registry con base in Italia <https://www.ripe.net/membership/indices/IT.html>`_ [#]_, solo 17 (l'1,4% circa) si sono fatti certificare [#]_. Vorremmo dunque cogliere l'occasione per esortare quanti leggessero questa breve guida a diventare più consapevoli delle insidie e, soprattutto, dei rimedi a disposizione nell'àmbito degli instradamenti su Internet.
 
@@ -752,6 +752,7 @@ _____
 .. [#] Dati: `CIDR Report <https://www.cidr-report.org/as2.0/>`_.
 .. [#] Criterio implementato da `Cisco <https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/13753-25.html>`_
 .. [#] Le reti che in conformità alla `[RFC1918] <https://www.rfc-editor.org/rfc/rfc1918.txt>`_ non possono essere instradate su Internet sono: 10.0.0.0/8; 172.16.0.0/12; 192.168.0.0/16.
+.. [#] Il gruppo di lavoro "GROW - Global Routing Operations" facente capo all'area "OPS - Operations and Management" di IETF ha pubblicato nel 2016 la `RFC7908 Problem Definition and Classification of BGP Route Leaks <https://www.rfc-editor.org/rfc/rfc7908.txt>`_ contenente una tassonomia ragionata per il fenomeno della perdita degli instradamenti.
 .. [#] Abbiamo considerato i soli LIR con base in Italia e non semplicemente quelli operanti in Italia. Tuttavia è da notare che un LIR potrebbe non detenere un numero di sistema autonomo o risorse IPv4 o risorse IPv6.
 .. [#] A gennaio 2020 risulta che, su oltre 66mila sistemi autonomi nel mondo, 271 si sono fatti certificare da MANRS, cioè meno dello 0,4%.
 
