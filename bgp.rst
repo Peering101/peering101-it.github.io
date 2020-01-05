@@ -399,7 +399,7 @@ Ecco spiegato dunque come è possibile mischiare le modalità *peering* e *trans
 
     *Figura 2: Gerarchia tra sistemi autonomi*
 
-Da notare che per la richiesta di un numero di sistema autonomo all'ente continentale di competenza (*RIR - Regional Internet Registry*) [#]_ è necessario dimostrare di aver contrattualizzato (o aver richiesto la contrattualizzazione di) almeno due diversi transiti con *AS* diversi.
+Da notare che per la richiesta di un numero di sistema autonomo all'ente continentale di competenza (*RIR - Regional Internet Registry*) [#]_ è necessario dimostrare di aver contrattualizzato (o aver richiesto la contrattualizzazione di) almeno due diversi transiti con *AS* diversi (topologia *multihomed*) [#]_.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
@@ -748,6 +748,7 @@ _____
 .. [#] Questa classificazione vede il primo abbozzo nel lavoro `An analysis of internet inter-domain topology and route stability <https://www.isi.edu/division7/publication_files/analysis_of_internet_inter.pdf>`_ pubblicato nel 1997 da Ramesh Govindan e Anoop Reddy.
 .. [#] Il numero dei sistemi autonomi classificabili come tier-1 può variare a seconda dell'algoritmo usato per elaborare le osservazioni di Internet. Ecco un paio di punti di vista: `Radar di Qrator Labs <https://radar.qrator.net/as-rating>`_ e `ASRank di CAIDA - Center for Applied Internet Data Analysis <https://asrank.caida.org/>`_.
 .. [#] I cinque Regional Internet Registry esistenti al mondo sono: `RIPE NCC <https://www.ripe.net>`_ (Europa, Russia, vicino Oriente), `AFRINIC <https://www.afrinic.net>`_ (Africa), `APNIC <https://www.apnic.net>`_ (Asia e Isole dell'Oceano Pacifico), `ARIN <https://www.arin.net>`_ (America del nord), `LACNIC <https://www.lacnic.net>`_ (America centrale, America del sud e isole caraibiche). Questi enti sono associati nell'organismo `NRO - Number Resource Organization <https://www.nro.net/>`_.
+.. [#] A esempio il RIR RIPE NCC lo prevede nel documento `RIPE-679 <https://www.ripe.net/publications/docs/ripe-679>`_.
 .. [#] Dati: `CIDR Report <https://www.cidr-report.org/as2.0/>`_.
 .. [#] Criterio implementato da `Cisco <https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/13753-25.html>`_
 .. [#] Le reti che in conformità alla `[RFC1918] <https://www.rfc-editor.org/rfc/rfc1918.txt>`_ non possono essere instradate su Internet sono: 10.0.0.0/8; 172.16.0.0/12; 192.168.0.0/16.
