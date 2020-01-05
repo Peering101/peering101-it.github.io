@@ -33,9 +33,9 @@ Per consentire l'instradamento, il *router* segue una procedura che si articola 
 
 2. inserimento di tali informazioni in tabelle di instradamento (*routing table*), una per ciascun protocollo;
 
-3. analisi di tutte le tabelle popolate e scelta dei migliori percorsi verso ciascuna destinazione;
+3. analisi di tutte le tabelle popolate e scelta dei migliori percorsi (*best path*) verso ciascuna destinazione;
 
-4. associazione di ciascuna destinazione con l'indirizzo del dispositivo collegato (*next-hop device*) all'interfaccia di uscita dei pacchetti verso quella destinazione;
+4. associazione di ciascuna destinazione con l'indirizzo del dispositivo collegato (*next-hop*) all'interfaccia di uscita dei pacchetti verso quella destinazione;
 
 5. popolamento di una tabella di inoltro (*forwarding table*) con queste ultime informazioni;
 
