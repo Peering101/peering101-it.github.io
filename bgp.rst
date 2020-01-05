@@ -422,7 +422,7 @@ Se in molti casi il processo per scegliere il miglior percorso (*best path*) ver
 
 Alcune implementazioni presenti sul mercato aggiungono altri criteri selettivi come a esempio:
 
-9. Preferire l'instradamento appreso (e installato nella tabella degli instradamenti) per primo [#]_.
+9. preferire l'instradamento appreso (e installato nella tabella degli instradamenti) per primo [#]_.
 
 Ovviamente se il *NEXT_HOP* non è raggiungibile allora l'instradamento viene ignorato, come pure se vengono implementate delle regole per filtrare via alcuni annunci.
 
