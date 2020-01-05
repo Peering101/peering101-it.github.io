@@ -753,7 +753,7 @@ _____
 .. [#] A esempio il RIR RIPE NCC lo prevede nel documento `RIPE-679 <https://www.ripe.net/publications/docs/ripe-679>`_ alla sezione `Assignment Criteria <https://www.ripe.net/publications/docs/ripe-679#AssignmentCriteria>`_: "A network must be multihomed in order to qualify for an AS Number."
 .. [#] Dati: `CIDR Report <https://www.cidr-report.org/as2.0/>`_.
 .. [#] Criterio implementato da `Cisco <https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/13753-25.html>`_
-.. [#] Le reti che in conformità alla `[RFC1918] <https://www.rfc-editor.org/rfc/rfc1918.txt>`_ non possono essere instradate su Internet sono: 10.0.0.0/8; 172.16.0.0/12; 192.168.0.0/16.
+.. [#] Le reti che in conformità della `[RFC1918] <https://www.rfc-editor.org/rfc/rfc1918.txt>`_ non possono essere instradate su Internet sono: 10.0.0.0/8; 172.16.0.0/12; 192.168.0.0/16.
 .. [#] Molti aspetti legati alla sicurezza sulla rete Internet sono stati trattati in un documento del 2000 ufficialmente etichettato come buona pratica per gli operatori di rete (ISP) tuttora valida: `[BCP38] Network Ingress Filtering: Defeating Denial of Service Attacks which employ IP Source Address Spoofing <https://www.rfc-editor.org/rfc/rfc2827.txt>`_.
 .. [#] I certificati alla base del funzionamento di RPKI seguono lo standard crittografico X.509 così come modificato dalla `[RFC3779] - X.509 Extensions for IP Addresses and AS Identifiers <https://www.rfc-editor.org/rfc/rfc3779.txt>`_.
 .. [#] Notazione riportata usando l'Alfabeto Fonetico Internazionale (AFI) per esprimere la pronuncia in inglese che, peraltro, non si discosta da quella necessaria per il plurale della parola inglese "manner".
