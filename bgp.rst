@@ -525,7 +525,7 @@ Per l'instradamento installato nella tabella BGP di R1, 250.0.250.0/24, apprendi
 
 Infatti analizzando la tabella degli instradamenti (*routing table*), troviamo che la rete 250.0.250.0/24 è stata installata con l'IP 198.51.100.129 come via d'uscita (*gateway*). Si tratta di un indirizzo che non appartiene a R1; infatti, scorrendo la *tabella di routing*, scopriamo che la rete di appartenenza di quell'IP, 198.51.100.128/26, è raggiungibile attraverso un altro *gateway*, il 192.0.2.253. A sua volta, la rete di appartenenza di quest'ultimo indirizzo, 192.0.2.252/30, è direttamente connessa alla interfaccia Gigabit Ethernet numero 3 del modulo numero 0 del *router* R1.
 
-Si tratta di una cosiddetta connessione punto-punto (*point-to-point*) dove, per ogni /30 IPv4, il bit disponibile dispari è assegnato a R1 e il bit disponibile pari al suo *neighbor* BGP.
+Si tratta di una cosiddetta connessione punto-punto (*point-to-point*) dove, per ogni /30 IPv4, il bit disponibile dispari è assegnato a R1 e il bit disponibile pari al suo *neighbor* BGP [#]_.
 
 Per concludere possiamo facilmente dire che R1 può raggiungere uno dei suoi instradamenti, 240.240.0.0/15, inoltrando i pacchetti indirizzati al *NEXT_HOP* 198.51.100.65, attraverso l'interfaccia GE0/2, all'IP 192.0.2.249.
 
@@ -755,9 +755,10 @@ _____
 .. [#] Dati: `CIDR Report <https://www.cidr-report.org/as2.0/>`_.
 .. [#] Criterio implementato da `Cisco <https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/13753-25.html>`_
 .. [#] Le reti che in conformità della `[RFC1918] <https://www.rfc-editor.org/rfc/rfc1918.txt>`_ non possono essere instradate su Internet sono: 10.0.0.0/8; 172.16.0.0/12; 192.168.0.0/16.
+.. [#] Dall'anno 2000 è anche possibile numerare le connessioni *point-to-point* usando una rete IPv4 /31, nella quale sono disponibili solo due indirizzi che vengono considerati entrambi assegnabili agli unici due dispositivi presenti nella rete. La *ratio* di questa pratica viene esplicitata nella `[RFC3021] Using 31-Bit Prefixes on IPv4 Point-to-Point Links <https://www.rfc-editor.org/rfc/rfc3021.txt>`_.
 .. [#] Molti aspetti legati alla sicurezza sulla rete Internet sono stati trattati in un documento del 2000 ufficialmente etichettato come buona pratica per gli operatori di rete (ISP) tuttora valida: `[BCP38] Network Ingress Filtering: Defeating Denial of Service Attacks which employ IP Source Address Spoofing <https://www.rfc-editor.org/rfc/rfc2827.txt>`_.
 .. [#] I certificati alla base del funzionamento di RPKI seguono lo standard crittografico X.509 così come modificato dalla `[RFC3779] - X.509 Extensions for IP Addresses and AS Identifiers <https://www.rfc-editor.org/rfc/rfc3779.txt>`_.
-.. [#] Notazione riportata usando l'Alfabeto Fonetico Internazionale (AFI) per esprimere la pronuncia in inglese che, peraltro, non si discosta da quella necessaria per il plurale della parola inglese "*manner*".
+.. [#] Notazione riportata usando l'Alfabeto Fonetico Internazionale (AFI) per esprimere la pronuncia in inglese che, peraltro, non si discosta da quella necessaria per il plurale della parola inglese *manner*.
 .. [#] Il gruppo di lavoro "GROW - Global Routing Operations", facente capo all'area "OPS - Operations and Management" di IETF, ha pubblicato nel 2016 la `[RFC7908] Problem Definition and Classification of BGP Route Leaks <https://www.rfc-editor.org/rfc/rfc7908.txt>`_ contenente una tassonomia ragionata per il fenomeno della perdita degli instradamenti.
 .. [#] Abbiamo considerato i soli LIR con base in Italia e non semplicemente quelli operanti in Italia. Tuttavia è da notare che un LIR potrebbe non detenere un numero di sistema autonomo o risorse IPv4 o risorse IPv6.
 .. [#] A gennaio 2020 risulta che, su oltre 66mila sistemi autonomi nel mondo, 271 si sono fatti certificare da MANRS, cioè meno dello 0,4%.
