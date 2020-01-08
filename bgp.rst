@@ -163,7 +163,7 @@ Il campo *type* definisce invece il tipo di messaggio trasmesso e può recare de
 - *KEEPALIVE*;
 - *ROUTE REFRESH*.
 
-Per una migliore comprensione dell'intero processo di instradamento gestito dal protocollo BGP, è utile a questo punto esaminare e comprendere la funzione degli ingranaggi in movimento sotto il cofano.
+Per una migliore comprensione dell'intero processo di instradamento gestito dal protocollo BGP, è utile a questo punto esaminare e afferrare la funzione degli ingranaggi in movimento sotto il cofano.
 
 Partiamo dal messaggio *OPEN* che costituisce il primo passo affinché due *router* possano stabilire una connessione secondo il protocollo BGP.
 
