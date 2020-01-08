@@ -176,7 +176,7 @@ Gli elementi del messaggio *OPEN* sono:
 - **[optional parameter length]** la lunghezza in byte del seguente parametro opzionale;
 - **[optional parameters]** una lista di parametri opzionali come a esempio quelli per l'autenticazione.
 
-Affinché la connessione BGP tra due *router* venga stabilita correttamente è necessario che l'iter superi alcuni passaggi.
+Affinché la connessione BGP tra due *router* venga stabilita correttamente è necessario che l'*iter* superi alcuni passaggi.
 
 Innanzitutto partiamo dallo stato di riposo (**idle**) nel quale si trova un *router* prima di ricevere il via alla connessione che possiamo dare noi stessi intervenendo sulla configurazione del dispositivo. Ricevuto il via (*start*), il primo *router* tenta una connessione TCP sulla porta 179 del secondo e poi si mette in ascolto di risposte provenienti dal secondo *router*.
 
