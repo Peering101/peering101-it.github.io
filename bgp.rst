@@ -689,10 +689,10 @@ Se per esempio gli afferenti all'infrastruttura di un *NAP* fossero cento, vorre
 
 .. figure:: media/BGP_NAP.svg
     :align: center
-    :alt: Route server presso Network Access Network
+    :alt: Route server presso Network Access Point
     :figclass: align-center
 
-    *Figura 3: Route server presso Network Access Network*
+    *Figura 3: Route server presso Network Access Point*
 
 In Italia i più attivi *NAP* neutrali sono: `MIX - Milan Internet eXchange <https://www.mix-it.net/>`_ a Milano; `NAMEX - NAutilus MEditerranean eXchange <https://www.namex.it/>`_ a Roma; `TOP-IX - TOrino Piemonte - Internet eXchange <https://www.top-ix.org/>`_ a Torino; `VSIX - Veneto System Internet eXchange <https://www.vsix.it/>`_ a Padova.
 
