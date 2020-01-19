@@ -178,6 +178,13 @@ Gli elementi del messaggio *OPEN* sono:
 
 Affinché la connessione BGP tra due *router* venga stabilita correttamente è necessario che l'*iter* superi alcuni passaggi.
 
+.. figure:: media/BGP_FSM.svg
+    :align: center
+    :alt: BGP - Macchina a Stati Finiti
+    :figclass: align-center
+
+    *Figura 2: BGP - Macchina a Stati Finiti*
+
 Innanzitutto partiamo dallo stato di riposo (**idle**) nel quale si trova un *router* prima di ricevere il via alla connessione che possiamo dare noi stessi intervenendo sulla configurazione del dispositivo. Ricevuto il via (*start*), il primo *router* tenta una connessione TCP sulla porta 179 del secondo e poi si mette in ascolto di risposte provenienti dal secondo *router*.
 
 Ecco che entriamo nel passaggio di connessione (**connect**) durante il quale si attende che la connessione TCP avvenga con successo. In quest'ultimo caso si procede verso un ulteriore passaggio chiamato *opensent*. Se invece la connessione TCP non viene stabilita, allora si va verso il passaggio *active*. E ancóra, nel caso in cui si esaurisca il tempo per l'operazione, si azzera il *timer* e viene ritentata una connessione TCP, mentre lo stato rimane *connect*. Altri eventi innescati dal sistema o manualmente da noi, producono il ritorno allo stato di riposo.
@@ -399,7 +406,7 @@ Ecco spiegato dunque come è possibile mischiare le modalità *peering* e *trans
     :alt: Gerarchia tra sistemi autonomi
     :figclass: align-center
 
-    *Figura 2: Gerarchia tra sistemi autonomi*
+    *Figura 3: Gerarchia tra sistemi autonomi*
 
 Da notare che per la richiesta di un numero di sistema autonomo all'ente continentale di competenza (*RIR - Regional Internet Registry*) [#]_ è necessario dimostrare di aver contrattualizzato (o aver richiesto la contrattualizzazione di) almeno due diversi transiti con *AS* diversi (topologia *multihomed*) [#]_.
 
@@ -692,7 +699,7 @@ Se per esempio gli afferenti all'infrastruttura di un *NAP* fossero cento, vorre
     :alt: Route server presso Network Access Point
     :figclass: align-center
 
-    *Figura 3: Route server presso Network Access Point*
+    *Figura 4: Route server presso Network Access Point*
 
 In Italia i più attivi *NAP* neutrali sono: `MIX - Milan Internet eXchange <https://www.mix-it.net/>`_ a Milano; `NAMEX - NAutilus MEditerranean eXchange <https://www.namex.it/>`_ a Roma; `TOP-IX - TOrino Piemonte - Internet eXchange <https://www.top-ix.org/>`_ a Torino; `VSIX - Veneto System Internet eXchange <https://www.vsix.it/>`_ a Padova.
 
