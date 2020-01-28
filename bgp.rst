@@ -307,7 +307,7 @@ Quindi alla luce di quanto appena documentato ripetiamo il completo schema di me
       |            203.0.113.0/24                           | NLRI
       +-----------------------------------------------------+
 
-È opportuno aggiungere, per completezza di informazione, che il messaggio *UPDATE* è agnostico rispetto al contenuto del campo *NLRI*: infatti può contenere indicazioni circa destinazioni sia IPv4 sia IPv6 (non contemporaneamente, è ovvio, poiché cambia il *NEXT_HOP*). E, come corollario, è dunque agnostico anche rispetto al trasporto, cioè è possibile che il campo *NLRI* contenga destinazioni IPv6 anche se la connessione TCP viene stabilita tra dirimpettai che usano IPv6 e viceversa.
+È opportuno aggiungere, per completezza di informazione, che il messaggio *UPDATE* è agnostico rispetto al contenuto del campo *NLRI*: infatti può contenere indicazioni circa destinazioni sia IPv4 sia IPv6 (non contemporaneamente, è ovvio, poiché cambia il *NEXT_HOP*). E, come corollario, è dunque agnostico anche rispetto al trasporto, cioè è possibile che il campo *NLRI* contenga destinazioni IPv6 anche se la connessione TCP viene stabilita tra dirimpettai che usano IPv4 e viceversa.
 
 Torna all'inizio di `BGP (Border Gateway Protocol)`_
 
