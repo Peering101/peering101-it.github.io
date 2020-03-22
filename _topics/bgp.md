@@ -13,15 +13,15 @@ In questo spazio, nato da un'idea di [ITNOG](https://www.itnog.it/) (*the ITalia
 La struttura del testo si rifà a un approccio sempreverde (cioè di tipo *bottom-up*, dal basso verso l’alto), scandito secondo questi punti:
 
 -   [protocolli di instradamento: fondamenti e concetti](#1);
--   [distance vector vs link-state] (#2);
--   [instradamento interno o esterno, statico o dinamico] (#3);
--   [come funziona BGP] (#4);
--   [sessioni BGP] (#5);
--   [processo di instradamento] (#6);
--   [controllo degli instradamenti] (#7);
--   [filtri e manipolazioni] (#8);
--   [ridondanza e bilanciamento] (#9);
--   [sicurezza] (#10).
+-   [distance vector vs link-state](#2);
+-   [instradamento interno o esterno, statico o dinamico](#3);
+-   [come funziona BGP](#4);
+-   [sessioni BGP](#5);
+-   [processo di instradamento](#6);
+-   [controllo degli instradamenti](#7);
+-   [filtri e manipolazioni](#8);
+-   [ridondanza e bilanciamento](#9);
+-   [sicurezza](#10).
 
 Per quanto possibile saranno indicate le fonti, le migliori pratiche e le recenti tecnologie così come pubblicate da [RFC Editor](https://rfc-editor.org) [^2] e dalle altre organizzazioni coinvolte nella definizione degli standard.
 
