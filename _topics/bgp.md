@@ -4,11 +4,11 @@ title: BGP
 subtitle: BGP (Border Gateway Protocol)
 ---
 
-BGP (Border Gateway Protocol) =====
+# BGP (Border Gateway Protocol)
 
-Premessa -----
+## Premessa
 
-In questo spazio, nato da un'idea di [ITNOG](https://www.itnog.it/) (*the ITalian Network Operators Group*), intendiamo fornire una breve guida in lingua italiana ai principali concetti e meccanismi sottesi al funzionamento di Internet illustrando alcune delle architetture di instradamento basate sul protocollo *BGP - Border Gateway Protocol*. L'obiettivo dunque non è quello di tradurre e parafrasare le RFC (*Request for comments*) [1], né quello di somministrare un ricettario; piuttosto vorremmo divulgare (con linguaggio semplice) i capisaldi della letteratura conditi con esempi intuitivi così da facilitare la strada a quanti vorranno poi approfondire.
+In questo spazio, nato da un'idea di [ITNOG](https://www.itnog.it/) (*the ITalian Network Operators Group*), intendiamo fornire una breve guida in lingua italiana ai principali concetti e meccanismi sottesi al funzionamento di Internet illustrando alcune delle architetture di instradamento basate sul protocollo *BGP - Border Gateway Protocol*. L'obiettivo dunque non è quello di tradurre e parafrasare le RFC (*Request for comments*) [^1], né quello di somministrare un ricettario; piuttosto vorremmo divulgare (con linguaggio semplice) i capisaldi della letteratura conditi con esempi intuitivi così da facilitare la strada a quanti vorranno poi approfondire.
 
 La struttura del testo si rifà a un approccio sempreverde (cioè di tipo *bottom-up*, dal basso verso l’alto), scandito secondo questi punti:
 
@@ -674,7 +674,7 @@ Torna all'inizio di BGP (Border Gateway Protocol)\_
 
 Torna all'inizio di BGP (Border Gateway Protocol)\_
 
-[1] Le RFC sono discusse e approvate nei gruppi di lavoro (*working group*) in seno all'organismo [IETF - Internet Engineering Task Force](https://www.ietf.org).
+[^1]: Le RFC sono discusse e approvate nei gruppi di lavoro (*working group*) in seno all'organismo [IETF - Internet Engineering Task Force](https://www.ietf.org).
 
 [2] La funzione di RFC Editor è stata voluta dal Governo degli Stati Uniti d'America ai tempi del progetto *DARPA - Defense Advanced Research Projects Agency* ed è durata fino al 1998. Dal 1998 al 2018, la funzione di modificare, pubblicare e catalogare le RFC è stata appaltata alla [Internet Society](https://www.isoc.org). RFC Editor è un progetto che fino al 2009 è stato condotto presso l'Università della California del sud a Marina del Rey. Oggi invece le funzioni di RFC Editor sono erogate da *AMS - Association Management Solutions LLC* sulla base di un contratto con *IETF LLC - IETF Administration*. Recentemente (dicembre 2019) RFC Editor ha festeggiato i suoi cinquant'anni di attività con la pubblicazione della [[RFC8700] Fifty Years of RFCs](https://www.rfc-editor.org/rfc/rfc8700.txt).
 
