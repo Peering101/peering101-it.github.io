@@ -4,7 +4,7 @@ title: BGP
 subtitle: BGP (Border Gateway Protocol)
 ---
 
-# <a name="0"></a>BGP (Border Gateway Protocol)
+# <a id="0"></a>BGP (Border Gateway Protocol)
 
 ## Premessa
 
@@ -43,7 +43,7 @@ Per consentire l'instradamento, il *router* segue una procedura che si articola 
 
 Alla base dei protocolli di instradamento più implementati ci sono generalmente tre algoritmi: vettore di distanze (*distance vector*), stato di collegamento (*link-state*) e vettore di percorsi (*path vector*).
 
-[Torna all'inizio di BGP (Border Gateway Protocol)] (#0)
+[Torna all'inizio di BGP (Border Gateway Protocol)](#0)
 
 ## <a name="2"></a>*Distance vector vs link-state*
 
@@ -59,7 +59,7 @@ Le argomentazioni necessarie a dare una risposta a quella domanda costituiscono 
 
 Alcuni esempi di protocolli di instradamento basati sull'algoritmo del *distance vector* sono: *RIP - Routing Information Protocol* [[RFC2453]](https://www.rfc-editor.org/rfc/rfc2453.txt), *EIGRP - Enhanced Interior Gateway Routing Protocol* [[RFC7868]](https://www.rfc-editor.org/rfc/rfc7868.txt).
 
-[Torna all'inizio di BGP (Border Gateway Protocol)] (#0)
+[Torna all'inizio di BGP (Border Gateway Protocol)](#0)
 
 Diverso protocollo di instradamento, e più complesso del precedente, è quello basato sull'algoritmo *link-state* [^3]. In questo caso i *router* si scambiano informazioni proprio sullo stato del collegamento e quindi non tabelle di instradamento.
 
@@ -71,9 +71,9 @@ Queste caratteristiche rendono il *link-state* un algoritmo più adatto a essere
 
 I due più importanti esempi di protocolli di instradamento basati sull'algoritmo *link-state* sono *OSPF - Open Shortest Path First* (versione 2 [[RFC2328]](http://www.rfc-editor.org/rfc/rfc2328.txt) e versione 3 [[RFC5340]](https://www.rfc-editor.org/rfc/rfc5340.txt) che supporta IPv6) e *IS-IS - Intermediate System to Intermediate System* [[ISO/IEC 10589:2002]](http://standards.iso.org/ittf/PubliclyAvailableStandards/c030932_ISO_IEC_10589_2002(E).zip).
 
-[Torna all'inizio di BGP (Border Gateway Protocol)] (#0)
+[Torna all'inizio di BGP (Border Gateway Protocol)](#0)
 
-## <a name="3"></a>Instradamento interno o esterno, statico o dinamico
+## <a id="3"></a>Instradamento interno o esterno, statico o dinamico
 
 Abbiamo visto come diversi siano i metodi per rendere le risorse di rete raggiungibili, ma occorre aggiungere ancóra un tassello determinante per la prosecuzione dell'illustrazione, e cioè il loro àmbito (o dominio) di applicazione. Per questo è necessario introdurre la nozione di sistema autonomo, fin qui solo velocemente menzionata.
 
@@ -93,9 +93,9 @@ Ora, gli instradamenti possono essere classificati anche per la modalità con la
 
 All'interno di questa ultima categoria distinguiamo: per il cosiddetto instradamento interno al sistema autonomo, *IGP - Interior Gateway Protocol* (come *RIP, EIGRP, OSPF, IS-IS*); per l'instradamento esterno tra sistemi autonomi diversi, *EGP - Exterior Gateway Protocol* (come *BGP*).
 
-[Torna all'inizio di BGP (Border Gateway Protocol)] (#0)
+[Torna all'inizio di BGP (Border Gateway Protocol)](#0)
 
-## <a name="4"></a>Come funziona BGP
+## <a id="4"></a>Come funziona BGP
 
 Nato nel 1989, quando *IETF* (*Internet Engineering Task Force*) partorì la [[RFC1105] A Border Gateway Protocol (BGP)](https://www.rfc-editor.org/rfc/rfc1105.txt) recante la versione 1 del protocollo, BGP subì nel tempo alcuni profondi cambiamenti e, nel 1995, RFC Editor pubblicò le specifiche della versione 4, oggi raccolte nella [[RFC4271] A Border Gateway Protocol 4 (BGP-4)](https://www.rfc-editor.org/rfc/rfc4271.txt).
 
@@ -279,9 +279,9 @@ Quindi alla luce di quanto appena documentato ripetiamo il completo schema di me
 
 È opportuno aggiungere, per completezza di informazione, che il messaggio *UPDATE* è agnostico rispetto al contenuto del campo *NLRI*: infatti può contenere indicazioni circa destinazioni sia IPv4 sia IPv6 (non contemporaneamente, è ovvio, poiché cambia il *NEXT\_HOP*). E, come corollario, è dunque agnostico anche rispetto al trasporto, cioè è possibile che il campo *NLRI* contenga destinazioni IPv6 anche se la connessione TCP viene stabilita tra dirimpettai che usano IPv4 e viceversa.
 
-[Torna all'inizio di BGP (Border Gateway Protocol)] (#0)
+[Torna all'inizio di BGP (Border Gateway Protocol)](#0)
 
-## <a name="5"></a>Sessioni BGP
+## <a id="5"></a>Sessioni BGP
 
 È arrivato il momento di sporcarsi le mani e testare alcune configurazioni utili a stabilire sessioni BGP con altri *bgp speaking router*. A seconda di chi ha implementato il protocollo BGP, è possibile trovare scostamenti nella sintassi e nelle opzioni usate nei dispositivi. Per questo qui vorremmo coprire almeno tre grandi categorie di software: il classico Cisco IOS, l'alternativo Juniper Junos e l'open-source OpenBGPD di OpenBSD.
 
@@ -374,9 +374,9 @@ Ecco spiegato dunque come è possibile mischiare le modalità *peering* e *trans
 
 Da notare che per la richiesta di un numero di sistema autonomo all'ente continentale di competenza (*RIR - Regional Internet Registry*) [^8] è necessario dimostrare di aver contrattualizzato (o aver richiesto la contrattualizzazione di) almeno due diversi transiti con *AS* diversi (topologia *multihomed*) [^9].
 
-[Torna all'inizio di BGP (Border Gateway Protocol)] (#0)
+[Torna all'inizio di BGP (Border Gateway Protocol)](#0)
 
-## <a name="6"></a>Processo di instradamento
+## <a id="6"></a>Processo di instradamento
 
 BGP è un protocollo molto flssibile, per questo gode di ottima salute nonostante il peso degli anni e le mutanti esigenze dell'industria di Internet. La sua grande abilità è di rendere note le posizioni di tutte le risorse numeriche che si affacciano in Rete originanti dagli oltre 66mila sistemi autonomi a oggi attivi nel mondo [^10].
 
@@ -397,9 +397,9 @@ Alcune implementazioni presenti sul mercato aggiungono altri criteri selettivi c
 
 Ovviamente se il *NEXT\_HOP* non è raggiungibile allora l'instradamento viene ignorato, come pure se vengono implementate delle regole per filtrare via alcuni annunci.
 
-[Torna all'inizio di BGP (Border Gateway Protocol)] (#0)
+[Torna all'inizio di BGP (Border Gateway Protocol)](#0)
 
-## <a name="7"></a>Controllo degli instradamenti
+## <a id="7"></a>Controllo degli instradamenti
 
 Lo standard viene coniugato, dalle molteplici implementazioni presenti sul mercato, a diversi modi di controllo degli instradamenti e ciascuno secondo un preciso tempo di applicazione.
 
@@ -576,9 +576,9 @@ In questo esempio, R1, che appartiene all'AS64500, assegna alcuni attributi *COM
 
 Nel momento in cui AS64500 rende conoscibili tali corrispondenze ai suoi clienti, questi ultimi nel ricevere gli instradamenti così classificati hanno la possibilità, a loro volta, di applicare degli ulteriori criteri, come l'accoppiamento a determinati valori di *LOCAL\_PREF* o addirittura di assumere la decisione di scartare certi instradamenti.
 
-[Torna all'inizio di BGP (Border Gateway Protocol)] (#0)
+[Torna all'inizio di BGP (Border Gateway Protocol)](#0)
 
-## <a name="8"></a>Filtri e manipolazioni
+## <a id="8"></a>Filtri e manipolazioni
 
 Inesorabilmente è arrivato il momento di complicare per ordinare. Cioè per far sì di usare gli annunci secondo un certo ordine, secondo un certo criterio, è inevitabile che la configurazione diventi più complessa.
 
@@ -604,9 +604,9 @@ Fuor di metafora, lo stesso principio vale anche per i *router* sui quali è pos
 
 Per manipolazione intendiamo quella attività che consente di modificare gli attributi BGP (già esposti nel paragrafo Controllo degli instradamenti\_) degli elementi filtrati al fine di influenzare il Processo di instradamento\_.
 
-[Torna all'inizio di BGP (Border Gateway Protocol)] (#0)
+[Torna all'inizio di BGP (Border Gateway Protocol)](#0)
 
-## <a name="9"></a>Ridondanza e bilanciamento
+## <a id="9"></a>Ridondanza e bilanciamento
 
 Seguendo il filo dell'esposizione imbastita con strategia *bottom-up*, giungiamo a uno degli argomenti che ha interessato e tuttora impegna, per la sua complessità, tutti gli operatori di rete come pure gli studiosi e i ricercatori delle cose di Internet (*res interretis*).
 
@@ -644,9 +644,9 @@ Una scienza inesatta (quella del *traffic engineering*) che, data la fluidità d
 
 In conclusione, comunque, va detto che bilanciare il traffico non vuol dire ripartirlo equamente tra i collegamenti a disposizione, ma distribuirlo in modo ragionato (tenuto conto anche dell'aspetto di ridondanza) così da poter sfruttare al meglio le risorse con una benefica ricaduta sul *budget*.
 
-[Torna all'inizio di BGP (Border Gateway Protocol)] (#0)
+[Torna all'inizio di BGP (Border Gateway Protocol)](#0)
 
-## <a name="10"></a>Sicurezza
+## <a id="10"></a>Sicurezza
 
 Molteplici sono gli aspetti legati alla sicurezza nel campo di applicazione del protocollo BGP e riguardano nello specifico diversi momenti della vita di una sessione BGP, sia essa di *peering* sia essa di *transit* [^14].
 
@@ -668,7 +668,7 @@ Infine, è necessario qui menzionare l'iniziativa di [ISOC - Internet Society](h
 
 MANRS offre programmi per punti di interscambio e operatori di rete i quali, se lo desiderano, possono sottoporsi a una verifica così da poter essere inclusi in un elenco pubblicamente consultabile sul sito <https://www.manrs.org>. Al momento (gennaio 2020), su quasi 1200 [LIR - Local Internet Registry con base in Italia](https://www.ripe.net/membership/indices/IT.html) [^18], solo 17 (l'1,4% circa) si sono fatti certificare [^19]. Vorremmo dunque cogliere l'occasione per esortare quanti leggessero questa breve guida a diventare più consapevoli delle insidie e, soprattutto, dei rimedi a disposizione nell'àmbito degli instradamenti su Internet.
 
-[Torna all'inizio di BGP (Border Gateway Protocol)] (#0)
+[Torna all'inizio di BGP (Border Gateway Protocol)](#0)
 
 **Citazioni:**
 
