@@ -83,7 +83,7 @@ Da un punto di vista tecnico una definizione può essere rintracciata nella [[RF
 
 > *"Un sistema autonomo è un gruppo di uno o più prefissi IP gestito da uno o più operatori di rete con una politica di instradamento UNICA e BEN DEFINITA."* [t.d.r.] [CIT-RFC1930]\_
 
-Fino al 2007 la rappresentazione di un *AS* avveniva per mezzo di un numero [5] a 16 bit (a esempio 64500), dopodiché per mezzo di un numero a 32 bit (a esempio in formato *asplain* 65551 o, in formato *asdot+*, 1.15), come regolata dalla [[RFC5396] Textual Representation of Autonomous System (AS) Numbers](https://www.rfc-editor.org/rfc/rfc5396.txt).
+Fino al 2007 la rappresentazione di un *AS* avveniva per mezzo di un numero [^5] a 16 bit (a esempio 64500), dopodiché per mezzo di un numero a 32 bit (a esempio in formato *asplain* 65551 o, in formato *asdot+*, 1.15), come regolata dalla [[RFC5396] Textual Representation of Autonomous System (AS) Numbers](https://www.rfc-editor.org/rfc/rfc5396.txt).
 
 Più dettagliatamente possiamo considerare un "dentro" e un "fuori" dal punto di vista di un *AS* e cioè rispettivamente instradamenti *intra-AS* e instradamenti *inter-AS*.
 
