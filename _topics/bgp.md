@@ -25,7 +25,7 @@ La struttura del testo si rifà a un approccio sempreverde (cioè di tipo *botto
 
 Per quanto possibile saranno indicate le fonti, le migliori pratiche e le recenti tecnologie così come pubblicate da [RFC Editor](https://rfc-editor.org) [^2] e dalle altre organizzazioni coinvolte nella definizione degli standard.
 
-## <a name="1"></a>Protocolli di instradamento: fondamenti e concetti
+## <a id="1"></a>Protocolli di instradamento: fondamenti e concetti
 
 L'attore protagonista in tutte le attività di instradamento si chiama *router*: quell'apparato capace di instradare il traffico dei dispositivi secondo delle tabelle contenenti indispensabili informazioni sui migliori percorsi (*best path*) verso tutte le destinazioni che conosce.
 
