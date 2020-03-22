@@ -77,7 +77,7 @@ I due più importanti esempi di protocolli di instradamento basati sull'algoritm
 
 Abbiamo visto come diversi siano i metodi per rendere le risorse di rete raggiungibili, ma occorre aggiungere ancóra un tassello determinante per la prosecuzione dell'illustrazione, e cioè il loro àmbito (o dominio) di applicazione. Per questo è necessario introdurre la nozione di sistema autonomo, fin qui solo velocemente menzionata.
 
-Si tratta della cellula più piccola che dà vita all'organismo di Internet e dobbiamo immaginarla come la tessera di un mosaico la quale può trovarsi nel centro o ai bordi del quadro ma sempre con almeno un lato (preferibilmente almeno due, come spiegato in coda al paragrafo Sessioni BGP\_) connesso ad altre tessere.
+Si tratta della cellula più piccola che dà vita all'organismo di Internet e dobbiamo immaginarla come la tessera di un mosaico la quale può trovarsi nel centro o ai bordi del quadro ma sempre con almeno un lato (preferibilmente almeno due, come spiegato in coda al paragrafo [Sessioni BGP](#5)) connesso ad altre tessere.
 
 Da un punto di vista tecnico una definizione può essere rintracciata nella [[RFC1930] Guidelines for creation, selection, and registration of an Autonomous System (AS)](http://www.rfc-editor.org/rfc/rfc1930.txt) dove si legge:
 
@@ -405,7 +405,7 @@ Lo standard viene coniugato, dalle molteplici implementazioni presenti sul merca
 
 Una esigenza che si palesa quando ci poniamo domande tipo: come evitiamo l'annuncio dello spazio di indirizzamento definito nella [[RFC1918]](https://www.rfc-editor.org/rfc/rfc1918.txt) [^12]? Oppure: come possiamo filtrare gli annunci provenienti da un determinato dirimpettaio (*neighbor*)? E ancóra: posso transitare per un certo fornitore (*AS*) invece che per un altro?
 
-Le risposte a questi e ad altri interrogativi presuppongono la conoscenza degli attributi menzionati nel paragrafo Come funziona BGP\_.
+Le risposte a questi e ad altri interrogativi presuppongono la conoscenza degli attributi menzionati nel paragrafo [Come funziona BGP](#4).
 
 Cominciamo con l'attributo *AS\_PATH* che contiene la sequenza ordinata dei sistemi autonomi (*AS\_SEQUENCE*) dai quali occorre transitare per raggiungere una determinata destinazione. Si tratta di un attributo che finché viene scambiato tra *bgp speaking router* appartenenti allo stesso sistema autonomo (*iBGP*) non viene modificato; ma quando viene scambiato tra sistemi autonomi diversi (*eBGP*), allora il *router* che riceve l'annuncio aggiunge (*prepend*) il proprio numero di *AS* all'inizio (cioè a sinistra) della sequenza.
 
@@ -518,7 +518,7 @@ Semplice, facciamo sì che il messaggio *UPDATE* che R1 trasmette a R2 sia condi
 |\*\>241.241.0.0/16|192.88.99.33|64500|100|
 |242.0.242.0/24|192.88.99.33|64500||
 
-Dato che l'algoritmo di selezione del miglior percorso (punto 4 del paragrafo Processo di instradamento\_) osservato da tutti i *bgp speaking router* rispettosi degli standard prevede che venga preferito l'instradamento con il più basso valore *MED*, possiamo infatti notare la presenza di un instradamento preceduto dai segni asterisco e maggiore (\*\>) indicanti il *best\_path* proprio in corrispondenza della voce con *MED* 100.
+Dato che l'algoritmo di selezione del miglior percorso (punto 4 del paragrafo [Processo di instradamento](#6)) osservato da tutti i *bgp speaking router* rispettosi degli standard prevede che venga preferito l'instradamento con il più basso valore *MED*, possiamo infatti notare la presenza di un instradamento preceduto dai segni asterisco e maggiore (\*\>) indicanti il *best\_path* proprio in corrispondenza della voce con *MED* 100.
 
 Dobbiamo precisare comunque che non tutti i sistemi autonomi accettano l'attributo *MULTI\_EXIT\_DISC*: ricade infatti nella classificazione *optional non-transitive*, cioè attributo opzionale che, se presente ma non riconosciuto, può essere tranquillamente ignorato e non deve essere trasmesso agli altri *bgp speaking router*.
 
@@ -552,7 +552,7 @@ Ecco come si trasforma la tabella BGP di R1:
 |240.240.0.0/15|198.51.100.65|64496|100|
 |240.240.0.0/15|198.51.100.129|64501 64496|150|
 
-Vuol dire che tutto il traffico diretto verso qualsiasi risorsa afferente alla rete 240.240.0.0/15 dovrà transitare per l'AS64501 nel pieno rispetto di quanto previsto al punto 1 del paragrafo sul Processo di instradamento\_.
+Vuol dire che tutto il traffico diretto verso qualsiasi risorsa afferente alla rete 240.240.0.0/15 dovrà transitare per l'AS64501 nel pieno rispetto di quanto previsto al punto 1 del paragrafo sul [Processo di instradamento](#6).
 
 Altro utilissimo attributo è *COMMUNITY* che ritrae proprio una comunità: un gruppo che condivide alcune proprietà logiche. Quanto sarebbe comodo raggruppare, nel senso di trattare in modo omogeneo, gli annunci provenienti da clienti? Oppure quelli provenienti da punti di interscambio italiani?
 
@@ -602,7 +602,7 @@ Va da sé che l'ordine nel quale vengono disposti i setacci conta, cioè se vien
 
 Fuor di metafora, lo stesso principio vale anche per i *router* sui quali è possibile programmare dei filtri utili a catturare gli elementi ai quali applicare poi una manipolazione che ci aiuti a ottenere i nostri scopi.
 
-Per manipolazione intendiamo quella attività che consente di modificare gli attributi BGP (già esposti nel paragrafo Controllo degli instradamenti\_) degli elementi filtrati al fine di influenzare il Processo di instradamento\_.
+Per manipolazione intendiamo quella attività che consente di modificare gli attributi BGP (già esposti nel paragrafo [Controllo degli instradamenti](#7)) degli elementi filtrati al fine di influenzare il [Processo di instradamento](#6).
 
 [Torna all'inizio di BGP (Border Gateway Protocol)](#0)
 
