@@ -87,7 +87,7 @@ Fino al 2007 la rappresentazione di un *AS* avveniva per mezzo di un numero [^5]
 
 Più dettagliatamente possiamo considerare un "dentro" e un "fuori" dal punto di vista di un *AS* e cioè rispettivamente instradamenti *intra-AS* e instradamenti *inter-AS*.
 
-![*Figura 1: Instradamenti intra-AS e inter-AS.*](media/BGP_intra-inter.svg%0A%20:align:%20center%0A%20:alt:%20Instradamenti%20intra-AS%20e%20inter-AS%0A%20:figclass:%20align-center)
+![*Figura 1: Instradamenti intra-AS e inter-AS.*](../media/BGP_intra-inter.svg%0A%20:align:%20center%0A%20:alt:%20Instradamenti%20intra-AS%20e%20inter-AS%0A%20:figclass:%20align-center)
 
 Ora, gli instradamenti possono essere classificati anche per la modalità con la quale vengono appresi dai *router*: quando inseriamo manualmente un percorso verso una destinazione, allora si chiamerà "instradamento statico" (*static routing*); quando invece i dispositivi apprendono gli instradamenti grazie a un protocollo, allora si parlerà di "instradamento dinamico" (*dynamic routing*).
 
@@ -158,7 +158,7 @@ Gli elementi del messaggio *OPEN* sono:
 
 Affinché la connessione BGP tra due *router* venga stabilita correttamente è necessario che l'*iter* superi alcuni passaggi.
 
-![*Figura 2: BGP - Macchina a Stati Finiti*](media/BGP_FSM.svg%0A%20:align:%20center%0A%20:alt:%20BGP%20-%20Macchina%20a%20Stati%20Finiti%0A%20:figclass:%20align-center)
+![*Figura 2: BGP - Macchina a Stati Finiti*](../media/BGP_FSM.svg%0A%20:align:%20center%0A%20:alt:%20BGP%20-%20Macchina%20a%20Stati%20Finiti%0A%20:figclass:%20align-center)
 
 Innanzitutto partiamo dallo stato di riposo (**idle**) nel quale si trova un *router* prima di ricevere il via alla connessione che possiamo dare noi stessi intervenendo sulla configurazione del dispositivo. Ricevuto il via (*start*), il primo *router* tenta una connessione TCP sulla porta 179 del secondo e poi si mette in ascolto di risposte provenienti dal secondo *router*.
 
@@ -370,7 +370,7 @@ Infine ci sono gli *AS* *tier-1* (una quindicina nel mondo al momento [^7]) che 
 
 Ecco spiegato dunque come è possibile mischiare le modalità *peering* e *transit* entrambe nello stesso *router*: all'*AS* con il quale facciamo *peering* annunciamo le nostre reti e accettiamo solo le sue reti; all'*AS* dal quale acquistiamo il transito annunciamo le nostre reti e accettiamo tutte le reti che conosce, sia le sue, sia quelle degli altri *AS*.
 
-![*Figura 3: Gerarchia tra sistemi autonomi*](media/BGP_gerarchia-AS.svg%0A%20:align:%20center%0A%20:alt:%20Gerarchia%20tra%20sistemi%20autonomi%0A%20:figclass:%20align-center)
+![*Figura 3: Gerarchia tra sistemi autonomi*](../media/BGP_gerarchia-AS.svg%0A%20:align:%20center%0A%20:alt:%20Gerarchia%20tra%20sistemi%20autonomi%0A%20:figclass:%20align-center)
 
 Da notare che per la richiesta di un numero di sistema autonomo all'ente continentale di competenza (*RIR - Regional Internet Registry*) [^8] è necessario dimostrare di aver contrattualizzato (o aver richiesto la contrattualizzazione di) almeno due diversi transiti con *AS* diversi (topologia *multihomed*) [^9].
 
@@ -628,7 +628,7 @@ Ma non solo, il *NAP* interpreta anche un ruolo di facilitatore sul piano tecnic
 
 Se per esempio gli afferenti all'infrastruttura di un *NAP* fossero cento, vorrebbe dire che, nella migliore delle ipotesi, ciascuno dovrebbe configurare sul proprio apparato 99 sessioni (*N-1*). Se invece il punto di interscambio mettesse a disposizione un *route server*, allora a ciascun afferente basterebbe configurare una sola sessione con quel dispositivo per vedersi annunciati tutti gli instradamenti dei partecipanti. Per una spiegazione più dettagliata di quanto attiene alla distribuzione degli instradamenti da parte di un calcolatore elettronico (*route server*) così come illustrato nella [[RFC7948] Internet Exchange BGP Route Server Operations](https://www.rfc-editor.org/rfc/rfc7948.txt), rimandiamo a un altro capitolo.
 
-![*Figura 4: Route server presso Network Access Point*](media/BGP_NAP.svg%0A%20:align:%20center%0A%20:alt:%20Route%20server%20presso%20Network%20Access%20Point%0A%20:figclass:%20align-center)
+![*Figura 4: Route server presso Network Access Point*](../media/BGP_NAP.svg%0A%20:align:%20center%0A%20:alt:%20Route%20server%20presso%20Network%20Access%20Point%0A%20:figclass:%20align-center)
 
 In Italia i più attivi *NAP* neutrali sono: [MIX - Milan Internet eXchange](https://www.mix-it.net/) a Milano; [NAMEX - NAutilus MEditerranean eXchange](https://www.namex.it/) a Roma; [TOP-IX - TOrino Piemonte - Internet eXchange](https://www.top-ix.org/) a Torino; [VSIX - Veneto System Internet eXchange](https://www.vsix.it/) a Padova.
 
