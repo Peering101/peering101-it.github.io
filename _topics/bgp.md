@@ -81,7 +81,7 @@ Si tratta della cellula più piccola che dà vita all'organismo di Internet e do
 
 Da un punto di vista tecnico una definizione può essere rintracciata nella [[RFC1930] Guidelines for creation, selection, and registration of an Autonomous System (AS)](http://www.rfc-editor.org/rfc/rfc1930.txt) dove si legge:
 
-> *"Un sistema autonomo è un gruppo di uno o più prefissi IP gestito da uno o più operatori di rete con una politica di instradamento UNICA e BEN DEFINITA."* [t.d.r.] [CIT-RFC1930]\_
+> *"Un sistema autonomo è un gruppo di uno o più prefissi IP gestito da uno o più operatori di rete con una politica di instradamento UNICA e BEN DEFINITA."* [t.d.r.]
 
 Fino al 2007 la rappresentazione di un *AS* avveniva per mezzo di un numero [^5] a 16 bit (a esempio 64500), dopodiché per mezzo di un numero a 32 bit (a esempio in formato *asplain* 65551 o, in formato *asdot+*, 1.15), come regolata dalla [[RFC5396] Textual Representation of Autonomous System (AS) Numbers](https://www.rfc-editor.org/rfc/rfc5396.txt).
 
@@ -669,8 +669,6 @@ Infine, è necessario qui menzionare l'iniziativa di [ISOC - Internet Society](h
 MANRS offre programmi per punti di interscambio e operatori di rete i quali, se lo desiderano, possono sottoporsi a una verifica così da poter essere inclusi in un elenco pubblicamente consultabile sul sito <https://www.manrs.org>. Al momento (gennaio 2020), su quasi 1200 [LIR - Local Internet Registry con base in Italia](https://www.ripe.net/membership/indices/IT.html) [^18], solo 17 (l'1,4% circa) si sono fatti certificare [^19]. Vorremmo dunque cogliere l'occasione per esortare quanti leggessero questa breve guida a diventare più consapevoli delle insidie e, soprattutto, dei rimedi a disposizione nell'àmbito degli instradamenti su Internet.
 
 [Torna all'inizio di BGP (Border Gateway Protocol)](#0)
-
-**Citazioni:**
 
 ### Note:
 
