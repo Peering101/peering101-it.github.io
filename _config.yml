@@ -27,7 +27,8 @@ github:
 
 # Collections
 collections:
- - topics
+  topics:
+    output: true
 
 # Gems
 plugins:
