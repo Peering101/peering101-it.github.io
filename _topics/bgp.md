@@ -8,7 +8,7 @@ subtitle: BGP (Border Gateway Protocol)
 
 ## Premessa
 
-In questo spazio, nato da un'idea di [ITNOG](https://www.itnog.it/) (*the ITalian Network Operators Group*), intendiamo fornire una breve guida in lingua italiana ai principali concetti e meccanismi sottesi al funzionamento di Internet illustrando alcune delle architetture di instradamento basate sul protocollo *BGP - Border Gateway Protocol*. L'obiettivo dunque non è quello di tradurre e parafrasare le RFC [^1] (*Request for comments*), né quello di somministrare un ricettario; piuttosto vorremmo divulgare (con linguaggio semplice) i capisaldi della letteratura conditi con esempi intuitivi così da facilitare la strada a quanti vorranno poi approfondire.
+In questo spazio, nato da un'idea di [ITNOG](https://www.itnog.it/) (*the ITalian Network Operators Group*), intendiamo fornire una breve guida in lingua italiana ai principali concetti e meccanismi sottesi al funzionamento di Internet illustrando alcune delle architetture di instradamento basate sul protocollo *BGP - Border Gateway Protocol*. L'obiettivo dunque non è quello di tradurre e parafrasare le RFC[^1] (*Request for comments*), né quello di somministrare un ricettario; piuttosto vorremmo divulgare (con linguaggio semplice) i capisaldi della letteratura conditi con esempi intuitivi così da facilitare la strada a quanti vorranno poi approfondire.
 
 La struttura del testo si rifà a un approccio sempreverde (cioè di tipo *bottom-up*, dal basso verso l’alto), scandito secondo questi punti:
 
@@ -23,7 +23,7 @@ La struttura del testo si rifà a un approccio sempreverde (cioè di tipo *botto
 -   [ridondanza e bilanciamento](#9);
 -   [sicurezza](#10).
 
-Per quanto possibile saranno indicate le fonti, le migliori pratiche e le recenti tecnologie così come pubblicate da [RFC Editor](https://rfc-editor.org) [^2] e dalle altre organizzazioni coinvolte nella definizione degli standard.
+Per quanto possibile saranno indicate le fonti, le migliori pratiche e le recenti tecnologie così come pubblicate da [RFC Editor](https://rfc-editor.org)[^2] e dalle altre organizzazioni coinvolte nella definizione degli standard.
 
 ## <a id="1"></a>Protocolli di instradamento: fondamenti e concetti
 
@@ -61,11 +61,11 @@ Alcuni esempi di protocolli di instradamento basati sull'algoritmo del *distance
 
 [Torna all'inizio di BGP (Border Gateway Protocol)](#0)
 
-Diverso protocollo di instradamento, e più complesso del precedente, è quello basato sull'algoritmo *link-state* [^3]. In questo caso i *router* si scambiano informazioni proprio sullo stato del collegamento e quindi non tabelle di instradamento.
+Diverso protocollo di instradamento, e più complesso del precedente, è quello basato sull'algoritmo *link-state*[^3]. In questo caso i *router* si scambiano informazioni proprio sullo stato del collegamento e quindi non tabelle di instradamento.
 
 L'oggetto delle comunicazioni tra apparati che ne fanno uso risiede nelle informazioni su *router* e reti adiacenti incluse delle grandezze (*metric*) associate alla connessione. In altre parole ciascun *router* produce un messaggio che contiene una descrizione del dispositivo stesso e di dove si connette agli altri; messaggio che viene distribuito a tutti gli altri *router* della rete i quali lo archiviano in una base di dati interna. Così ciascun dispositivo sarà in grado di ricostruire autonomamente una topologia della rete che sarà uguale per tutti.
 
-Dopodiché, tutti i *router* saranno in grado di calcolare e tratteggiare un albero (dove ciascun dispositivo pone sé stesso alla radice) di cosiddetti *best path* verso ciascuna destinazione applicando l'algoritmo [SPF - Shortest Path First](http://www-m3.ma.tum.de/foswiki/pub/MN0506/WebHome/dijkstra.pdf) concepito nel 1959 dal matematico olandese Edsger W. Dijkstra [^4].
+Dopodiché, tutti i *router* saranno in grado di calcolare e tratteggiare un albero (dove ciascun dispositivo pone sé stesso alla radice) di cosiddetti *best path* verso ciascuna destinazione applicando l'algoritmo [SPF - Shortest Path First](http://www-m3.ma.tum.de/foswiki/pub/MN0506/WebHome/dijkstra.pdf) concepito nel 1959 dal matematico olandese Edsger W. Dijkstra[^4].
 
 Queste caratteristiche rendono il *link-state* un algoritmo più adatto a essere impiegato in scenari grandi e complessi, tuttavia sempre interni a un sistema autonomo. Infatti su grandi reti, come Internet, l'instabilità di alcuni collegamenti renderebbe le ritrasmissioni e i conseguenti calcoli un lavoro troppo oneroso (e di conseguenza inefficiente) per i singoli *router*.
 
@@ -83,12 +83,12 @@ Da un punto di vista tecnico una definizione può essere rintracciata nella [[RF
 
 > *"Un sistema autonomo è un gruppo di uno o più prefissi IP gestito da uno o più operatori di rete con una politica di instradamento UNICA e BEN DEFINITA."* [t.d.r.]
 
-Fino al 2007 la rappresentazione di un *AS* avveniva per mezzo di un numero [^5] a 16 bit (a esempio 64500), dopodiché per mezzo di un numero a 32 bit (a esempio in formato *asplain* 65551 o, in formato *asdot+*, 1.15), come regolata dalla [[RFC5396] Textual Representation of Autonomous System (AS) Numbers](https://www.rfc-editor.org/rfc/rfc5396.txt).
+Fino al 2007 la rappresentazione di un *AS* avveniva per mezzo di un numero[^5] a 16 bit (a esempio 64500), dopodiché per mezzo di un numero a 32 bit (a esempio in formato *asplain* 65551 o, in formato *asdot+*, 1.15), come regolata dalla [[RFC5396] Textual Representation of Autonomous System (AS) Numbers](https://www.rfc-editor.org/rfc/rfc5396.txt).
 
 Più dettagliatamente possiamo considerare un "dentro" e un "fuori" dal punto di vista di un *AS* e cioè rispettivamente instradamenti *intra-AS* e instradamenti *inter-AS*.
 
 *Figura 1: Instradamenti intra-AS e inter-AS.*
-![*Figura 1*](../../media/BGP_intra-inter.svg "Instradamenti intra-AS e inter-AS.")
+![Figura 1](../../media/BGP_intra-inter.svg "Instradamenti intra-AS e inter-AS.")
 
 Ora, gli instradamenti possono essere classificati anche per la modalità con la quale vengono appresi dai *router*: quando inseriamo manualmente un percorso verso una destinazione, allora si chiamerà "instradamento statico" (*static routing*); quando invece i dispositivi apprendono gli instradamenti grazie a un protocollo, allora si parlerà di "instradamento dinamico" (*dynamic routing*).
 
@@ -364,24 +364,24 @@ Si capisce come sia strategica per gli operatori nell'industria di Internet l'in
 
 Ma a questo punto ci domandiamo come si faccia a raggiungere le risorse appartenenti a tutti quei sistemi autonomi con i quali non abbiamo rapporti di *peering*. La risposta è semplice: ci si accorda con un altro sistema autonomo affinché ci conceda il transito verso le risorse appartenenti ad altri *AS* con cui abbia stabilito sessioni BGP.
 
-In altre parole, dobbiamo trovare un *AS* (o più d'uno naturalmente) che ci faccia appunto da transito. Sul mercato esistono parecchi operatori che per mestiere (cioè a titolo oneroso) danno *transit* ad altri *AS* e, a seconda del numero e della qualità delle sessioni BGP che hanno in piedi, vengono classificati secondo livelli (*tier*), solitamente tre: *tier-1*, *tier-2*, *tier-3* [^6].
+In altre parole, dobbiamo trovare un *AS* (o più d'uno naturalmente) che ci faccia appunto da transito. Sul mercato esistono parecchi operatori che per mestiere (cioè a titolo oneroso) danno *transit* ad altri *AS* e, a seconda del numero e della qualità delle sessioni BGP che hanno in piedi, vengono classificati secondo livelli (*tier*), solitamente tre: *tier-1*, *tier-2*, *tier-3*[^6].
 
 Un *AS* viene classificato come *tier-3* se può accedere al resto di Internet solo attraverso l'acquisto di transito da altri. Come *tier-2* abbiamo invece sistemi autonomi che, oltre a sessioni BGP paritarie con altri (molte, a volte moltissime), necessitano di acquistare transito da altri per raggiungere alcune porzioni di Internet.
 
-Infine ci sono gli *AS* *tier-1* (una quindicina nel mondo al momento [^7]) che non necessitano di acquistare transito da altri (*transit-free*) poiché riescono, attraverso accordi di *peering*, a raggiungere tutti gli altri *AS* che costituiscono l'organismo di Internet.
+Infine ci sono gli *AS* *tier-1* (una quindicina nel mondo al momento[^7]) che non necessitano di acquistare transito da altri (*transit-free*) poiché riescono, attraverso accordi di *peering*, a raggiungere tutti gli altri *AS* che costituiscono l'organismo di Internet.
 
 Ecco spiegato dunque come è possibile mischiare le modalità *peering* e *transit* entrambe nello stesso *router*: all'*AS* con il quale facciamo *peering* annunciamo le nostre reti e accettiamo solo le sue reti; all'*AS* dal quale acquistiamo il transito annunciamo le nostre reti e accettiamo tutte le reti che conosce, sia le sue, sia quelle degli altri *AS*.
 
 *Figura 3: Gerarchia tra sistemi autonomi.*
 ![Figura 3](../../media/BGP_gerarchia-AS.svg "Gerarchia tra sistemi autonomi.")
 
-Da notare che per la richiesta di un numero di sistema autonomo all'ente continentale di competenza (*RIR - Regional Internet Registry*) [^8] è necessario dimostrare di aver contrattualizzato (o aver richiesto la contrattualizzazione di) almeno due diversi transiti con *AS* diversi (topologia *multihomed*) [^9].
+Da notare che per la richiesta di un numero di sistema autonomo all'ente continentale di competenza (*RIR - Regional Internet Registry*)[^8] è necessario dimostrare di aver contrattualizzato (o aver richiesto la contrattualizzazione di) almeno due diversi transiti con *AS* diversi (topologia *multihomed*)[^9].
 
 [Torna all'inizio di BGP (Border Gateway Protocol)](#0)
 
 ## <a id="6"></a>Processo di instradamento
 
-BGP è un protocollo molto flssibile, per questo gode di ottima salute nonostante il peso degli anni e le mutanti esigenze dell'industria di Internet. La sua grande abilità è di rendere note le posizioni di tutte le risorse numeriche che si affacciano in Rete originanti dagli oltre 66mila sistemi autonomi a oggi attivi nel mondo [^10].
+BGP è un protocollo molto flssibile, per questo gode di ottima salute nonostante il peso degli anni e le mutanti esigenze dell'industria di Internet. La sua grande abilità è di rendere note le posizioni di tutte le risorse numeriche che si affacciano in Rete originanti dagli oltre 66mila sistemi autonomi a oggi attivi nel mondo[^10].
 
 Se in molti casi il processo per scegliere il miglior percorso (*best path*) verso una destinazione è assai lineare perché si può preferire semplicemente il percorso più breve (cioè l'*AS\_PATH* più corto), a volte si deve applicare un chiaro algoritmo che i *router* devono osservare tutte le volte che per la stessa destinazione hanno a disposizione più percorsi diversi:
 
@@ -396,7 +396,7 @@ Se in molti casi il processo per scegliere il miglior percorso (*best path*) ver
 
 Alcune implementazioni presenti sul mercato aggiungono altri criteri selettivi come a esempio:
 
-1.  preferire l'instradamento appreso (e installato nella tabella degli instradamenti) per primo [^11].
+1.  preferire l'instradamento appreso (e installato nella tabella degli instradamenti) per primo[^11].
 
 Ovviamente se il *NEXT\_HOP* non è raggiungibile allora l'instradamento viene ignorato, come pure se vengono implementate delle regole per filtrare via alcuni annunci.
 
@@ -406,7 +406,7 @@ Ovviamente se il *NEXT\_HOP* non è raggiungibile allora l'instradamento viene i
 
 Lo standard viene coniugato, dalle molteplici implementazioni presenti sul mercato, a diversi modi di controllo degli instradamenti e ciascuno secondo un preciso tempo di applicazione.
 
-Una esigenza che si palesa quando ci poniamo domande tipo: come evitiamo l'annuncio dello spazio di indirizzamento definito nella [[RFC1918]](https://www.rfc-editor.org/rfc/rfc1918.txt) [^12]? Oppure: come possiamo filtrare gli annunci provenienti da un determinato dirimpettaio (*neighbor*)? E ancóra: posso transitare per un certo fornitore (*AS*) invece che per un altro?
+Una esigenza che si palesa quando ci poniamo domande tipo: come evitiamo l'annuncio dello spazio di indirizzamento definito nella [[RFC1918]](https://www.rfc-editor.org/rfc/rfc1918.txt)[^12]? Oppure: come possiamo filtrare gli annunci provenienti da un determinato dirimpettaio (*neighbor*)? E ancóra: posso transitare per un certo fornitore (*AS*) invece che per un altro?
 
 Le risposte a questi e ad altri interrogativi presuppongono la conoscenza degli attributi menzionati nel paragrafo [Come funziona BGP](#4).
 
@@ -484,7 +484,7 @@ Per l'instradamento installato nella tabella BGP di R1, 250.0.250.0/24, apprendi
 
 Infatti analizzando la tabella degli instradamenti (*routing table*), troviamo che la rete 250.0.250.0/24 è stata installata con l'IP 198.51.100.129 come via d'uscita (*gateway*). Si tratta di un indirizzo che non appartiene a R1; infatti, scorrendo la *tabella di routing*, scopriamo che la rete di appartenenza di quell'IP, 198.51.100.128/26, è raggiungibile attraverso un altro *gateway*, il 192.0.2.253. A sua volta, la rete di appartenenza di quest'ultimo indirizzo, 192.0.2.252/30, è direttamente connessa alla interfaccia Gigabit Ethernet numero 3 del modulo numero 0 del *router* R1.
 
-Si tratta di una cosiddetta connessione punto-punto (*point-to-point*) dove, per ogni /30 IPv4, il bit disponibile dispari è assegnato a R1 e il bit disponibile pari al suo *neighbor* BGP [^13].
+Si tratta di una cosiddetta connessione punto-punto (*point-to-point*) dove, per ogni /30 IPv4, il bit disponibile dispari è assegnato a R1 e il bit disponibile pari al suo *neighbor* BGP[^13].
 
 Per concludere possiamo facilmente dire che R1 può raggiungere uno dei suoi instradamenti, 240.240.0.0/15, inoltrando i pacchetti indirizzati al *NEXT\_HOP* 198.51.100.65, attraverso l'interfaccia GE0/2, all'IP 192.0.2.249.
 
@@ -652,7 +652,7 @@ In conclusione, comunque, va detto che bilanciare il traffico non vuol dire ripa
 
 ## <a id="10"></a>Sicurezza
 
-Molteplici sono gli aspetti legati alla sicurezza nel campo di applicazione del protocollo BGP e riguardano nello specifico diversi momenti della vita di una sessione BGP, sia essa di *peering* sia essa di *transit* [^14].
+Molteplici sono gli aspetti legati alla sicurezza nel campo di applicazione del protocollo BGP e riguardano nello specifico diversi momenti della vita di una sessione BGP, sia essa di *peering* sia essa di *transit*[^14].
 
 Partiamo dal momento in cui si individua, e si deve poter raggiungere, un *neighbor*. Come possiamo, a esempio, essere certi che non si tratti di un intruso?
 
@@ -664,13 +664,13 @@ E ancóra, è possibile subordinare a un meccanismo di autenticazione la realizz
 
 Esistono ulteriori tecniche che le implementazioni di BGP ingegnate dai vari produttori mettono a disposizione degli operatori, ma nessuna entra nel merito della legittimità dei singoli annunci. In poche parole, i metodi fin qui descritti sono in grado di accertare l'identità del *neighbor* e di proteggere il nostro *router* da eventuali pacchetti maliziosi provenienti da disturbatori. Ma se questo dirimpettaio ben identificato e pulito ci annunciasse risorse di altri sistemi autonomi come fossero le sue? Avremmo comunque un problema e, di sicuro, assai grave per l'intero ecosistema di Internet.
 
-Fortunatamente dal 2012, con la [[RFC6480] An Infrastructure to Support Secure Internet Routing](https://www.rfc-editor.org/rfc/rfc6480.txt), abbiamo un formidabile antidoto contro l'annuncio di instradamenti cosiddetti dirottati (*hijacked*), e cioè una infrastruttura basata su risorse verificabili con una chiave pubblica: *RPKI - Resource Public Key Infrastructure* [^15].
+Fortunatamente dal 2012, con la [[RFC6480] An Infrastructure to Support Secure Internet Routing](https://www.rfc-editor.org/rfc/rfc6480.txt), abbiamo un formidabile antidoto contro l'annuncio di instradamenti cosiddetti dirottati (*hijacked*), e cioè una infrastruttura basata su risorse verificabili con una chiave pubblica: *RPKI - Resource Public Key Infrastructure*[^15].
 
 Data l'importanza e la vastità dell'argomento, un trattazione più completa sarà presto pubblicata in una guida a sé stante.
 
-Infine, è necessario qui menzionare l'iniziativa di [ISOC - Internet Society](https://www.isoc.org) nominata [MANRS](https://www.manrs.org) (pronunciato ˈmænəz [^16]). **Mutually Agreed Norms for Routing Security** è un programma che propone alcune soluzioni per rendere più sicura la gestione degli instradamenti e ridurre di conseguenza i rischi più comuni come il dirottamento degli instradamenti (*route hijacking*), la perdita degli instradamenti (*route leak*) [^17], la falsificazione degli indirizzi IP (*IP address spoofing*).
+Infine, è necessario qui menzionare l'iniziativa di [ISOC - Internet Society](https://www.isoc.org) nominata [MANRS](https://www.manrs.org) (pronunciato ˈmænəz[^16]). **Mutually Agreed Norms for Routing Security** è un programma che propone alcune soluzioni per rendere più sicura la gestione degli instradamenti e ridurre di conseguenza i rischi più comuni come il dirottamento degli instradamenti (*route hijacking*), la perdita degli instradamenti (*route leak*)[^17], la falsificazione degli indirizzi IP (*IP address spoofing*).
 
-MANRS offre programmi per punti di interscambio e operatori di rete i quali, se lo desiderano, possono sottoporsi a una verifica così da poter essere inclusi in un elenco pubblicamente consultabile sul sito <https://www.manrs.org>. Al momento (gennaio 2020), su quasi 1200 [LIR - Local Internet Registry con base in Italia](https://www.ripe.net/membership/indices/IT.html) [^18], solo 17 (l'1,4% circa) si sono fatti certificare [^19]. Vorremmo dunque cogliere l'occasione per esortare quanti leggessero questa breve guida a diventare più consapevoli delle insidie e, soprattutto, dei rimedi a disposizione nell'àmbito degli instradamenti su Internet.
+MANRS offre programmi per punti di interscambio e operatori di rete i quali, se lo desiderano, possono sottoporsi a una verifica così da poter essere inclusi in un elenco pubblicamente consultabile sul sito <https://www.manrs.org>. Al momento (gennaio 2020), su quasi 1200 [LIR - Local Internet Registry con base in Italia](https://www.ripe.net/membership/indices/IT.html)[^18], solo 17 (l'1,4% circa) si sono fatti certificare[^19]. Vorremmo dunque cogliere l'occasione per esortare quanti leggessero questa breve guida a diventare più consapevoli delle insidie e, soprattutto, dei rimedi a disposizione nell'àmbito degli instradamenti su Internet.
 
 [Torna all'inizio di BGP (Border Gateway Protocol)](#0)
 
