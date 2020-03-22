@@ -87,6 +87,7 @@ Fino al 2007 la rappresentazione di un *AS* avveniva per mezzo di un numero [^5]
 
 Più dettagliatamente possiamo considerare un "dentro" e un "fuori" dal punto di vista di un *AS* e cioè rispettivamente instradamenti *intra-AS* e instradamenti *inter-AS*.
 
+*Figura 1: Instradamenti intra-AS e inter-AS.*
 ![*Figura 1*](../../media/BGP_intra-inter.svg "Instradamenti intra-AS e inter-AS.")
 
 Ora, gli instradamenti possono essere classificati anche per la modalità con la quale vengono appresi dai *router*: quando inseriamo manualmente un percorso verso una destinazione, allora si chiamerà "instradamento statico" (*static routing*); quando invece i dispositivi apprendono gli instradamenti grazie a un protocollo, allora si parlerà di "instradamento dinamico" (*dynamic routing*).
