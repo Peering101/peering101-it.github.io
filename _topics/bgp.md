@@ -1,3 +1,9 @@
+---
+layout: default
+title: BGP
+subtitle: BGP (Border Gateway Protocol)
+---
+
 # BGP (Border Gateway Protocol)
 
 ## Premessa
