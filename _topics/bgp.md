@@ -210,47 +210,47 @@ Riprendiamo un esempio esposto precedentemente:
 
 Proviamo a popolare il messaggio *UPDATE* con questo contenuto:
 
-    +---------------------------------------------+
-    |                                             | Withdrawn Routes Length
-    +---------------------------------------------+
-    |                                             | Withdrawn Routes
-    +---------------------------------------------+
-    |                                             | Total Path Attribute Length
-    +---------------------------------------------+
-    |   AS_PATH  64496 65551 64511 65536          | Path Attributes
-    |   NEXT_HOP 198.51.100.1                     |
-    +---------------------------------------------+
-    |            203.0.113.0/24                   | NLRI
-    +---------------------------------------------+
+    +-----------------------------------+
+    |                                   | Withdrawn Routes Length
+    +-----------------------------------+
+    |                                   | Withdrawn Routes
+    +-----------------------------------+
+    |                                   | Total Path Attribute Length
+    +-----------------------------------+
+    |  AS_PATH  64496 65551 64511 65536 | Path Attributes
+    |  NEXT_HOP 198.51.100.1            |
+    +-----------------------------------+
+    |            203.0.113.0/24         | NLRI
+    +-----------------------------------+
 
 Altra ipotesi potrebbe essere la seguente:
 
-    +---------------------------------------------+
-    |                                             | Withdrawn Routes Length
-    +---------------------------------------------+
-    |           240.0.240.0/24                    | Withdrawn Routes
-    +---------------------------------------------+
-    |                                             | Total Path Attribute Length
-    +---------------------------------------------+
-    |                                             | Path Attributes
-    +---------------------------------------------+
-    |                                             | NLRI
-    +---------------------------------------------+
+    +-----------------------------------+
+    |                                   | Withdrawn Routes Length
+    +-----------------------------------+
+    |           240.0.240.0/24          | Withdrawn Routes
+    +-----------------------------------+
+    |                                   | Total Path Attribute Length
+    +-----------------------------------+
+    |                                   | Path Attributes
+    +-----------------------------------+
+    |                                   | NLRI
+    +-----------------------------------+
 
 Oppure una combinazione delle due precedenti:
 
-    +---------------------------------------------+
-    |                                             | Withdrawn Routes Length
-    +---------------------------------------------+
-    |           240.0.240.0/24                    | Withdrawn Routes
-    +---------------------------------------------+
-    |                                             | Total Path Attribute Length
-    +---------------------------------------------+
-    |   AS_PATH  64496 65551 64511 65536          | Path Attributes
-    |   NEXT_HOP 198.51.100.1                     |
-    +---------------------------------------------+
-    |            203.0.113.0/24                   | NLRI
-    +---------------------------------------------+
+    +-----------------------------------+
+    |                                   | Withdrawn Routes Length
+    +-----------------------------------+
+    |           240.0.240.0/24          | Withdrawn Routes
+    +-----------------------------------+
+    |                                   | Total Path Attribute Length
+    +-----------------------------------+
+    |  AS_PATH  64496 65551 64511 65536 | Path Attributes
+    |  NEXT_HOP 198.51.100.1            |
+    +-----------------------------------+
+    |            203.0.113.0/24         | NLRI
+    +-----------------------------------+
 
 Una speciale considerazione va rivolta agli attributi del percorso (**path attributes**) i quali si articolano in quattro diverse categorie:
 
@@ -265,19 +265,19 @@ Facciamo alcuni esempi:
 
 Quindi alla luce di quanto appena documentato ripetiamo il completo schema di messaggio *UPDATE*:
 
-    +---------------------------------------------+
-    |           14 byte                           | Withdrawn Routes Length
-    +---------------------------------------------+
-    |           240.0.240.0/24                    | Withdrawn Routes
-    +---------------------------------------------+
-    |           67 byte                           | Total Path Attribute Length
-    +---------------------------------------------+
-    |   ORIGIN   IGP                              |
-    |   AS_PATH  64496 65551 64511 65536          | Path Attributes
-    |   NEXT_HOP 198.51.100.1                     |
-    +---------------------------------------------+
-    |            203.0.113.0/24                   | NLRI
-    +---------------------------------------------+
+    +-----------------------------------+
+    |           14 byte                 | Withdrawn Routes Length
+    +-----------------------------------+
+    |           240.0.240.0/24          | Withdrawn Routes
+    +-----------------------------------+
+    |           67 byte                 | Total Path Attribute Length
+    +-----------------------------------+
+    |  ORIGIN   IGP                     |
+    |  AS_PATH  64496 65551 64511 65536 | Path Attributes
+    |  NEXT_HOP 198.51.100.1            |
+    +-----------------------------------+
+    |            203.0.113.0/24         | NLRI
+    +-----------------------------------+
 
 È opportuno aggiungere, per completezza di informazione, che il messaggio *UPDATE* è agnostico rispetto al contenuto del campo *NLRI*: infatti può contenere indicazioni circa destinazioni sia IPv4 sia IPv6 (non contemporaneamente, è ovvio, poiché cambia il *NEXT\_HOP*). E, come corollario, è dunque agnostico anche rispetto al trasporto, cioè è possibile che il campo *NLRI* contenga destinazioni IPv6 anche se la connessione TCP viene stabilita tra dirimpettai che usano IPv4 e viceversa.
 
