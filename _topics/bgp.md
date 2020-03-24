@@ -7,6 +7,7 @@ date: gennaio 2020
 ---
 
 # <a id="0"></a>BGP (Border Gateway Protocol)
+di [Antonio Prado](https://www.prado.it)
 
 ## Premessa
 
