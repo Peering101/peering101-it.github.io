@@ -2,6 +2,8 @@
 layout: default
 title: BGP
 subtitle: BGP (Border Gateway Protocol)
+author: Antonio Prado
+date: gennaio 2020
 ---
 
 # <a id="0"></a>BGP (Border Gateway Protocol)
