@@ -6,8 +6,7 @@ author: Antonio Prado
 date: 2020-04-31
 ---
 
-# <a id="0"></a>BGP (Border Gateway Protocol)
-di [Antonio Prado](https://www.prado.it).
+# BGP (Border Gateway Protocol)
 
 ## Premessa
 
@@ -678,7 +677,7 @@ MANRS offre programmi per punti di interscambio e operatori di rete i quali, se 
 [Torna all'inizio di BGP (Border Gateway Protocol)](#0)
 
 # Autore
-Antonio Prado(https://www.prado.it/)
+[Antonio Prado](https://www.prado.it/)
 
 ### Note:
 
