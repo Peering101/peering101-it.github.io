@@ -677,6 +677,9 @@ MANRS offre programmi per punti di interscambio e operatori di rete i quali, se 
 
 [Torna all'inizio di BGP (Border Gateway Protocol)](#0)
 
+# Autore
+Antonio Prado(https://www.prado.it/)
+
 ### Note:
 
 [^1]: Le RFC sono discusse e approvate nei gruppi di lavoro (*working group*) in seno all'organismo [IETF - Internet Engineering Task Force](https://www.ietf.org).
