@@ -674,8 +674,6 @@ Infine, è necessario qui menzionare l'iniziativa di [ISOC - Internet Society](h
 
 MANRS offre programmi per punti di interscambio e operatori di rete i quali, se lo desiderano, possono sottoporsi a una verifica così da poter essere inclusi in un elenco pubblicamente consultabile sul sito <https://www.manrs.org>. Al momento (gennaio 2020), su quasi 1200 [LIR - Local Internet Registry con base in Italia](https://www.ripe.net/membership/indices/IT.html)[^18], solo 17 (l'1,4% circa) si sono fatti certificare[^19]. Vorremmo dunque cogliere l'occasione per esortare quanti leggessero questa breve guida a diventare più consapevoli delle insidie e, soprattutto, dei rimedi a disposizione nell'àmbito degli instradamenti su Internet.
 
-[Torna all'inizio di BGP (Border Gateway Protocol)](#0)
-
 # Autore
 [Antonio Prado](https://www.prado.it/)
 
@@ -718,5 +716,3 @@ MANRS offre programmi per punti di interscambio e operatori di rete i quali, se 
 [^18]: Abbiamo considerato i soli LIR con base in Italia e non semplicemente quelli operanti in Italia. Tuttavia è da notare che un LIR potrebbe non detenere un numero di sistema autonomo o risorse IPv4 o risorse IPv6.
 
 [^19]: A gennaio 2020 risulta che, su oltre 66mila sistemi autonomi nel mondo, 271 si sono fatti certificare da MANRS, cioè meno dello 0,4%.
-
-[Torna all'inizio di BGP (Border Gateway Protocol)] (#0)
